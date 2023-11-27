@@ -79,54 +79,55 @@ const clickLogin = async () =>{
 	// 대기창표시
 	startLoadingBar();
 
-	const param = {
-		userId : memberId.value,
-		userPw : memberPw.value
-	}
-	let data = await loginApi.executeLogin(param)
-	if (data.RecordSet.length > 0) {
-		var userInfo = data.RecordSet[0]; 
-		showAlertSuccess(userInfo.RET_MSG)
-		if (userInfo.RET_CODE == "100") {
-			// 아이디 암호 저장..
-			if (rememberChk.value) {
-				localStorage.setItem("LOGIN_SAVE_YN", "Y");
-				localStorage.setItem("LOGIN_ID", memberId.value);
-			} else {
-				localStorage.setItem("LOGIN_SAVE_YN", "N");
-				localStorage.setItem("LOGIN_ID", "");
-			}
-			
-			sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
-				const now = new Date();
-
-				const twoDigits = (num) => String(num).padStart(2, '0');
-
-				const year = now.getFullYear();       // 년 
-				const month = twoDigits(now.getMonth() + 1);     // 월 (0부터 시작하므로 1을 더해줍니다)
-				const day = twoDigits(now.getDate());            // 일
-				const hours = twoDigits(now.getHours());         // 시
-				const minutes = twoDigits(now.getMinutes());     // 분
-				const seconds = twoDigits(now.getSeconds());     // 초
-				const randomThreeDigits = twoDigits(Math.floor(Math.random() * 1000));
-
-
-			const combined = `${year}${month}${day}${hours}${minutes}${seconds}${randomThreeDigits}`;
-			// 정상처리, 페이지이동..
-			//router.push('/member/memberMng?'+combined)
-			// 수정(2023.10.17)
-			router.push('/client/clientMng?'+combined)
-			
-		} else {
-				
+	try {
+		const param = {
+			userId : memberId.value,
+			userPw : memberPw.value
 		}
-	} else {
-		showAlert('등록된 사용자가 없습니다.')
-	}
+		let data = await loginApi.executeLogin(param)
+		if (data.RecordSet.length > 0) {
+			var userInfo = data.RecordSet[0]; 
+			showAlertSuccess(userInfo.RET_MSG)
+			if (userInfo.RET_CODE == "100") {
+				// 아이디 암호 저장..
+				if (rememberChk.value) {
+					localStorage.setItem("LOGIN_SAVE_YN", "Y");
+					localStorage.setItem("LOGIN_ID", memberId.value);
+				} else {
+					localStorage.setItem("LOGIN_SAVE_YN", "N");
+					localStorage.setItem("LOGIN_ID", "");
+				}
+				
+				sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
+					const now = new Date();
 
-	// 로딩바숨기기..
-    removeLoadingBar();
-	
+					const twoDigits = (num) => String(num).padStart(2, '0');
+
+					const year = now.getFullYear();       // 년 
+					const month = twoDigits(now.getMonth() + 1);     // 월 (0부터 시작하므로 1을 더해줍니다)
+					const day = twoDigits(now.getDate());            // 일
+					const hours = twoDigits(now.getHours());         // 시
+					const minutes = twoDigits(now.getMinutes());     // 분
+					const seconds = twoDigits(now.getSeconds());     // 초
+					const randomThreeDigits = twoDigits(Math.floor(Math.random() * 1000));
+
+
+				const combined = `${year}${month}${day}${hours}${minutes}${seconds}${randomThreeDigits}`;
+				// 정상처리, 페이지이동..
+				router.push('/member/memberMng?'+combined)
+				
+			} else {
+					
+			}
+		} else {
+			showAlert('등록된 사용자가 없습니다.')
+		}
+	} catch (error) {
+		console.error(error);
+	} finally {
+		// 로딩바숨기기..
+		removeLoadingBar();
+	}
 }
 const select = (x) =>{
 	bg.bg1.active = false;

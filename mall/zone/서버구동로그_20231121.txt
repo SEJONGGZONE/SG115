@@ -1,0 +1,1389 @@
+﻿
+gzone@DESKTOP-TUISEE2 MINGW64 ~
+$
+
+gzone@DESKTOP-TUISEE2 MINGW64 ~
+$
+
+gzone@DESKTOP-TUISEE2 MINGW64 ~
+$
+
+gzone@DESKTOP-TUISEE2 MINGW64 ~
+$ pwd
+/c/Users/gzone
+
+gzone@DESKTOP-TUISEE2 MINGW64 ~
+$ cd D:\project\cookjjang\mall
+bash: cd: D:projectcookjjangmall: No such file or directory
+
+gzone@DESKTOP-TUISEE2 MINGW64 ~
+$ cd d:
+
+gzone@DESKTOP-TUISEE2 MINGW64 /d
+$ cd project
+
+gzone@DESKTOP-TUISEE2 MINGW64 /d/project
+$ cd cookjjang
+
+gzone@DESKTOP-TUISEE2 MINGW64 /d/project/cookjjang (main)
+$ cd mall
+
+gzone@DESKTOP-TUISEE2 MINGW64 /d/project/cookjjang/mall (main)
+$ pwd
+/d/project/cookjjang/mall
+
+gzone@DESKTOP-TUISEE2 MINGW64 /d/project/cookjjang/mall (main)
+$
+
+gzone@DESKTOP-TUISEE2 MINGW64 /d/project/cookjjang/mall (main)
+$ yarn build
+yarn run v1.22.19
+$ nuxt build
+Nuxi 3.2.3
+Nuxt 3.2.3 with Nitro 2.2.3
+i Building client...
+vite v4.1.4 building for production...
+transforming...
+✓ 1604 modules transformed.
+rendering chunks...
+computing gzip size...
+.nuxt/dist/client/_nuxt/client-2.602075b9.jpg              4.15 kB
+.nuxt/dist/client/_nuxt/testi1.18e83e1b.webp               4.15 kB
+.nuxt/dist/client/_nuxt/testi3.1ebc665e.webp               4.39 kB
+.nuxt/dist/client/_nuxt/client-4.1a9f90ac.jpg              4.53 kB
+.nuxt/dist/client/_nuxt/person-1.054f231d.jpg              4.72 kB
+.nuxt/dist/client/_nuxt/person-3.6cef10f9.jpg              4.97 kB
+.nuxt/dist/client/_nuxt/credit-card.959452d6.png           5.04 kB
+.nuxt/dist/client/_nuxt/person-4.32562d8e.jpg              6.96 kB
+.nuxt/dist/client/_nuxt/person-2.162c4ad5.jpg              7.78 kB
+.nuxt/dist/client/_nuxt/logo_nobg.2f66d9d7.png            10.32 kB
+.nuxt/dist/client/_nuxt/delivery.8f81d8b2.png             12.98 kB
+.nuxt/dist/client/_nuxt/notification.0bb2a7e7.png         14.20 kB
+.nuxt/dist/client/_nuxt/avater-1.1b19789e.png             14.58 kB
+.nuxt/dist/client/_nuxt/avater-2.98418edb.png             15.73 kB
+.nuxt/dist/client/_nuxt/logo_nobg_h.6aa10586.png          15.84 kB
+.nuxt/dist/client/_nuxt/telephone-call.d940e79d.png       18.33 kB
+.nuxt/dist/client/_nuxt/banner-3.6f44d5aa.webp            20.00 kB
+.nuxt/dist/client/_nuxt/mega-menu-bg.42b5c4fd.jpg         29.72 kB
+.nuxt/dist/client/_nuxt/banner-2.e05f2b71.webp            30.20 kB
+.nuxt/dist/client/_nuxt/banner-1.2f8ae217.webp            30.82 kB
+.nuxt/dist/client/_nuxt/12.1dc5666d.png                   33.16 kB
+.nuxt/dist/client/_nuxt/fashion-b1.81424b0a.webp          33.46 kB
+.nuxt/dist/client/_nuxt/fashion-b2.00d88c2a.webp          33.99 kB
+.nuxt/dist/client/_nuxt/blog-details-sm.1395d550.jpg      34.23 kB
+.nuxt/dist/client/_nuxt/banner-big-1.9697851e.jpg         39.57 kB
+.nuxt/dist/client/_nuxt/blog-ms-1.cdaac6cd.jpg            40.51 kB
+.nuxt/dist/client/_nuxt/blog-ms-4.00eb3109.jpg            41.63 kB
+.nuxt/dist/client/_nuxt/blog-big-6.93bc10c1.jpg           42.69 kB
+.nuxt/dist/client/_nuxt/blog-2.5070eb02.jpg               49.77 kB
+.nuxt/dist/client/_nuxt/blog-ms-2.89d60401.jpg            50.85 kB
+.nuxt/dist/client/_nuxt/blog-1.515cf7a4.jpg               51.18 kB
+.nuxt/dist/client/_nuxt/blog-4.ef2ffc14.jpg               53.29 kB
+.nuxt/dist/client/_nuxt/no_img.91a9af11.png               55.03 kB
+.nuxt/dist/client/_nuxt/testimonial-bg.c1a12b9e.jpg       56.12 kB
+.nuxt/dist/client/_nuxt/blog-big-5.81f9a5f1.jpg           56.83 kB
+.nuxt/dist/client/_nuxt/blog-big-3.2f9247a7.jpg           57.24 kB
+.nuxt/dist/client/_nuxt/blog-3.564bca74.jpg               57.41 kB
+.nuxt/dist/client/manifest.json                           57.63 kB
+.nuxt/dist/client/_nuxt/blog-big-7.2c141da8.jpg           64.04 kB
+.nuxt/dist/client/_nuxt/ionicons.709f2789.woff            67.90 kB
+.nuxt/dist/client/_nuxt/banner-big-2.c3aa94be.jpg         68.41 kB
+.nuxt/dist/client/_nuxt/04.909ce733.png                   69.28 kB
+.nuxt/dist/client/_nuxt/03.6d5c82c1.png                   69.43 kB
+.nuxt/dist/client/_nuxt/01.b13f3a64.png                   70.89 kB
+.nuxt/dist/client/_nuxt/07.84df2d9c.png                   71.64 kB
+.nuxt/dist/client/_nuxt/08.2a321885.png                   73.67 kB
+.nuxt/dist/client/_nuxt/02.44968e46.png                   74.20 kB
+.nuxt/dist/client/_nuxt/blog-big-4.59aa8da0.jpg           75.85 kB
+.nuxt/dist/client/_nuxt/blog-ms-3.05b1cf1c.jpg            76.24 kB
+.nuxt/dist/client/_nuxt/06.a30ec5b5.png                   76.73 kB
+.nuxt/dist/client/_nuxt/fa-brands-400.485ef94c.woff2      77.38 kB
+.nuxt/dist/client/_nuxt/09.74703fe0.png                   78.21 kB
+.nuxt/dist/client/_nuxt/10.c1a46335.png                   80.20 kB
+.nuxt/dist/client/_nuxt/11.43d2e70a.png                   81.76 kB
+.nuxt/dist/client/_nuxt/blog-5.1242670f.jpg               85.96 kB
+.nuxt/dist/client/_nuxt/slide111.b11bcbe1.webp            85.99 kB
+.nuxt/dist/client/_nuxt/fa-brands-400.3699081d.woff       90.67 kB
+.nuxt/dist/client/_nuxt/product-big-3.c501115d.jpg        92.68 kB
+.nuxt/dist/client/_nuxt/slide113.781d9e3d.webp            95.65 kB
+.nuxt/dist/client/_nuxt/blog-big-2.a26df831.jpg           99.52 kB
+.nuxt/dist/client/_nuxt/slider-2.ddb414d2.jpg            100.59 kB
+.nuxt/dist/client/_nuxt/slider-02.8b770b12.jpg           101.10 kB
+.nuxt/dist/client/_nuxt/page-title-1.ff64a97e.jpg        102.50 kB
+.nuxt/dist/client/_nuxt/slider-3.2c2310fe.jpg            103.86 kB
+.nuxt/dist/client/_nuxt/slider-1.9ccbaa17.jpg            106.84 kB
+.nuxt/dist/client/_nuxt/blog-02.a9e10d84.webp            110.40 kB
+.nuxt/dist/client/_nuxt/slider-03.2c66e0f9.jpg           111.10 kB
+.nuxt/dist/client/_nuxt/slider-01.271709a9.jpg           114.03 kB
+.nuxt/dist/client/_nuxt/blog-06.7d415ad1.webp            116.19 kB
+.nuxt/dist/client/_nuxt/blog-05.c1a89d5c.webp            117.79 kB
+.nuxt/dist/client/_nuxt/ionicons.a4803d7b.eot            120.72 kB
+.nuxt/dist/client/_nuxt/promo2.74670120.jpg              120.88 kB
+.nuxt/dist/client/_nuxt/blog-04.b8bb8f10.webp            121.76 kB
+.nuxt/dist/client/_nuxt/slide112.830db2eb.webp           125.74 kB
+.nuxt/dist/client/_nuxt/product-big-1.593f97b8.jpg       127.98 kB
+.nuxt/dist/client/_nuxt/fa-brands-400.ea6f8caa.ttf       134.32 kB
+.nuxt/dist/client/_nuxt/fa-brands-400.1741e902.eot       134.62 kB
+.nuxt/dist/client/_nuxt/fa-solid-900.2a2399d5.woff2      140.70 kB
+.nuxt/dist/client/_nuxt/blog-03.58fe580e.webp            157.61 kB
+.nuxt/dist/client/_nuxt/promo1.d2f4c898.jpg              161.56 kB
+.nuxt/dist/client/_nuxt/blog-01.8fcc41fc.webp            163.20 kB
+.nuxt/dist/client/_nuxt/r3.b9865c84.jpg                  163.23 kB
+.nuxt/dist/client/_nuxt/r2.b2c01a20.jpg                  171.06 kB
+.nuxt/dist/client/_nuxt/bg-video.2fff5e37.webp           172.53 kB
+.nuxt/dist/client/_nuxt/fa-regular-400.58f76b0b.woff2    173.22 kB
+.nuxt/dist/client/_nuxt/r1.ff289793.jpg                  185.12 kB
+.nuxt/dist/client/_nuxt/05.46a0afcd.png                  186.55 kB
+.nuxt/dist/client/_nuxt/fa-duotone-900.20ec55e7.woff2    186.96 kB
+.nuxt/dist/client/_nuxt/fa-solid-900.77238eb6.woff       188.03 kB
+.nuxt/dist/client/_nuxt/ionicons.2ba7f20b.ttf            188.51 kB
+.nuxt/dist/client/_nuxt/fa-light-300.dbbe0d8c.woff2      189.45 kB
+.nuxt/dist/client/_nuxt/fa-regular-400.c1811cae.woff     230.07 kB
+.nuxt/dist/client/_nuxt/promo3.2d392993.jpg              245.18 kB
+.nuxt/dist/client/_nuxt/fa-light-300.93bb8293.woff       251.52 kB
+.nuxt/dist/client/_nuxt/fa-duotone-900.7912f1b7.woff     264.93 kB
+.nuxt/dist/client/_nuxt/deliveryPolicy.34383dc4.png      312.56 kB
+.nuxt/dist/client/_nuxt/ionicons.dd1d74ab.svg            336.06 kB
+.nuxt/dist/client/_nuxt/fa-solid-900.fbbe4d98.ttf        386.89 kB
+.nuxt/dist/client/_nuxt/fa-solid-900.5c717ef5.eot        387.17 kB
+.nuxt/dist/client/_nuxt/fa-regular-400.9fb5a85f.ttf      453.44 kB
+.nuxt/dist/client/_nuxt/fa-regular-400.d1acd8ec.eot      453.73 kB
+.nuxt/dist/client/_nuxt/fa-light-300.717497bc.ttf        492.90 kB
+.nuxt/dist/client/_nuxt/fa-light-300.a3044338.eot        493.18 kB
+.nuxt/dist/client/_nuxt/fa-duotone-900.9bb6447f.ttf      565.96 kB
+.nuxt/dist/client/_nuxt/fa-duotone-900.41f94d0a.eot      566.25 kB
+.nuxt/dist/client/_nuxt/company_002.cc5d78e3.png         658.55 kB
+.nuxt/dist/client/_nuxt/fa-brands-400.b44e9124.svg       733.90 kB
+.nuxt/dist/client/_nuxt/company_001.1373e350.png         924.27 kB
+.nuxt/dist/client/_nuxt/privacyPolicy.092aeb53.pdf     1,221.45 kB
+.nuxt/dist/client/_nuxt/fa-solid-900.27ab9551.svg      1,789.68 kB
+.nuxt/dist/client/_nuxt/fa-regular-400.0f02e134.svg    2,187.88 kB
+.nuxt/dist/client/_nuxt/fa-light-300.02ce017d.svg      2,450.76 kB
+.nuxt/dist/client/_nuxt/fa-duotone-900.7a7da4de.svg    2,668.56 kB
+.nuxt/dist/client/_nuxt/checkout.973355a9.css              0.03 kB │ gzip:   0.05 kB
+.nuxt/dist/client/_nuxt/SortFiltering.f04877f3.css         0.04 kB │ gzip:   0.05 kB
+.nuxt/dist/client/_nuxt/orderListHistory.29032cca.css      0.04 kB │ gzip:   0.06 kB
+.nuxt/dist/client/_nuxt/BlogArea.875ca0ed.css              0.06 kB │ gzip:   0.08 kB
+.nuxt/dist/client/_nuxt/SaleOffProduct.407237d6.css        0.07 kB │ gzip:   0.09 kB
+.nuxt/dist/client/_nuxt/ProductList.5fca26a9.css           0.08 kB │ gzip:   0.09 kB
+.nuxt/dist/client/_nuxt/customerUpdate.7b9536a2.css        0.10 kB │ gzip:   0.11 kB
+.nuxt/dist/client/_nuxt/mega-menu-bg.1fd0c02e.css          0.12 kB │ gzip:   0.08 kB
+.nuxt/dist/client/_nuxt/SubscribeArea.a27e863c.css         0.12 kB │ gzip:   0.10 kB
+.nuxt/dist/client/_nuxt/LayoutFour.d86a9ef7.css            0.12 kB │ gzip:   0.11 kB
+.nuxt/dist/client/_nuxt/callback.be10d84e.css              0.13 kB │ gzip:   0.12 kB
+.nuxt/dist/client/_nuxt/qnaList.ae0e4490.css               0.14 kB │ gzip:   0.14 kB
+.nuxt/dist/client/_nuxt/aosTest.2a0012dd.css               0.15 kB │ gzip:   0.14 kB
+.nuxt/dist/client/_nuxt/BillingDetails.55dc98f7.css        0.21 kB │ gzip:   0.17 kB
+.nuxt/dist/client/_nuxt/home-3.1721a15a.css                0.25 kB │ gzip:   0.17 kB
+.nuxt/dist/client/_nuxt/home-7.b7e83c4f.css                0.26 kB │ gzip:   0.15 kB
+.nuxt/dist/client/_nuxt/test.ea4790ee.css                  0.43 kB │ gzip:   0.26 kB
+.nuxt/dist/client/_nuxt/Header.9ca4eb9e.css                0.72 kB │ gzip:   0.27 kB
+.nuxt/dist/client/_nuxt/index.8e31a435.css                 1.46 kB │ gzip:   0.62 kB
+.nuxt/dist/client/_nuxt/register.1da6a7c4.css              2.00 kB │ gzip:   0.78 kB
+.nuxt/dist/client/_nuxt/ShopArea.9c563d2b.css              6.86 kB │ gzip:   1.36 kB
+.nuxt/dist/client/_nuxt/swiper-vue.25ac1039.css           17.81 kB │ gzip:   4.63 kB
+.nuxt/dist/client/_nuxt/entry.9b1ec825.css               620.58 kB │ gzip: 101.13 kB
+.nuxt/dist/client/_nuxt/person-1.fbc61517.js               0.11 kB │ gzip:   0.12 kB
+.nuxt/dist/client/_nuxt/admin.994cf539.js                  0.17 kB │ gzip:   0.17 kB
+.nuxt/dist/client/_nuxt/avater-2.6addf44f.js               0.18 kB │ gzip:   0.15 kB
+.nuxt/dist/client/_nuxt/empty.4a29f781.js                  0.18 kB │ gzip:   0.16 kB
+.nuxt/dist/client/_nuxt/comingsoon.658d4555.js             0.59 kB │ gzip:   0.39 kB
+.nuxt/dist/client/_nuxt/Layout.2ae544cf.js                 0.64 kB │ gzip:   0.39 kB
+.nuxt/dist/client/_nuxt/aosTest.41771021.js                0.74 kB │ gzip:   0.32 kB
+.nuxt/dist/client/_nuxt/useCompare.aacd6556.js             0.82 kB │ gzip:   0.36 kB
+.nuxt/dist/client/_nuxt/useWishlist.967a82fc.js            0.85 kB │ gzip:   0.36 kB
+.nuxt/dist/client/_nuxt/index.7972f172.js                  0.86 kB │ gzip:   0.51 kB
+.nuxt/dist/client/_nuxt/blog-left-sidebar.31ee0d1d.js      0.89 kB │ gzip:   0.52 kB
+.nuxt/dist/client/_nuxt/blog.c3ac1f9a.js                   0.89 kB │ gzip:   0.52 kB
+.nuxt/dist/client/_nuxt/BreadcrumbArea.349ae59b.js         0.91 kB │ gzip:   0.59 kB
+.nuxt/dist/client/_nuxt/_id_.d034759f.js                   0.98 kB │ gzip:   0.57 kB
+.nuxt/dist/client/_nuxt/index.0b7846d2.js                  1.00 kB │ gzip:   0.55 kB
+.nuxt/dist/client/_nuxt/shop.b339b52e.js                   1.05 kB │ gzip:   0.57 kB
+.nuxt/dist/client/_nuxt/shop-right.085c480b.js             1.06 kB │ gzip:   0.58 kB
+.nuxt/dist/client/_nuxt/recentList.f7fb2015.js             1.06 kB │ gzip:   0.66 kB
+.nuxt/dist/client/_nuxt/categoryData.20e5cc43.js           1.10 kB │ gzip:   0.44 kB
+.nuxt/dist/client/_nuxt/BlogItem.8d1c6a4a.js               1.11 kB │ gzip:   0.59 kB
+.nuxt/dist/client/_nuxt/BlogStandardItem.d51a0997.js       1.23 kB │ gzip:   0.63 kB
+.nuxt/dist/client/_nuxt/error-component.d7897501.js        1.27 kB │ gzip:   0.75 kB
+.nuxt/dist/client/_nuxt/SortFiltering.86a41b85.js          1.40 kB │ gzip:   0.77 kB
+.nuxt/dist/client/_nuxt/favList.ed37668f.js                1.41 kB │ gzip:   0.81 kB
+.nuxt/dist/client/_nuxt/test2.62166ad0.js                  1.52 kB │ gzip:   0.75 kB
+.nuxt/dist/client/_nuxt/BlogStandardArea.d6815bf0.js       1.52 kB │ gzip:   0.79 kB
+.nuxt/dist/client/_nuxt/test.b84c9c8d.js                   1.58 kB │ gzip:   0.85 kB
+.nuxt/dist/client/_nuxt/Pagination.430ee931.js             1.62 kB │ gzip:   0.79 kB
+.nuxt/dist/client/_nuxt/_id_.0bef1dd1.js                   1.68 kB │ gzip:   0.89 kB
+.nuxt/dist/client/_nuxt/callback.81be4a55.js               1.69 kB │ gzip:   0.90 kB
+.nuxt/dist/client/_nuxt/blog-2-col.cdd17c70.js             1.70 kB │ gzip:   0.87 kB
+.nuxt/dist/client/_nuxt/blog-3-col.8c4b9261.js             1.71 kB │ gzip:   0.87 kB
+.nuxt/dist/client/_nuxt/blog-no-sidebar.14f33489.js        1.80 kB │ gzip:   0.92 kB
+.nuxt/dist/client/_nuxt/blog-2-col-mas.19f3a5a0.js         1.86 kB │ gzip:   0.91 kB
+.nuxt/dist/client/_nuxt/searchResultList.af52db0a.js       1.90 kB │ gzip:   1.06 kB
+.nuxt/dist/client/_nuxt/companyInfo.f7b209a2.js            1.98 kB │ gzip:   1.07 kB
+.nuxt/dist/client/_nuxt/ProductItem.f1f2fedc.js            2.08 kB │ gzip:   1.03 kB
+.nuxt/dist/client/_nuxt/ProductListItem.89662d72.js        2.12 kB │ gzip:   1.09 kB
+.nuxt/dist/client/_nuxt/complete.78ac1b5a.js               2.24 kB │ gzip:   1.21 kB
+.nuxt/dist/client/_nuxt/BlogArea.9190df8e.js               2.41 kB │ gzip:   1.16 kB
+.nuxt/dist/client/_nuxt/eventList.8c5facfc.js              2.77 kB │ gzip:   1.46 kB
+.nuxt/dist/client/_nuxt/consult.90bb4024.js                2.77 kB │ gzip:   1.46 kB
+.nuxt/dist/client/_nuxt/SubscribeArea.4626c780.js          2.81 kB │ gzip:   1.35 kB
+.nuxt/dist/client/_nuxt/CartMini.0c1ddb03.js               2.91 kB │ gzip:   1.26 kB
+.nuxt/dist/client/_nuxt/wishlist.2c382c28.js               3.10 kB │ gzip:   1.37 kB
+.nuxt/dist/client/_nuxt/slider-3.ba12e9b8.js               3.12 kB │ gzip:   2.20 kB
+.nuxt/dist/client/_nuxt/beforeSelectimg.66d06b4c.js        3.13 kB │ gzip:   2.21 kB
+.nuxt/dist/client/_nuxt/SaleOffProduct.ded27c86.js         3.40 kB │ gzip:   1.22 kB
+.nuxt/dist/client/_nuxt/compare.122cc599.js                3.41 kB │ gzip:   1.34 kB
+.nuxt/dist/client/_nuxt/noticeDetail.0afe9cfb.js           3.44 kB │ gzip:   1.75 kB
+.nuxt/dist/client/_nuxt/shop-3-col.cd5572f8.js             3.52 kB │ gzip:   1.45 kB
+.nuxt/dist/client/_nuxt/avater-3.bb615705.js               3.61 kB │ gzip:   2.63 kB
+.nuxt/dist/client/_nuxt/noticeList.e22a7bdd.js             3.93 kB │ gzip:   1.96 kB
+.nuxt/dist/client/_nuxt/contact.53d29c19.js                4.18 kB │ gzip:   1.79 kB
+.nuxt/dist/client/_nuxt/home-2.d4afac83.js                 4.50 kB │ gzip:   1.79 kB
+.nuxt/dist/client/_nuxt/ProductModal.48f2ef38.js           4.54 kB │ gzip:   1.88 kB
+.nuxt/dist/client/_nuxt/BlogSidebar.52812bbf.js            4.54 kB │ gzip:   1.60 kB
+.nuxt/dist/client/_nuxt/categoryList.47941bfb.js           4.64 kB │ gzip:   2.08 kB
+.nuxt/dist/client/_nuxt/qnaWrite.7148d10d.js               5.27 kB │ gzip:   2.56 kB
+.nuxt/dist/client/_nuxt/cart.782bd14f.js                   5.73 kB │ gzip:   2.77 kB
+.nuxt/dist/client/_nuxt/home-6.3a391453.js                 5.83 kB │ gzip:   2.60 kB
+.nuxt/dist/client/_nuxt/qnaDetail.e8427e9f.js              5.95 kB │ gzip:   2.65 kB
+.nuxt/dist/client/_nuxt/home-5.5b03cc0c.js                 6.10 kB │ gzip:   2.73 kB
+.nuxt/dist/client/_nuxt/qnaList.8ddbacda.js                6.25 kB │ gzip:   2.91 kB
+.nuxt/dist/client/_nuxt/Footer.4bdb4f65.js                 6.48 kB │ gzip:   3.66 kB
+.nuxt/dist/client/_nuxt/LayoutFour.vue.35def0a4.js         7.79 kB │ gzip:   3.38 kB
+.nuxt/dist/client/_nuxt/BlogDetailsArea.3214e2da.js        7.88 kB │ gzip:   2.90 kB
+.nuxt/dist/client/_nuxt/blogData.9a6a3802.js               8.21 kB │ gzip:   1.26 kB
+.nuxt/dist/client/_nuxt/deliveryList.056f2b0f.js           8.30 kB │ gzip:   3.38 kB
+.nuxt/dist/client/_nuxt/account.8c7243fb.js                9.03 kB │ gzip:   2.92 kB
+.nuxt/dist/client/_nuxt/home-3.bbae8785.js                10.43 kB │ gzip:   3.36 kB
+.nuxt/dist/client/_nuxt/mega-menu-bg.4d964c74.js          10.60 kB │ gzip:   4.42 kB
+.nuxt/dist/client/_nuxt/login.b466c1a8.js                 11.03 kB │ gzip:   3.61 kB
+.nuxt/dist/client/_nuxt/index.5af19ff7.js                 11.09 kB │ gzip:   4.45 kB
+.nuxt/dist/client/_nuxt/Header.vue.8d3457c6.js            12.18 kB │ gzip:   4.43 kB
+.nuxt/dist/client/_nuxt/ShopDetailsArea.4a702ddf.js       13.23 kB │ gzip:   5.57 kB
+.nuxt/dist/client/_nuxt/ProductList.1a514d9d.js           14.85 kB │ gzip:   4.98 kB
+.nuxt/dist/client/_nuxt/customerUpdate.21db5e32.js        15.86 kB │ gzip:   4.86 kB
+.nuxt/dist/client/_nuxt/orderListHistory.17f73c9a.js      16.03 kB │ gzip:   5.51 kB
+.nuxt/dist/client/_nuxt/HomeTwoHeroSlider.fbae76f2.js     16.60 kB │ gzip:  10.46 kB
+.nuxt/dist/client/_nuxt/checkout.d3524d4f.js              22.08 kB │ gzip:   7.39 kB
+.nuxt/dist/client/_nuxt/vee-validate.esm.321ed98c.js      27.44 kB │ gzip:   9.52 kB
+.nuxt/dist/client/_nuxt/index.esm.8f5709a8.js             31.35 kB │ gzip:  10.66 kB
+.nuxt/dist/client/_nuxt/home-7.9770840e.js                35.01 kB │ gzip:  15.35 kB
+.nuxt/dist/client/_nuxt/register.e867a51f.js              35.34 kB │ gzip:  15.05 kB
+.nuxt/dist/client/_nuxt/useProducts.fa4e2e49.js           39.67 kB │ gzip:   2.88 kB
+.nuxt/dist/client/_nuxt/ShopArea.348048d5.js              47.55 kB │ gzip:  16.13 kB
+.nuxt/dist/client/_nuxt/swiper-vue.c9f54af7.js           177.15 kB │ gzip:  58.99 kB
+.nuxt/dist/client/_nuxt/entry.5cb429d6.js                698.62 kB │ gzip: 196.18 kB
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+√ Client built in 38184ms
+i Building server...
+vite v4.1.4 building SSR bundle for production...
+transforming...
+✓ 635 modules transformed.
+rendering chunks...
+.nuxt/dist/server/_nuxt/index-styles.44c38473.mjs                       0.08 kB
+.nuxt/dist/server/_nuxt/aosTest-styles.fd9429b3.mjs                     0.08 kB
+.nuxt/dist/server/_nuxt/QnaList-styles.f106b18b.mjs                     0.08 kB
+.nuxt/dist/server/_nuxt/callback-styles.d26cf163.mjs                    0.08 kB
+.nuxt/dist/server/_nuxt/checkout-styles.5811ab42.mjs                    0.08 kB
+.nuxt/dist/server/_nuxt/CartModal-styles.10da7d46.mjs                   0.08 kB
+.nuxt/dist/server/_nuxt/ComSwiper-styles.ff50f94d.mjs                   0.08 kB
+.nuxt/dist/server/_nuxt/EventPopup-styles.a596c1db.mjs                  0.09 kB
+.nuxt/dist/server/_nuxt/Datepicker-styles.ba425b25.mjs                  0.09 kB
+.nuxt/dist/server/_nuxt/BlogAreaTwo-styles.83aca2dd.mjs                 0.09 kB
+.nuxt/dist/server/_nuxt/RegisterArea-styles.ef4a92cb.mjs                0.09 kB
+.nuxt/dist/server/_nuxt/vue3-toastify-styles.af858e62.mjs               0.09 kB
+.nuxt/dist/server/_nuxt/RegisterAgree-styles.455aaa22.mjs               0.09 kB
+.nuxt/dist/server/_nuxt/BillingDetails-styles.356f073a.mjs              0.09 kB
+.nuxt/dist/server/_nuxt/CustomerUpdate-styles.1c1fc20a.mjs              0.09 kB
+.nuxt/dist/server/_nuxt/vue3-datepicker-styles.88fab238.mjs             0.09 kB
+.nuxt/dist/server/_nuxt/FeaturedProducts-styles.8ed402e4.mjs            0.09 kB
+.nuxt/dist/server/_nuxt/OfferProductsSlider-styles.43170f99.mjs         0.09 kB
+.nuxt/dist/server/_nuxt/HomeThreeTestimonial-styles.ec59d248.mjs        0.10 kB
+.nuxt/dist/server/_nuxt/HomeSevenTestimonial-styles.e39ef62b.mjs        0.10 kB
+.nuxt/dist/server/styles.mjs                                            2.44 kB
+.nuxt/dist/server/_nuxt/person-1-ba5dd223.js                            0.14 kB │ map:   0.23 kB
+.nuxt/dist/server/_nuxt/composables-b654975a.js                         0.21 kB │ map:   0.62 kB
+.nuxt/dist/server/_nuxt/checkout-styles-1.mjs-72326e40.js               0.21 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/avater-2-e2234c85.js                            0.21 kB │ map:   0.36 kB
+.nuxt/dist/server/_nuxt/Datepicker-styles-1.mjs-9c1e84eb.js             0.22 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/SortFiltering-styles-1.mjs-fcedf6d6.js          0.23 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/BlogArea-styles-1.mjs-db067657.js               0.27 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/ProductList-styles-1.mjs-ff197189.js            0.27 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/RegisterArea-styles-1.mjs-e7ef5705.js           0.28 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/ProductThumbnail-styles-1.mjs-df054ca6.js       0.29 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/OfferProductsSlider-styles-1.mjs-9aa230d5.js    0.29 kB │ map:   0.13 kB
+.nuxt/dist/server/_nuxt/HomeSevenTestimonial-styles-1.mjs-ff482646.js   0.29 kB │ map:   0.13 kB
+.nuxt/dist/server/_nuxt/CustomerUpdate-styles-1.mjs-96e84784.js         0.30 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/FooterTwo-styles-1.mjs-44c9fc11.js              0.30 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/SaleOffProduct-styles-1.mjs-3a542cd6.js         0.30 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/callback-styles-1.mjs-9f8d9ad6.js               0.30 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/SearchPopup-styles-1.mjs-77bf2b4a.js            0.30 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/aosTest-styles-1.mjs-e7442115.js                0.32 kB │ map:   0.11 kB
+.nuxt/dist/server/_nuxt/FeaturedProducts-styles-1.mjs-383fde4e.js       0.33 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/slider-3-2daf43f4.js                            0.33 kB │ map:   0.47 kB
+.nuxt/dist/server/_nuxt/ShopBanner-styles-1.mjs-f62b7f02.js             0.34 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/QnaList-styles-1.mjs-9e23276b.js                0.34 kB │ map:   0.11 kB
+.nuxt/dist/server/_nuxt/BlogAreaTwo-styles-1.mjs-80ae779f.js            0.35 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/BillingDetails-styles-1.mjs-c20344be.js         0.40 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/HomeThreeTestimonial-styles-1.mjs-776da8ae.js   0.44 kB │ map:   0.13 kB
+.nuxt/dist/server/_nuxt/admin-afc9ee4a.js                               0.47 kB │ map:   0.11 kB
+.nuxt/dist/server/_nuxt/CartModal-styles-1.mjs-c63e5ee1.js              0.59 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/ComSwiper-styles-1.mjs-d6ccf3f0.js              0.61 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/EventPopup-styles-1.mjs-880e5614.js             0.71 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/CookImage-styles-1.mjs-218f5e28.js              0.90 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/empty-420928f8.js                               1.10 kB │ map:   0.13 kB
+.nuxt/dist/server/_nuxt/useCompare-065d51a7.js                          1.16 kB │ map:   2.42 kB
+.nuxt/dist/server/_nuxt/useWishlist-f3207f48.js                         1.19 kB │ map:   2.45 kB
+.nuxt/dist/server/_nuxt/index-styles-1.mjs-9a65e2f4.js                  1.29 kB │ map:   0.11 kB
+.nuxt/dist/server/_nuxt/CookImage-8118e05c.js                           1.37 kB │ map:   2.17 kB
+.nuxt/dist/server/_nuxt/island-renderer-f4aaa7df.js                     1.48 kB │ map:   1.60 kB
+.nuxt/dist/server/_nuxt/BreadcrumbArea-3ffd0173.js                      1.64 kB │ map:   3.57 kB
+.nuxt/dist/server/_nuxt/Header-1ca9f0fa.js                              1.68 kB │ map:  28.48 kB
+.nuxt/dist/server/_nuxt/test2-56e29b27.js                               1.69 kB │ map:   3.64 kB
+.nuxt/dist/server/_nuxt/categoryData-19a8d6bb.js                        1.72 kB │ map:   3.42 kB
+.nuxt/dist/server/_nuxt/aosTest-73d6dafe.js                             1.74 kB │ map:   1.30 kB
+.nuxt/dist/server/_nuxt/Layout-f4521284.js                              1.76 kB │ map:   1.91 kB
+.nuxt/dist/server/_nuxt/callback-f7dab8ef.js                            1.80 kB │ map:   5.36 kB
+.nuxt/dist/server/_nuxt/RegisterAgree-styles-1.mjs-1a472d9f.js          2.11 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/client-only-305a520b.js                         2.23 kB │ map:   5.35 kB
+.nuxt/dist/server/_nuxt/comingsoon-9367df67.js                          2.31 kB │ map:   1.71 kB
+.nuxt/dist/server/_nuxt/css-styles-1.mjs-df5e1699.js                    2.41 kB │ map:   0.11 kB
+.nuxt/dist/server/_nuxt/Pagination-00be2f84.js                          2.55 kB │ map:   6.12 kB
+.nuxt/dist/server/_nuxt/index-38d06553.js                               2.57 kB │ map:   1.76 kB
+.nuxt/dist/server/_nuxt/SortFiltering-e237d050.js                       2.57 kB │ map:   7.91 kB
+.nuxt/dist/server/_nuxt/_id_-f670212a.js                                2.58 kB │ map:   3.13 kB
+.nuxt/dist/server/_nuxt/_id_-4a800265.js                                2.74 kB │ map:   2.50 kB
+.nuxt/dist/server/_nuxt/blog-15d175b4.js                                2.84 kB │ map:   2.00 kB
+.nuxt/dist/server/_nuxt/blog-left-sidebar-02cd62b7.js                   2.90 kB │ map:   2.00 kB
+.nuxt/dist/server/_nuxt/BlogItem-615b2e95.js                            2.92 kB │ map:   3.44 kB
+.nuxt/dist/server/_nuxt/shop-7c40afb3.js                                3.01 kB │ map:   1.81 kB
+.nuxt/dist/server/_nuxt/shop-right-8d9d113f.js                          3.07 kB │ map:   1.87 kB
+.nuxt/dist/server/_nuxt/BlogStandardItem-9bc3df38.js                    3.07 kB │ map:   3.58 kB
+.nuxt/dist/server/_nuxt/BlogStandardArea-3332c3c7.js                    3.08 kB │ map:   5.53 kB
+.nuxt/dist/server/_nuxt/recentList-5ee294d3.js                          3.09 kB │ map:   3.05 kB
+.nuxt/dist/server/_nuxt/index-19a8a8db.js                               3.18 kB │ map:   2.40 kB
+.nuxt/dist/server/_nuxt/beforeSelectimg-2e9b5269.js                     3.22 kB │ map:   3.30 kB
+.nuxt/dist/server/_nuxt/ProductListItem-dcbc69d4.js                     3.55 kB │ map:   7.54 kB
+.nuxt/dist/server/_nuxt/ProductItem-d13a9422.js                         3.60 kB │ map:   7.61 kB
+.nuxt/dist/server/_nuxt/avater-3-3749cb92.js                            3.67 kB │ map:   3.77 kB
+.nuxt/dist/server/_nuxt/compare-e3251b9e.js                             3.76 kB │ map:   6.92 kB
+.nuxt/dist/server/_nuxt/cart-d2a1a992.js                                3.85 kB │ map:  15.08 kB
+.nuxt/dist/server/_nuxt/favList-8478b719.js                             4.26 kB │ map:   5.10 kB
+.nuxt/dist/server/_nuxt/complete-23512cfe.js                            4.29 kB │ map:   6.31 kB
+.nuxt/dist/server/_nuxt/error-component-c41ef00a.js                     4.43 kB │ map:   1.80 kB
+.nuxt/dist/server/_nuxt/blog-2-col-cfafc4a0.js                          4.70 kB │ map:   6.22 kB
+.nuxt/dist/server/_nuxt/blog-3-col-fd975fdc.js                          4.71 kB │ map:   6.20 kB
+.nuxt/dist/server/_nuxt/blog-no-sidebar-156b6c9a.js                     4.82 kB │ map:   6.80 kB
+.nuxt/dist/server/_nuxt/nuxt-link-80d3cee7.js                           5.06 kB │ map:  11.67 kB
+.nuxt/dist/server/_nuxt/test-b6c2b0c9.js                                5.08 kB │ map:   6.45 kB
+.nuxt/dist/server/_nuxt/searchResultList-27065468.js                    5.10 kB │ map:   5.13 kB
+.nuxt/dist/server/_nuxt/noticeDetail-d1ba668e.js                        5.54 kB │ map:   6.77 kB
+.nuxt/dist/server/_nuxt/SubscribeArea-de882a95.js                       5.71 kB │ map:   9.51 kB
+.nuxt/dist/server/_nuxt/wishlist-077579cc.js                            5.86 kB │ map:   8.26 kB
+.nuxt/dist/server/_nuxt/BlogArea-6c733574.js                            6.23 kB │ map:   8.54 kB
+.nuxt/dist/server/_nuxt/ProductModal-5e3764e9.js                        6.29 kB │ map:  15.99 kB
+.nuxt/dist/server/_nuxt/SaleOffProduct-83bb6d91.js                      6.77 kB │ map:  12.51 kB
+.nuxt/dist/server/_nuxt/shop-3-col-6f4f6fde.js                          6.79 kB │ map:  11.86 kB
+.nuxt/dist/server/_nuxt/BlogSidebar-9e2794c8.js                         6.83 kB │ map:  17.13 kB
+.nuxt/dist/server/_nuxt/PriceFilter.vue-ae46f9a8.js                     6.97 kB │ map:   0.11 kB
+.nuxt/dist/server/_nuxt/noticeList-74fa167d.js                          7.51 kB │ map:   9.88 kB
+.nuxt/dist/server/_nuxt/qnaDetail-eb47319e.js                           7.56 kB │ map:  13.72 kB
+.nuxt/dist/server/_nuxt/eventList-7bbf282e.js                           7.60 kB │ map:   9.37 kB
+.nuxt/dist/server/_nuxt/blog-2-col-mas-b0a17888.js                      8.15 kB │ map:   7.29 kB
+.nuxt/dist/server/_nuxt/index-23fea331.js                               8.61 kB │ map:  34.39 kB
+.nuxt/dist/server/_nuxt/Footer-8a5329ca.js                              8.99 kB │ map:  17.64 kB
+.nuxt/dist/server/_nuxt/consult-3c2cf9c9.js                             9.22 kB │ map:   6.25 kB
+.nuxt/dist/server/_nuxt/qnaList-0a3ccdcf.js                            10.12 kB │ map:  14.00 kB
+.nuxt/dist/server/_nuxt/companyInfo-433e9c70.js                        10.58 kB │ map:   4.05 kB
+.nuxt/dist/server/_nuxt/blogData-6de6d989.js                           11.05 kB │ map:  17.33 kB
+.nuxt/dist/server/_nuxt/vue3-toastify-styles-1.mjs-e27aedc9.js         11.42 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/home-2-7da0b0f5.js                             11.51 kB │ map:  16.32 kB
+.nuxt/dist/server/_nuxt/contact-b06fed7a.js                            12.80 kB │ map:  16.69 kB
+.nuxt/dist/server/_nuxt/qnaWrite-0b9e94a3.js                           13.49 kB │ map:  11.97 kB
+.nuxt/dist/server/_nuxt/home-6-964cf1c6.js                             13.90 kB │ map:  17.29 kB
+.nuxt/dist/server/_nuxt/BlogDetailsArea-da2903c0.js                    14.29 kB │ map:  30.23 kB
+.nuxt/dist/server/_nuxt/home-5-ac286e17.js                             14.65 kB │ map:  19.24 kB
+.nuxt/dist/server/_nuxt/LayoutFour-e59ba524.js                         15.86 kB │ map:  15.96 kB
+.nuxt/dist/server/_nuxt/ShopArea-abb8aca9.js                           17.32 kB │ map:  36.46 kB
+.nuxt/dist/server/_nuxt/ShopDetailsArea-d4a3dd1a.js                    18.28 kB │ map:  31.63 kB
+.nuxt/dist/server/_nuxt/vue3-datepicker-styles-1.mjs-6635ad23.js       18.64 kB │ map:   0.12 kB
+.nuxt/dist/server/_nuxt/categoryList-a700aa2d.js                       18.65 kB │ map:  12.65 kB
+.nuxt/dist/server/_nuxt/account-f5f4f9c9.js                            19.22 kB │ map:  31.85 kB
+.nuxt/dist/server/_nuxt/OffCanvas-4b3097c5.js                          20.97 kB │ map:  29.24 kB
+.nuxt/dist/server/_nuxt/deliveryList-c495b593.js                       21.16 kB │ map:  17.96 kB
+.nuxt/dist/server/_nuxt/ProductList-6b2b937f.js                        23.15 kB │ map:  30.64 kB
+.nuxt/dist/server/_nuxt/HomeTwoHeroSlider-2ba5eac7.js                  24.41 kB │ map:  28.04 kB
+.nuxt/dist/server/_nuxt/index-16494d93.js                              25.68 kB │ map:  30.94 kB
+.nuxt/dist/server/_nuxt/home-3-67ab730b.js                             29.28 kB │ map:  41.60 kB
+.nuxt/dist/server/_nuxt/checkout-2a79e19e.js                           29.85 kB │ map:  47.70 kB
+.nuxt/dist/server/_nuxt/login-3e64c32a.js                              32.22 kB │ map:  21.65 kB
+.nuxt/dist/server/_nuxt/orderListHistory-cc34edb6.js                   38.90 kB │ map:  26.38 kB
+.nuxt/dist/server/_nuxt/useProducts-97e7bcc5.js                        52.28 kB │ map:  80.08 kB
+.nuxt/dist/server/_nuxt/customerUpdate-9ba95535.js                     52.39 kB │ map:  33.16 kB
+.nuxt/dist/server/_nuxt/home-7-3da7a403.js                             65.93 kB │ map: 100.45 kB
+.nuxt/dist/server/_nuxt/register-a77e3b58.js                           73.38 kB │ map:  46.41 kB
+.nuxt/dist/server/server.mjs                                           95.88 kB │ map: 239.15 kB
+√ Server built in 20399ms
+√ Generated public .output/public
+i Building Nitro Server (preset: node-server)
+[esbuild] (.nuxt/dist/server/_nuxt/useProducts-97e7bcc5.js:833:4) Duplicate key "sale_of_per" in object literal
+[esbuild] (.nuxt/dist/server/_nuxt/useProducts-97e7bcc5.js:949:4) Duplicate key "topRated" in object literal
+√ Nitro server built
+  ├─ .output/server/package.json (1.98 kB) (722 B gzip)
+  ├─ .output/server/index.mjs (484 B) (258 B gzip)
+  ├─ .output/server/chunks/wishlist-077579cc.mjs.map (4.9 kB) (1.17 kB gzip)
+  ├─ .output/server/chunks/wishlist-077579cc.mjs (6.11 kB) (1.68 kB gzip)
+  ├─ .output/server/chunks/vue3-toastify-styles.af858e62.mjs.map (354 B) (227 B gzip)
+  ├─ .output/server/chunks/vue3-toastify-styles.af858e62.mjs (11.5 kB) (2.3 kB gzip)
+  ├─ .output/server/chunks/vue3-datepicker-styles.88fab238.mjs.map (361 B) (227 B gzip)
+  ├─ .output/server/chunks/vue3-datepicker-styles.88fab238.mjs (18.7 kB) (3.7 kB gzip)
+  ├─ .output/server/chunks/useWishlist-f3207f48.mjs.map (1.44 kB) (479 B gzip)
+  ├─ .output/server/chunks/useWishlist-f3207f48.mjs (1.16 kB) (454 B gzip)
+  ├─ .output/server/chunks/useProducts-97e7bcc5.mjs.map (31.8 kB) (1.3 kB gzip)
+  ├─ .output/server/chunks/useProducts-97e7bcc5.mjs (52.6 kB) (3.26 kB gzip)
+  ├─ .output/server/chunks/useCompare-065d51a7.mjs.map (1.43 kB) (478 B gzip)
+  ├─ .output/server/chunks/useCompare-065d51a7.mjs (1.13 kB) (452 B gzip)
+  ├─ .output/server/chunks/test2-56e29b27.mjs.map (1.4 kB) (486 B gzip)
+  ├─ .output/server/chunks/test2-56e29b27.mjs (1.25 kB) (568 B gzip)
+  ├─ .output/server/chunks/test-b6c2b0c9.mjs.map (5.39 kB) (1.34 kB gzip)
+  ├─ .output/server/chunks/test-b6c2b0c9.mjs (5.06 kB) (1.52 kB gzip)
+  ├─ .output/server/chunks/SubscribeArea-de882a95.mjs.map (5.01 kB) (1.31 kB gzip)
+  ├─ .output/server/chunks/SubscribeArea-de882a95.mjs (5.63 kB) (1.77 kB gzip)
+  ├─ .output/server/chunks/styles.mjs.map (1.63 kB) (400 B gzip)
+  ├─ .output/server/chunks/styles.mjs (2.39 kB) (658 B gzip)
+  ├─ .output/server/chunks/SortFiltering-e237d050.mjs.map (2.12 kB) (681 B gzip)
+  ├─ .output/server/chunks/SortFiltering-e237d050.mjs (2.83 kB) (1.11 kB gzip)
+  ├─ .output/server/chunks/slider-3-2daf43f4.mjs.map (350 B) (199 B gzip)
+  ├─ .output/server/chunks/slider-3-2daf43f4.mjs (372 B) (210 B gzip)
+  ├─ .output/server/chunks/ShopDetailsArea-d4a3dd1a.mjs.map (15.1 kB) (3.14 kB gzip)
+  ├─ .output/server/chunks/ShopDetailsArea-d4a3dd1a.mjs (20.6 kB) (5.42 kB gzip)
+  ├─ .output/server/chunks/ShopArea-abb8aca9.mjs.map (95.2 kB) (8.56 kB gzip)
+  ├─ .output/server/chunks/ShopArea-abb8aca9.mjs (55.2 kB) (16.1 kB gzip)
+  ├─ .output/server/chunks/shop-right-8d9d113f.mjs.map (1.79 kB) (676 B gzip)
+  ├─ .output/server/chunks/shop-right-8d9d113f.mjs (3.3 kB) (1.24 kB gzip)
+  ├─ .output/server/chunks/shop-7c40afb3.mjs.map (1.74 kB) (660 B gzip)
+  ├─ .output/server/chunks/shop-7c40afb3.mjs (3.24 kB) (1.22 kB gzip)
+  ├─ .output/server/chunks/shop-3-col-6f4f6fde.mjs.map (4.44 kB) (1.23 kB gzip)
+  ├─ .output/server/chunks/shop-3-col-6f4f6fde.mjs (7.05 kB) (2.16 kB gzip)
+  ├─ .output/server/chunks/server.mjs.map (80.5 kB) (11 kB gzip)
+  ├─ .output/server/chunks/server.mjs (69.1 kB) (16.6 kB gzip)
+  ├─ .output/server/chunks/searchResultList-27065468.mjs.map (4.46 kB) (1.22 kB gzip)
+  ├─ .output/server/chunks/searchResultList-27065468.mjs (5.49 kB) (1.8 kB gzip)
+  ├─ .output/server/chunks/SaleOffProduct-83bb6d91.mjs.map (5.89 kB) (1.19 kB gzip)
+  ├─ .output/server/chunks/SaleOffProduct-83bb6d91.mjs (6.7 kB) (1.57 kB gzip)
+  ├─ .output/server/chunks/rollup/_virtual_head-static.mjs.map (111 B) (112 B gzip)
+  ├─ .output/server/chunks/rollup/_virtual_head-static.mjs (635 B) (414 B gzip)
+  ├─ .output/server/chunks/renderer.mjs.map (20.4 kB) (3.55 kB gzip)
+  ├─ .output/server/chunks/renderer.mjs (16.2 kB) (4.96 kB gzip)
+  ├─ .output/server/chunks/RegisterArea-styles.ef4a92cb.mjs.map (354 B) (220 B gzip)
+  ├─ .output/server/chunks/RegisterArea-styles.ef4a92cb.mjs (338 B) (219 B gzip)
+  ├─ .output/server/chunks/RegisterAgree-styles.455aaa22.mjs.map (358 B) (224 B gzip)
+  ├─ .output/server/chunks/RegisterAgree-styles.455aaa22.mjs (2.17 kB) (855 B gzip)
+  ├─ .output/server/chunks/register-a77e3b58.mjs.map (47.2 kB) (5.28 kB gzip)
+  ├─ .output/server/chunks/register-a77e3b58.mjs (120 kB) (18.2 kB gzip)
+  ├─ .output/server/chunks/recentList-5ee294d3.mjs.map (2.37 kB) (783 B gzip)
+  ├─ .output/server/chunks/recentList-5ee294d3.mjs (3.36 kB) (1.26 kB gzip)
+  ├─ .output/server/chunks/qnaWrite-0b9e94a3.mjs.map (11.9 kB) (2.36 kB gzip)
+  ├─ .output/server/chunks/qnaWrite-0b9e94a3.mjs (14.2 kB) (3.39 kB gzip)
+  ├─ .output/server/chunks/QnaList-styles.f106b18b.mjs.map (339 B) (224 B gzip)
+  ├─ .output/server/chunks/QnaList-styles.f106b18b.mjs (396 B) (259 B gzip)
+  ├─ .output/server/chunks/qnaList-0a3ccdcf.mjs.map (8.31 kB) (1.89 kB gzip)
+  ├─ .output/server/chunks/qnaList-0a3ccdcf.mjs (10.6 kB) (2.96 kB gzip)
+  ├─ .output/server/chunks/qnaDetail-eb47319e.mjs.map (6.66 kB) (1.62 kB gzip)
+  ├─ .output/server/chunks/qnaDetail-eb47319e.mjs (8.11 kB) (2.57 kB gzip)
+  ├─ .output/server/chunks/ProductModal-5e3764e9.mjs.map (4.89 kB) (1.32 kB gzip)
+  ├─ .output/server/chunks/ProductModal-5e3764e9.mjs (6.32 kB) (2.01 kB gzip)
+  ├─ .output/server/chunks/ProductListItem-dcbc69d4.mjs.map (2.94 kB) (911 B gzip)
+  ├─ .output/server/chunks/ProductListItem-dcbc69d4.mjs (3.6 kB) (1.35 kB gzip)
+  ├─ .output/server/chunks/ProductList-6b2b937f.mjs.map (17.2 kB) (3.02 kB gzip)
+  ├─ .output/server/chunks/ProductList-6b2b937f.mjs (23.3 kB) (4.39 kB gzip)
+  ├─ .output/server/chunks/ProductItem-d13a9422.mjs.map (3.08 kB) (920 B gzip)
+  ├─ .output/server/chunks/ProductItem-d13a9422.mjs (3.64 kB) (1.27 kB gzip)
+  ├─ .output/server/chunks/person-1-ba5dd223.mjs.map (246 B) (190 B gzip)
+  ├─ .output/server/chunks/person-1-ba5dd223.mjs (188 B) (165 B gzip)
+  ├─ .output/server/chunks/Pagination-00be2f84.mjs.map (2.72 kB) (861 B gzip)
+  ├─ .output/server/chunks/Pagination-00be2f84.mjs (2.55 kB) (1.03 kB gzip)
+  ├─ .output/server/chunks/orderListHistory-cc34edb6.mjs.map (28.5 kB) (4.77 kB gzip)
+  ├─ .output/server/chunks/orderListHistory-cc34edb6.mjs (40.7 kB) (6.01 kB gzip)
+  ├─ .output/server/chunks/OfferProductsSlider-styles.43170f99.mjs.map (375 B) (231 B gzip)
+  ├─ .output/server/chunks/OfferProductsSlider-styles.43170f99.mjs (367 B) (209 B gzip)
+  ├─ .output/server/chunks/OffCanvas-4b3097c5.mjs.map (17.7 kB) (1.9 kB gzip)
+  ├─ .output/server/chunks/OffCanvas-4b3097c5.mjs (22.2 kB) (4.5 kB gzip)
+  ├─ .output/server/chunks/nuxt-link-80d3cee7.mjs.map (5.05 kB) (1.24 kB gzip)
+  ├─ .output/server/chunks/nuxt-link-80d3cee7.mjs (5.09 kB) (1.4 kB gzip)
+  ├─ .output/server/chunks/noticeList-74fa167d.mjs.map (7.18 kB) (1.62 kB gzip)
+  ├─ .output/server/chunks/noticeList-74fa167d.mjs (7.95 kB) (2.43 kB gzip)
+  ├─ .output/server/chunks/noticeDetail-d1ba668e.mjs.map (4.64 kB) (1.19 kB gzip)
+  ├─ .output/server/chunks/noticeDetail-d1ba668e.mjs (5.96 kB) (2.06 kB gzip)
+  ├─ .output/server/chunks/node-server.mjs.map (85.2 kB) (5.94 kB gzip)
+  ├─ .output/server/chunks/node-server.mjs (75 kB) (18.4 kB gzip)
+  ├─ .output/server/chunks/login-3e64c32a.mjs.map (25.8 kB) (3.45 kB gzip)
+  ├─ .output/server/chunks/login-3e64c32a.mjs (35.2 kB) (4.9 kB gzip)
+  ├─ .output/server/chunks/LayoutFour-e59ba524.mjs.map (12 kB) (1.72 kB gzip)
+  ├─ .output/server/chunks/LayoutFour-e59ba524.mjs (16.9 kB) (3.82 kB gzip)
+  ├─ .output/server/chunks/Layout-f4521284.mjs.map (1.65 kB) (611 B gzip)
+  ├─ .output/server/chunks/Layout-f4521284.mjs (1.77 kB) (700 B gzip)
+  ├─ .output/server/chunks/island-renderer-f4aaa7df.mjs.map (1.15 kB) (507 B gzip)
+  ├─ .output/server/chunks/island-renderer-f4aaa7df.mjs (1.66 kB) (742 B gzip)
+  ├─ .output/server/chunks/index-styles.44c38473.mjs.map (334 B) (220 B gzip)
+  ├─ .output/server/chunks/index-styles.44c38473.mjs (1.34 kB) (606 B gzip)
+  ├─ .output/server/chunks/index-38d06553.mjs.map (1.63 kB) (630 B gzip)
+  ├─ .output/server/chunks/index-38d06553.mjs (2.82 kB) (1.13 kB gzip)
+  ├─ .output/server/chunks/index-23fea331.mjs.map (8.36 kB) (1.09 kB gzip)
+  ├─ .output/server/chunks/index-23fea331.mjs (8.73 kB) (1.9 kB gzip)
+  ├─ .output/server/chunks/index-19a8a8db.mjs.map (2 kB) (714 B gzip)
+  ├─ .output/server/chunks/index-19a8a8db.mjs (3.41 kB) (1.24 kB gzip)
+  ├─ .output/server/chunks/index-16494d93.mjs.map (19.2 kB) (2.17 kB gzip)
+  ├─ .output/server/chunks/index-16494d93.mjs (26.8 kB) (5.03 kB gzip)
+  ├─ .output/server/chunks/HomeTwoHeroSlider-2ba5eac7.mjs.map (9.29 kB) (1.3 kB gzip)
+  ├─ .output/server/chunks/HomeTwoHeroSlider-2ba5eac7.mjs (24.5 kB) (11.6 kB gzip)
+  ├─ .output/server/chunks/HomeThreeTestimonial-styles.ec59d248.mjs.map (378 B) (230 B gzip)
+  ├─ .output/server/chunks/HomeThreeTestimonial-styles.ec59d248.mjs (522 B) (276 B gzip)
+  ├─ .output/server/chunks/HomeSevenTestimonial-styles.e39ef62b.mjs.map (378 B) (231 B gzip)
+  ├─ .output/server/chunks/HomeSevenTestimonial-styles.e39ef62b.mjs (372 B) (209 B gzip)
+  ├─ .output/server/chunks/home-7-3da7a403.mjs.map (43 kB) (3.61 kB gzip)
+  ├─ .output/server/chunks/home-7-3da7a403.mjs (66.3 kB) (16.9 kB gzip)
+  ├─ .output/server/chunks/home-6-964cf1c6.mjs.map (11 kB) (2.27 kB gzip)
+  ├─ .output/server/chunks/home-6-964cf1c6.mjs (14.2 kB) (3.35 kB gzip)
+  ├─ .output/server/chunks/home-5-ac286e17.mjs.map (11.6 kB) (2.34 kB gzip)
+  ├─ .output/server/chunks/home-5-ac286e17.mjs (14.9 kB) (3.55 kB gzip)
+  ├─ .output/server/chunks/home-3-67ab730b.mjs.map (24.4 kB) (2.1 kB gzip)
+  ├─ .output/server/chunks/home-3-67ab730b.mjs (29.4 kB) (4.67 kB gzip)
+  ├─ .output/server/chunks/home-2-7da0b0f5.mjs.map (9.33 kB) (1.8 kB gzip)
+  ├─ .output/server/chunks/home-2-7da0b0f5.mjs (11.8 kB) (2.67 kB gzip)
+  ├─ .output/server/chunks/Header-1ca9f0fa.mjs.map (1.93 kB) (561 B gzip)
+  ├─ .output/server/chunks/Header-1ca9f0fa.mjs (1.67 kB) (640 B gzip)
+  ├─ .output/server/chunks/Footer-8a5329ca.mjs.map (4.17 kB) (1.03 kB gzip)
+  ├─ .output/server/chunks/Footer-8a5329ca.mjs (9 kB) (4.02 kB gzip)
+  ├─ .output/server/chunks/FeaturedProducts-styles.8ed402e4.mjs.map (366 B) (224 B gzip)
+  ├─ .output/server/chunks/FeaturedProducts-styles.8ed402e4.mjs (396 B) (227 B gzip)
+  ├─ .output/server/chunks/favList-8478b719.mjs.map (3.79 kB) (1.06 kB gzip)
+  ├─ .output/server/chunks/favList-8478b719.mjs (4.67 kB) (1.61 kB gzip)
+  ├─ .output/server/chunks/EventPopup-styles.a596c1db.mjs.map (348 B) (223 B gzip)
+  ├─ .output/server/chunks/EventPopup-styles.a596c1db.mjs (771 B) (441 B gzip)
+  ├─ .output/server/chunks/eventList-7bbf282e.mjs.map (6.78 kB) (1.71 kB gzip)
+  ├─ .output/server/chunks/eventList-7bbf282e.mjs (8 kB) (2.28 kB gzip)
+  ├─ .output/server/chunks/error-component-c41ef00a.mjs.map (2.69 kB) (925 B gzip)
+  ├─ .output/server/chunks/error-component-c41ef00a.mjs (4.68 kB) (1.53 kB gzip)
+  ├─ .output/server/chunks/error-500.mjs.map (1.05 kB) (380 B gzip)
+  ├─ .output/server/chunks/error-500.mjs (4.26 kB) (1.82 kB gzip)
+  ├─ .output/server/chunks/empty-420928f8.mjs.map (728 B) (364 B gzip)
+  ├─ .output/server/chunks/empty-420928f8.mjs (1.28 kB) (575 B gzip)
+  ├─ .output/server/chunks/deliveryList-c495b593.mjs.map (19.4 kB) (3.3 kB gzip)
+  ├─ .output/server/chunks/deliveryList-c495b593.mjs (22.9 kB) (4.41 kB gzip)
+  ├─ .output/server/chunks/Datepicker-styles.ba425b25.mjs.map (348 B) (221 B gzip)
+  ├─ .output/server/chunks/Datepicker-styles.ba425b25.mjs (279 B) (188 B gzip)
+  ├─ .output/server/chunks/CustomerUpdate-styles.1c1fc20a.mjs.map (360 B) (225 B gzip)
+  ├─ .output/server/chunks/CustomerUpdate-styles.1c1fc20a.mjs (361 B) (230 B gzip)
+  ├─ .output/server/chunks/customerUpdate-9ba95535.mjs.map (43.5 kB) (4.83 kB gzip)
+  ├─ .output/server/chunks/customerUpdate-9ba95535.mjs (56.9 kB) (6.95 kB gzip)
+  ├─ .output/server/chunks/CookImage-8118e05c.mjs.map (1.52 kB) (433 B gzip)
+  ├─ .output/server/chunks/CookImage-8118e05c.mjs (1.36 kB) (659 B gzip)
+  ├─ .output/server/chunks/contact-b06fed7a.mjs.map (10.4 kB) (1.94 kB gzip)
+  ├─ .output/server/chunks/contact-b06fed7a.mjs (13.1 kB) (2.84 kB gzip)
+  ├─ .output/server/chunks/consult-3c2cf9c9.mjs.map (7.4 kB) (1.76 kB gzip)
+  ├─ .output/server/chunks/consult-3c2cf9c9.mjs (10.1 kB) (2.55 kB gzip)
+  ├─ .output/server/chunks/ComSwiper-styles.ff50f94d.mjs.map (345 B) (221 B gzip)
+  ├─ .output/server/chunks/ComSwiper-styles.ff50f94d.mjs (662 B) (374 B gzip)
+  ├─ .output/server/chunks/composables-b654975a.mjs.map (294 B) (215 B gzip)
+  ├─ .output/server/chunks/composables-b654975a.mjs (210 B) (174 B gzip)
+  ├─ .output/server/chunks/complete-23512cfe.mjs.map (2.73 kB) (909 B gzip)
+  ├─ .output/server/chunks/complete-23512cfe.mjs (4.66 kB) (1.7 kB gzip)
+  ├─ .output/server/chunks/compare-e3251b9e.mjs.map (2.77 kB) (874 B gzip)
+  ├─ .output/server/chunks/compare-e3251b9e.mjs (4.01 kB) (1.31 kB gzip)
+  ├─ .output/server/chunks/companyInfo-433e9c70.mjs.map (7.67 kB) (1.18 kB gzip)
+  ├─ .output/server/chunks/companyInfo-433e9c70.mjs (10.8 kB) (2.28 kB gzip)
+  ├─ .output/server/chunks/comingsoon-9367df67.mjs.map (1.56 kB) (617 B gzip)
+  ├─ .output/server/chunks/comingsoon-9367df67.mjs (2.54 kB) (996 B gzip)
+  ├─ .output/server/chunks/client.manifest.mjs.map (62.7 kB) (3.13 kB gzip)
+  ├─ .output/server/chunks/client.manifest.mjs (82.3 kB) (8.1 kB gzip)
+  ├─ .output/server/chunks/client-only-305a520b.mjs.map (2.23 kB) (822 B gzip)
+  ├─ .output/server/chunks/client-only-305a520b.mjs (2.23 kB) (972 B gzip)
+  ├─ .output/server/chunks/checkout-styles.5811ab42.mjs.map (342 B) (221 B gzip)
+  ├─ .output/server/chunks/checkout-styles.5811ab42.mjs (265 B) (184 B gzip)
+  ├─ .output/server/chunks/checkout-2a79e19e.mjs.map (23.1 kB) (4.54 kB gzip)
+  ├─ .output/server/chunks/checkout-2a79e19e.mjs (31.2 kB) (6.88 kB gzip)
+  ├─ .output/server/chunks/categoryList-a700aa2d.mjs.map (15.4 kB) (3.04 kB gzip)
+  ├─ .output/server/chunks/categoryList-a700aa2d.mjs (19 kB) (3.82 kB gzip)
+  ├─ .output/server/chunks/categoryData-19a8d6bb.mjs.map (1.55 kB) (320 B gzip)
+  ├─ .output/server/chunks/categoryData-19a8d6bb.mjs (1.78 kB) (530 B gzip)
+  ├─ .output/server/chunks/CartModal-styles.10da7d46.mjs.map (345 B) (220 B gzip)
+  ├─ .output/server/chunks/CartModal-styles.10da7d46.mjs (645 B) (387 B gzip)
+  ├─ .output/server/chunks/cart-d2a1a992.mjs.map (3.51 kB) (1 kB gzip)
+  ├─ .output/server/chunks/cart-d2a1a992.mjs (4.08 kB) (1.44 kB gzip)
+  ├─ .output/server/chunks/callback-styles.d26cf163.mjs.map (342 B) (218 B gzip)
+  ├─ .output/server/chunks/callback-styles.d26cf163.mjs (357 B) (243 B gzip)
+  ├─ .output/server/chunks/callback-f7dab8ef.mjs.map (1.28 kB) (512 B gzip)
+  ├─ .output/server/chunks/callback-f7dab8ef.mjs (1.96 kB) (890 B gzip)
+  ├─ .output/server/chunks/BreadcrumbArea-3ffd0173.mjs.map (1.28 kB) (414 B gzip)
+  ├─ .output/server/chunks/BreadcrumbArea-3ffd0173.mjs (1.72 kB) (824 B gzip)
+  ├─ .output/server/chunks/BlogStandardItem-9bc3df38.mjs.map (3.32 kB) (892 B gzip)
+  ├─ .output/server/chunks/BlogStandardItem-9bc3df38.mjs (3.08 kB) (1.05 kB gzip)
+  ├─ .output/server/chunks/BlogStandardArea-3332c3c7.mjs.map (2.95 kB) (926 B gzip)
+  ├─ .output/server/chunks/BlogStandardArea-3332c3c7.mjs (3.08 kB) (1.09 kB gzip)
+  ├─ .output/server/chunks/BlogSidebar-9e2794c8.mjs.map (4.55 kB) (1.19 kB gzip)
+  ├─ .output/server/chunks/BlogSidebar-9e2794c8.mjs (6.84 kB) (1.91 kB gzip)
+  ├─ .output/server/chunks/BlogItem-615b2e95.mjs.map (3.21 kB) (917 B gzip)
+  ├─ .output/server/chunks/BlogItem-615b2e95.mjs (2.92 kB) (1.03 kB gzip)
+  ├─ .output/server/chunks/BlogDetailsArea-da2903c0.mjs.map (8.37 kB) (1.2 kB gzip)
+  ├─ .output/server/chunks/BlogDetailsArea-da2903c0.mjs (14.4 kB) (3.5 kB gzip)
+  ├─ .output/server/chunks/blogData-6de6d989.mjs.map (6.29 kB) (485 B gzip)
+  ├─ .output/server/chunks/blogData-6de6d989.mjs (11.1 kB) (1.4 kB gzip)
+  ├─ .output/server/chunks/BlogAreaTwo-styles.83aca2dd.mjs.map (351 B) (225 B gzip)
+  ├─ .output/server/chunks/BlogAreaTwo-styles.83aca2dd.mjs (413 B) (239 B gzip)
+  ├─ .output/server/chunks/BlogArea-6c733574.mjs.map (5.51 kB) (1.44 kB gzip)
+  ├─ .output/server/chunks/BlogArea-6c733574.mjs (6.17 kB) (1.8 kB gzip)
+  ├─ .output/server/chunks/blog-no-sidebar-156b6c9a.mjs.map (3.72 kB) (1.12 kB gzip)
+  ├─ .output/server/chunks/blog-no-sidebar-156b6c9a.mjs (5.07 kB) (1.64 kB gzip)
+  ├─ .output/server/chunks/blog-left-sidebar-02cd62b7.mjs.map (1.81 kB) (683 B gzip)
+  ├─ .output/server/chunks/blog-left-sidebar-02cd62b7.mjs (3.15 kB) (1.17 kB gzip)
+  ├─ .output/server/chunks/blog-3-col-fd975fdc.mjs.map (3.7 kB) (1.1 kB gzip)
+  ├─ .output/server/chunks/blog-3-col-fd975fdc.mjs (4.96 kB) (1.61 kB gzip)
+  ├─ .output/server/chunks/blog-2-col-mas-b0a17888.mjs.map (6.88 kB) (1.57 kB gzip)
+  ├─ .output/server/chunks/blog-2-col-mas-b0a17888.mjs (8.4 kB) (1.99 kB gzip)
+  ├─ .output/server/chunks/blog-2-col-cfafc4a0.mjs.map (3.69 kB) (1.1 kB gzip)
+  ├─ .output/server/chunks/blog-2-col-cfafc4a0.mjs (4.95 kB) (1.6 kB gzip)
+  ├─ .output/server/chunks/blog-15d175b4.mjs.map (1.73 kB) (662 B gzip)
+  ├─ .output/server/chunks/blog-15d175b4.mjs (3.09 kB) (1.15 kB gzip)
+  ├─ .output/server/chunks/BillingDetails-styles.356f073a.mjs.map (360 B) (226 B gzip)
+  ├─ .output/server/chunks/BillingDetails-styles.356f073a.mjs (467 B) (301 B gzip)
+  ├─ .output/server/chunks/beforeSelectimg-2e9b5269.mjs.map (214 B) (174 B gzip)
+  ├─ .output/server/chunks/beforeSelectimg-2e9b5269.mjs (3.22 kB) (2.27 kB gzip)
+  ├─ .output/server/chunks/avater-3-3749cb92.mjs.map (199 B) (169 B gzip)
+  ├─ .output/server/chunks/avater-3-3749cb92.mjs (3.67 kB) (2.68 kB gzip)
+  ├─ .output/server/chunks/avater-2-e2234c85.mjs.map (298 B) (197 B gzip)
+  ├─ .output/server/chunks/avater-2-e2234c85.mjs (262 B) (188 B gzip)
+  ├─ .output/server/chunks/aosTest-styles.fd9429b3.mjs.map (339 B) (223 B gzip)
+  ├─ .output/server/chunks/aosTest-styles.fd9429b3.mjs (375 B) (264 B gzip)
+  ├─ .output/server/chunks/aosTest-73d6dafe.mjs.map (805 B) (387 B gzip)
+  ├─ .output/server/chunks/aosTest-73d6dafe.mjs (1.87 kB) (733 B gzip)
+  ├─ .output/server/chunks/admin-afc9ee4a.mjs.map (605 B) (330 B gzip)
+  ├─ .output/server/chunks/admin-afc9ee4a.mjs (474 B) (291 B gzip)
+  ├─ .output/server/chunks/account-f5f4f9c9.mjs.map (13.7 kB) (2.03 kB gzip)
+  ├─ .output/server/chunks/account-f5f4f9c9.mjs (19.5 kB) (3.8 kB gzip)
+  ├─ .output/server/chunks/_id_-f670212a.mjs.map (1.71 kB) (631 B gzip)
+  ├─ .output/server/chunks/_id_-f670212a.mjs (2.8 kB) (1.11 kB gzip)
+  ├─ .output/server/chunks/_id_-4a800265.mjs.map (1.94 kB) (710 B gzip)
+  └─ .output/server/chunks/_id_-4a800265.mjs (2.99 kB) (1.21 kB gzip)
+Σ Total size: 8.67 MB (2.13 MB gzip)
+√ You can preview this build using node .output/server/index.mjs
+Done in 338.20s.
+
+gzone@DESKTOP-TUISEE2 MINGW64 /d/project/cookjjang/mall (main)
+$ ^C
+
+gzone@DESKTOP-TUISEE2 MINGW64 /d/project/cookjjang/mall (main)
+$ node .output/server/index.mjs
+Listening http://[::]:3000
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/sitemap_index.xml"
+[Vue Router warn]: No match found for location with path "/sitemap_index.xml"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/sitemap_index.xml"
+[Vue Router warn]: No match found for location with path "/sitemap_index.xml"
+[nuxt] error caught during app initialization H3Error: Page not found: /sitemap_
+index.xml
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /sitemap_index.xml',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/sitemap_index.xml"
+[Vue Router warn]: No match found for location with path "/sitemap_index.xml"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/sitemap_index.xml"
+[Vue Router warn]: No match found for location with path "/sitemap_index.xml"
+[nuxt] error caught during app initialization H3Error: Page not found: /sitemap_
+index.xml
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22
+    at async Object.handler (file:///D:/project/cookjjang/mall/.output/server/no
+de_modules/h3/dist/index.mjs:1196:19) {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /sitemap_index.xml',
+  __nuxt_error: true
+}
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_listing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_listing.html?category=%EB%83
+%89%EB%8F%99%EC%8B%9D%ED%92%88',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_listing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_listing.html?category=%EB%83
+%89%EB%8F%99%EC%8B%9D%ED%92%88',
+  __nuxt_error: true
+}
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[nuxt] error caught during app initialization H3Error: Page not found: /robots.txt
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /robots.txt',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[nuxt] error caught during app initialization H3Error: Page not found: /robots.txt
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /robots.txt',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/ui/ck_recommend.html"
+[Vue Router warn]: No match found for location with path "/ui/ck_recommend.html"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/ck_recommend.html"
+[Vue Router warn]: No match found for location with path "/ui/ck_recommend.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/ck_re
+commend.html
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/ck_recommend.html',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/ui/ck_recommend.html"
+[Vue Router warn]: No match found for location with path "/ui/ck_recommend.html"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/ck_recommend.html"
+[Vue Router warn]: No match found for location with path "/ui/ck_recommend.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/ck_re
+commend.html
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/ck_recommend.html',
+  __nuxt_error: true
+}
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000002679"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000002679"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000002679"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_product_details.html?category=01&itCode=0000002679
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_product_details.html?categor
+y=01&itCode=0000002679',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000002679"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000002679"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000002679"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_product_details.html?category=01&itCode=0000002679
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_product_details.html?categor
+y=01&itCode=0000002679',
+  __nuxt_error: true
+}
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000003892"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000003892"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000003892"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_product_details.html?category=01&itCode=0000003892
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_product_details.html?categor
+y=01&itCode=0000003892',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000003892"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000003892"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html?category=01&itCode=0000003892"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_prod
+uct_details.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_product_details.html?category=01&itCode=0000003892
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_product_details.html?categor
+y=01&itCode=0000003892',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_listing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_listing.html?category=%EB%83
+%89%EB%8F%99%EC%8B%9D%ED%92%88',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_listing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_listing.html?category=%EB%83
+%89%EB%8F%99%EC%8B%9D%ED%92%88',
+  __nuxt_error: true
+}
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[nuxt] error caught during app initialization H3Error: Page not found: /robots.txt
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /robots.txt',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[Vue Router warn]: No match found for location with path "/robots.txt"
+[nuxt] error caught during app initialization H3Error: Page not found: /robots.txt
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /robots.txt',
+  __nuxt_error: true
+}
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_listing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_listing.html?category=%EB%83
+%89%EB%8F%99%EC%8B%9D%ED%92%88',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88"
+[Vue Router warn]: No match found for location with path "/ui/categories/ck_list
+ing.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /ui/categ
+ories/ck_listing.html?category=%EB%83%89%EB%8F%99%EC%8B%9D%ED%92%88
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /ui/categories/ck_listing.html?category=%EB%83
+%89%EB%8F%99%EC%8B%9D%ED%92%88',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/terms_conditions.html"
+[Vue Router warn]: No match found for location with path "/terms_conditions.html"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/terms_conditions.html"
+[Vue Router warn]: No match found for location with path "/terms_conditions.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /terms_co
+nditions.html
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/
+dist/vue-router.mjs:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5
+)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/serv
+er/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/se
+rver/node_modules/vue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /terms_conditions.html',
+  __nuxt_error: true
+}
+[Vue Router warn]: No match found for location with path "/terms_conditions.html"
+[Vue Router warn]: No match found for location with path "/terms_conditions.html"
+[Vue warn]: A plugin must either be a function or an object with an "install" function.
+[Vue Router warn]: No match found for location with path "/terms_conditions.html"
+[Vue Router warn]: No match found for location with path "/terms_conditions.html"
+[nuxt] error caught during app initialization H3Error: Page not found: /terms_co
+nditions.html
+    at createError (file:///D:/project/cookjjang/mall/.output/server/node_modules/h3/dist/index.mjs:128:15)
+    at file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1420:47
+    at triggerAfterEach (file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs:3306:13)
+    at file:///D:/project/cookjjang/mall/.output/server/node_modules/vue-router/dist/vue-router.mjs
+:3209:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:1436:7
+    at async createNuxtAppServer (file:///D:/project/cookjjang/mall/.output/server/chunks/server.mjs:2180:7)
+    at async Object.renderToString (file:///D:/project/cookjjang/mall/.output/server/node_modules/v
+ue-bundle-renderer/dist/runtime.mjs:172:19)
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:374:21
+    at async file:///D:/project/cookjjang/mall/.output/server/chunks/renderer.mjs:16:22 {
+  statusCode: 404,
+  fatal: false,
+  unhandled: false,
+  statusMessage: 'Page not found: /terms_conditions.html',
+  __nuxt_error: true
+}
+[Vue warn]: A plugin must either be a function or an object with an "install" function.

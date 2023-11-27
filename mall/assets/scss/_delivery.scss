@@ -1,0 +1,28 @@
+
+/*----------------------------------------*/
+/*  14.  LOGIN CSS START
+/*----------------------------------------*/
+.type_button {
+  width: 150px;
+}
+@media (max-width: 575px) {
+  .type_button { 
+          width: 120px;
+        } 
+  }
+ 
+    @media (max-width: 567px) {
+      .basic-login {
+        padding: 10px 10px 10px 10px;
+      }
+      .main-col .login-area {
+        padding-top: 150px;
+      }
+    } 
+   
+.delivery_add_btn{
+  font-size: 20px;
+    font-weight: 500;
+    width: 200px;
+    margin-right: 10px;
+}
