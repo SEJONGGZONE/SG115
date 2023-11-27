@@ -25,8 +25,8 @@ export default defineConfig({
     proxy: {
       '/cvoapi': 'http://sjwas.gzonesoft.co.kr:27002',
       '/api': 'http://sjwas.gzonesoft.co.kr:27002',
-      '/DatabaseController': 'http://sjwas.gzonesoft.co.kr:32203/cvoapi',
-      '/file': 'http://sjwas.gzonesoft.co.kr:27002'
+      '/DatabaseController': 'http://sjwas.gzonesoft.co.kr:32206/cvoapi',
+      '/file': 'http://sjwas.gzonesoft.co.kr:32206/api'
     }
   }
 });
