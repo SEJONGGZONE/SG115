@@ -1,15 +1,15 @@
 ------------------------------
-SG115 - ¼ºÃ¢Çªµå
+SG115 - ì„±ì°½í‘¸ë“œ
 ------------------------------
-1.À¥¼­ºñ½º ¼¼ÆÃ
- - ¼­ºñ½ºÆ÷Æ® : 27007
- - ¾ÆÆÄÄ¡ : C:\Apache24
+1.ì›¹ì„œë¹„ìŠ¤ ì„¸íŒ…
+ - ì„œë¹„ìŠ¤í¬íŠ¸ : 27007
+ - ì•„íŒŒì¹˜ : C:\Apache24
 ...
 Listen 27007
 ...
 ...
 ######################################################################################
-# SG115-ORDER(¼ºÃ¢Çªµå)
+# SG115-ORDER(ì„±ì°½í‘¸ë“œ)
 ######################################################################################
 <Directory "D:/project/SEJONGGZONE/SG115/manager/dist">
     AllowOverride none
@@ -38,8 +38,8 @@ Listen 27007
     </Directory>
 </VirtualHost>
 
- - À¥¼Ò½º
-  (¹èÆ÷) D:\project\SEJONGGZONE\SG115\manager\dist
-  (°³¹ß) D:\project\SEJONGGZONE\SG115\manager
- - ¼Ò½ººôµå : yarn build
+ - ì›¹ì†ŒìŠ¤
+  (ë°°í¬) D:\project\SEJONGGZONE\SG115\manager\dist
+  (ê°œë°œ) D:\project\SEJONGGZONE\SG115\manager
+ - ì†ŒìŠ¤ë¹Œë“œ : yarn build
 
