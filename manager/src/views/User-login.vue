@@ -193,7 +193,7 @@ const select = (x) =>{
 					<div class="brand">
 						<div class="d-flex align-items-center" style="padding-bottom: 10px;">
 							
-						<span style="border-radius: 20px;width: 100px;height: 100px; " v-bind:style="{ backgroundImage: 'url('+ '/assets/img/logo/ic_launcher_ilove_ci_foreground.png' + ')'}"></span> &nbsp;<b> SG623 - 아이사랑</b>
+						<span style="border-radius: 20px;width: 100px;height: 100px; " v-bind:style="{ backgroundImage: 'url('+ '/assets/img/logo/ic_launcher_ilove_ci_foreground.png' + ')'}"></span> &nbsp;<b> SG115 - 성창푸드</b>
 						</div>
 						<small style="padding-left:10px">관리자 페이지에 오신걸 환영합니다.</small>
 					</div> 
