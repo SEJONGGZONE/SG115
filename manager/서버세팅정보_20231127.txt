@@ -1,0 +1,45 @@
+------------------------------
+SG115 - 성창푸드
+------------------------------
+1.웹서비스 세팅
+ - 서비스포트 : 27007
+ - 아파치 : C:\Apache24
+...
+Listen 27007
+...
+...
+######################################################################################
+# SG115-ORDER(성창푸드)
+######################################################################################
+<Directory "D:/project/SEJONGGZONE/SG115/manager/dist">
+    AllowOverride none
+    Require all granted
+</Directory>
+<VirtualHost *:27007>
+  DocumentRoot D:/project/SEJONGGZONE/SG115/manager/dist
+  SSLProxyEngine On
+  ProxyPass /cvoapi http://sjwas.gzonesoft.co.kr:27002/cvoapi/
+  ProxyPassReverse /cvoapi http://sjwas.gzonesoft.co.kr:27002/cvoapi/ 
+  ProxyPass /api http://sjwas.gzonesoft.co.kr:27002/api/
+  ProxyPassReverse /api http://sjwas.gzonesoft.co.kr:27002/api/ 
+  ProxyPass /DatabaseController http://sjwas.gzonesoft.co.kr:32206/cvoapi/DatabaseController/
+  ProxyPassReverse /DatabaseController http://sjwas.gzonesoft.co.kr:32206/cvoapi/DatabaseController/
+  ProxyPass /file http://sjwas.gzonesoft.co.kr:32206/api/file/
+  ProxyPassReverse /file http://sjwas.gzonesoft.co.kr:32206/api/file/
+   <Directory "D:/project/SEJONGGZONE/SG115/manager/dist"> 
+
+        RewriteEngine on
+        # Don't rewrite files or directories
+        RewriteCond %{REQUEST_FILENAME} -f [OR]
+        RewriteCond %{REQUEST_FILENAME} -d
+        RewriteRule ^ - [L]
+        # Rewrite everything else to index.html to allow html5 state links
+        RewriteRule ^ index.html [L]
+    </Directory>
+</VirtualHost>
+
+ - 웹소스
+  (배포) D:\project\SEJONGGZONE\SG115\manager\dist
+  (개발) D:\project\SEJONGGZONE\SG115\manager
+ - 소스빌드 : yarn build
+
