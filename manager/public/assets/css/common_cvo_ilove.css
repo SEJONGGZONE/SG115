@@ -1,0 +1,864 @@
+﻿/* --------------------------------------------------------------- */
+/* 화면 레이아웃 관련 */
+/* --------------------------------------------------------------- */
+/* 비로그인용-섹션 */
+.section__management_ilove {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0.1rem 0.1rem;
+  margin: 0px;
+  background-color: #f4f4f1;
+  height: 100%;
+}
+/* 비로그인용-섹션,그룹컨텐츠 */
+.group__contents_ilove {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 0px 10px;
+  overflow: auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px solid #c6a1ed;
+}
+/* 그리드 기본 */
+.grid_clientlist {
+  gap: 0rem 0rem;
+  padding: 0px 0px;
+  border: 0px solid #c6a1ed;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  flex-direction: column;
+  width: 19rem;
+  height: 100%;
+}
+/* 미디어크기 세팅(0~1000까지) */
+@media screen and (max-width: 1000px) {
+  .grid_clientlist {
+    /**좌측, 그리드등영역 숨김처리 */
+    display: none;
+  }
+}
+
+/* 접기버튼 */
+.btn_fold_ilove {
+  border-right: 0.05rem solid #004cff4d;
+  margin-left: -0.3rem;
+  margin-right: -0.5rem;
+  width: 1.2rem;
+  cursor: pointer;
+  background-color: #dbf0ff;
+}
+
+/** 이미지 요약 영역 */
+.image_summ_area {
+  // display: none;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background-color: #f5f5f5c9;
+  width: 95%;
+  height: 5rem;
+  text-align: center;
+  padding: 0rem 0.5rem;
+  vertical-align: middle;
+  border: 2px solid #ffffff;
+  box-shadow: 2px 2px 10px #000000c9;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  vertical-align: middle;
+  align-items: center;
+  gap: 0rem 0.5rem;
+}
+/* 이미지카드 */
+.image_summ_card {
+  border: 0px solid #8b8b8b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0rem 0rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  position: relative;
+}
+.image_summ_card:hover {
+  transform: scale(1.1);
+}
+.image_summ_badge {
+  position: absolute;
+  right: -0.1rem;
+  top: 0.8rem;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.55rem;
+  font-weight: 600;
+  padding: 0rem 0rem;
+  color: #ffffff;
+  background-color: #f82714;
+  border-radius: 5rem;
+  box-shadow: 2px 2px 5px 3px #79797980;
+  border: 0.1rem solid #ffffff;
+}
+/* 이미지타이틀 */
+.image_summ_area span {
+  background-color: #015e94e3;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  width: 3.5rem;
+  height: 1rem;
+  font-size: 0.55rem;
+  padding-top: 0.1rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  margin-bottom: 0.2rem;
+  /* 말줄임처리 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+/* 이미지 */
+.image_summ_area img {
+  border-radius: 0rem;
+  width: 3.5rem;
+  height: 3.2rem;
+  object-fit: scale-down;
+  filter: drop-shadow(5px 5px 5px #00000054);
+  user-select: none;
+}
+
+/* --------------------------------------------------------------- */
+/* 지도 마커 관련 */
+/* --------------------------------------------------------------- */
+/* 반경거리 콤보 */
+.bound_select {
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  border: 0.13rem solid #ffffff;
+  box-shadow: 0px 2px 5px 3px #9d9d9d6e;
+  background-color: #747cecd0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #005e89;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.bound_select:hover {
+  transform: scale(1.1);
+}
+.bound_select:focus {
+  outline: none;
+}
+/* 기준점 마커 - 배경 */
+.rootPosition {
+  background: url(/assets/img/map/example/pin_map.png) no-repeat;
+  width: 110px;
+  height: 72px;
+  transition: all 0.2s linear;
+}
+.rootPosition:hover {
+  transform: scale(1.1);
+}
+/* 기준점 마커 - 타이틀 */
+.rootPositionTitle {
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 0px solid red;
+  position: absolute;
+  margin-left: auto;
+  width: 100%;
+  color: #024165;
+  text-align: center;
+  text-shadow: 1px 1px 2px #ffffff;
+  margin-top: -1rem;
+}
+/* 기준점 마커 - 서브타이틀 */
+.rootPositionSubTitle {
+  font-size: 0.5rem;
+  font-weight: 600;
+  border: 0px solid red;
+  position: absolute;
+  margin-left: auto;
+  width: 100%;
+  color: #ff0505;
+  text-align: center;
+  text-shadow: 1px 1px 2px #ffffff;
+  bottom: -0.8rem;
+}
+
+/* 거래처 마커 - 뱃지 */
+.marker_image_badge_on {
+  position: absolute;
+  right: -0.2rem;
+  top: -0.5rem;
+  font-size: 0.55rem;
+  font-weight: 600;
+  padding: 0rem 0.25rem;
+  color: #ffffff;
+  background-color: #f82714;
+  border-radius: 5rem;
+  box-shadow: 2px 2px 5px 3px #79797980;
+  border: 0.1rem solid #ffffff;
+}
+.marker_image_badge_off {
+  display: none;
+}
+
+/* 거래처 마커 - 구분 */
+.marker_clgubun_1 {
+  font-size: 0.6rem;
+  font-weight: 600;
+  border: 0.07rem solid #ffffffbc;
+  border-radius: 20px;
+  padding: 0px 0.3rem;
+  margin: 0px 0.3rem 0px 0px;
+}
+
+/* --------------------------------------------------------------- */
+/* 좌측 검색영역 관련 */
+/* --------------------------------------------------------------- */
+/* 검색영역 버튼 */
+.item__buttons .btn_search {
+  background-color: #4866de;
+  border: 1px solid #4866de;
+  color: #fff;
+}
+/* 검색영역 버튼 span */
+.item__buttons .btn_search span {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------- */
+/* 좌측 그리드영역 관련 */
+/* --------------------------------------------------------------- */
+/* 그리드영역 */
+.grid_searcharea {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.3rem 0.2rem 0.3rem 0.2rem;
+  background-color: #aae1fd;
+}
+/* 그리드영역 콤보선택 */
+.grid_searcharea select {
+  border: 1px solid #4866de;
+  border-radius: 0.3rem;
+  width: 5rem;
+  padding: 0.25rem 0.1rem;
+  margin: 0rem -0.2rem 0rem 0.1rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+/* 그리드영역 입력창 */
+.grid_searcharea input {
+  border: 1px solid #4866de;
+  border-radius: 0.3rem;
+  width: 100%;
+  padding-left: 0.3rem;
+}
+/* 그리드영역내 버튼 */
+.grid_searcharea button {
+  border: 1px solid #4866de;
+  border-radius: 0.3rem;
+}
+
+.grid_clientlist div {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------- */
+/* 우측 상세영역 관련 */
+/* --------------------------------------------------------------- */
+/* 상세영역 */
+.grid_data_detail {
+  top: 0px;
+  right: 0px;
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 0px #9d9d9d6e;
+  height: 725px;
+}
+/* 상세영역, 타이틀 */
+.grid_data_detail label {
+  color: #777777;
+  font-size: 0.5rem;
+  margin: 0rem;
+}
+/* 상세영역, 입력창 */
+.grid_data_detail input {
+  color: #000000;
+  margin-bottom: 0.5rem;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.3rem;
+  background-color: #fff6f6;
+  border: 0.05rem solid #b7b7b7;
+  width: 95%;
+}
+/* 거래처상세정보/배송이미지 영역 */
+.client_detail_area {
+  gap: 0rem 0rem;
+  padding: 0px 0.2rem;
+  border: 0px solid #c6a1ed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-direction: column;
+  margin: 0rem -0.6rem;
+  height: 100%;
+}
+/* 배송이미지 영역 */
+.client_image_area {
+  border: 0px solid #ff0000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.1rem;
+  margin: 0rem;
+  text-align: center;
+}
+/* 배송이미지 셋(반복됨) */
+.client_image_set {
+  border: 0px solid #e3e3e3;
+  padding: 0.05rem;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+/* 배송일자 */
+.item_ddate {
+  width: 3.4rem;
+  height: 3.4rem;
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+  background-color: #f3b52f;
+  color: #ffffff;
+  margin-right: 0.2rem;
+  text-align: center;
+  line-height: 100%;
+  display: table; /** 세로중앙위하여1 */
+}
+.item_ddate span {
+  display: table-cell; /** 세로중앙위하여2 */
+  vertical-align: middle;
+  border: 0px solid #e3e3e3;
+}
+/* 배송이미지 */
+.item_image {
+  width: 3.4rem;
+  height: 3.4rem;
+  object-fit: scale-down;
+  border: 1px solid #e3e3e3;
+  background-color: #ffffff;
+}
+
+/* --------------------------------------------------------------- */
+/* 배송리스트상에서 사진표현 - (미사용) */
+/* --------------------------------------------------------------- */
+
+/* 배송상세-아이템:배송사진 */
+.info_detail .item_detail .deliveryImage {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 2rem;
+  padding: 0.3rem 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0.07rem solid #7329af;
+  border-radius: 0.3rem;
+  background-color: #f5f8fd;
+  color: #7329af;
+  box-shadow: 2px 2px 5px 3px #a3a3a380;
+  transition: all 0.2s linear;
+}
+.info_detail .item_detail .deliveryImage:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.info_detail .item_detail .deliveryImage_NOTIN {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 2rem;
+  padding: 0.3rem 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0.07rem solid #989898e6;
+  border-radius: 0.3rem;
+  background-color: #ebebeb;
+  color: #989898e6;
+}
+/* 배송사진-뱃지 */
+.info_detail .item_detail .deliveryImageCnt {
+  position: absolute;
+  right: -0.2rem;
+  top: -0.5rem;
+  font-size: 0.55rem;
+  font-weight: 600;
+  padding: 0rem 0.25rem;
+  color: #ffffff;
+  background-color: #f82714;
+  border-radius: 5rem;
+  box-shadow: 2px 2px 5px 3px #79797980;
+  border: 0.1rem solid #ffffff;
+}
+/* 배송사진-뱃지(없을때-숨김) */
+.info_detail .item_detail .deliveryImageCnt_NOTIN {
+  visibility: hidden;
+}
+/* 배송상세-클릭영역,재정의 */
+.deliveryCustArea {
+  background-color: #000f0800;
+  width: 13.5rem;
+  height: 99%;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------- */
+/* 거래처관리 관련 */
+/* --------------------------------------------------------------- */
+/** 거래처관리, 그리드-거래처리스트 */
+.grid_clientmnglist {
+  gap: 0rem 0rem;
+  padding: 0px 0px;
+  border: 0px solid #c6a1ed;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  flex-direction: column;
+  width: 30rem;
+  height: 100%;
+}
+/** 거래처관리, 지도위-주소 영역 */
+.onmap_inputAddress_area {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  // margin: 0rem auto;
+  height: 2rem;
+  width: 20rem;
+  padding: 0rem;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.onmap_inputAddress_area input {
+  border-radius: 1rem;
+  border: 0.1rem solid #5903b44f;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.2rem;
+  width: 14rem;
+  box-shadow: 2px 2px 5px 3px #79797944;
+  background-color: #ffffffce;
+  color: #270579b5;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+::placeholder {
+  color: #b9b9b9b5;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: #9ddafdb5;
+}
+
+/** 거래처관리, 지도위-거래처 상세팝업 타이틀 */
+.client_detail_title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  background-color: #026fcefc;
+  color: #ffffff;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  margin: 0rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: left;
+}
+/** 거래처관리, 지도위-거래처 상세팝업 영역 */
+.onmap_clientdetail_area {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 1rem;
+  bottom: 0rem;
+  height: 17rem;
+  width: 19rem;
+  padding: 0rem;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+/* 센터상세 - 타이틀, 업데이트일시영역 */
+.client_detail_tag_01 {
+  text-align: left;
+  margin: auto 0.5rem;
+  font-size: 0.55rem;
+  line-height: 120%;
+  border: 0rem solid #0d1381ba;
+}
+
+/* 센터상세 - 주소, 이동버튼구현 */
+.client_detail_tag_02 {
+  position: absolute;
+  width: 1.8rem;
+  top: 0.9rem;
+  right: -2.5rem;
+  font-size: 0.65rem;
+  background-color: #fa5d7d;
+  color: #ffffff;
+  padding: 0.1rem 0.3rem;
+  border-radius: 2rem;
+  border: 0rem solid #0d1381ba;
+  box-shadow: 2px 2px 5px 3px #79797980;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.client_detail_tag_02:hover {
+  transform: scale(1.1);
+}
+/* --------------------------------------------------------------- */
+/* 지도 관련 - 거래처마커(배차일지) */
+/* --------------------------------------------------------------- */
+
+/* 진입 미확인 */
+.marker_center_off {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  background-color: #989898e6;
+  color: #ffffff;
+  padding: 5px 8px 2px 8px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+/* 진입 확인 */
+.marker_center_on {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  background-color: #4e44d5d1;
+  color: #ffffff;
+  padding: 2px 10px 2px 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+.marker_center_off:hover {
+  transform: scale(1.1);
+}
+.marker_center_on:hover {
+  transform: scale(1.1);
+}
+.marker_center_bottom_arrow_off {
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid #989898e6;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin: -50px auto 0 auto;
+}
+.marker_center_bottom_arrow_on {
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid #4e44d5d1;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin: -50px auto 0 auto;
+}
+.marker_center_bottom_point {
+  width: 60px;
+  height: 20px;
+  border-radius: 80%;
+  /* border-top-radius:50%;
+  border-right-radius:80%;
+  border-bottom-radius:50%;
+  border-left-radius:80%; */
+  background-color: #fa42523a;
+  margin: 0px auto 30px auto;
+}
+.marker_center_route_seq_1 {
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  padding: 0px 5px;
+  margin: 0px 4px 0px 0px;
+}
+.marker_center_route_seq_2 {
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  padding: 0px 2px;
+  margin: 0px 4px 0px 0px;
+}
+
+/* ---------------------------------------------------------- */
+/* 센터관리, 구간관리 - 타이틀 영역 */
+/* ---------------------------------------------------------- */
+/** 출발센터 팝업 영역 */
+.onmap_endCenterTab {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 1rem;
+  bottom: 0rem;
+  height: 17rem;
+  width: 19rem;
+  padding: 0rem;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+/** 출발센터 팝업 영역 */
+.onmap_startCenterTab {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 1rem;
+  bottom: 0rem;
+  height: 17rem;
+  width: 19rem;
+  padding: 0rem;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+/** 출발센터 - 상단타이틀 */
+.start_center_top_title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  background-color: #4e44d5;
+  color: #ffffff;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  margin: 0rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+/** 출발센터 - 하단타이틀 */
+.start_center_bottom_title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  background-color: #4e44d5ba;
+  color: #ffffff;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  margin: 0rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+
+/** 도착센터 - 상단타이틀 */
+.end_center_top_title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  background-color: #ff5c26;
+  color: #ffffff;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  margin: 0rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+/** 도착센터 - 하단타이틀 */
+.end_center_bottom_title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  background-color: #ff5c26ba;
+  color: #ffffff;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  margin: 0rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+
+/** 상세팝업 말줄임처리.. */
+.item__contents div span {
+  width: 9.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+/** 지도위, 하단왼쪽 - 출발센터 영역 */
+.onmap_startCenterTab {
+  height: 10rem;
+  width: 10rem;
+  bottom: 1rem;
+}
+/** 지도위, 하단오른쪽 - 도착센터 영역 */
+.onmap_endCenterTab {
+  height: 10rem;
+  width: 10rem;
+  bottom: 1rem;
+}
+/** 지도위, 하단중앙 - 경로정보 영역 */
+.onmap_middle_area {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 1px 1px 2rem #190089;
+  bottom: 0.3rem;
+  position: absolute;
+  line-height: 2.5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.onmap_middle_area span {
+  color: #4e44d5;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 1.5rem #000000;
+}
+
+/** 도착센터, 타이틀 영역 */
+.to_center_list_title_div {
+  align-items: center;
+  justify-content: center;
+  background-color: #ff5c26;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  // text-shadow: 2px 2px 2px #FFFFFF;
+  border-width: 0px;
+  padding: 0rem 0.1rem;
+}
+/** 출발센터, 타이틀 영역 */
+.from_center_list_title_div {
+  align-items: center;
+  justify-content: center;
+  background-color: #4e44d5;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  // text-shadow: 2px 2px 2px #FFFFFF;
+  border-width: 0px;
+  padding: 0rem 0.1rem;
+}
+/** 알림대상, 타이틀 영역 */
+.alarm_list_title_div {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #7d7d7d;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  // text-shadow: 2px 2px 2px #FFFFFF;
+  border-width: 0px;
+  padding: 0rem 0.1rem;
+}
+/* ---------------------------------------------------------- */
+/* 고객사, 제공웹지도 - 마커 */
+/* ---------------------------------------------------------- */
+/** 센터 */
+.marker_center {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  background-color: #da3319d1;
+  color: #ffffff;
+  padding: 2px 10px 2px 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+.marker_center:hover {
+  transform: scale(1.1);
+}
+.marker_center_bottom_point {
+  width: 60px;
+  height: 20px;
+  border-radius: 80%;
+  /* border-top-radius:50%;
+  border-right-radius:80%;
+  border-bottom-radius:50%;
+  border-left-radius:80%; */
+  background-color: #fa42523a;
+  margin: 0px auto 30px auto;
+}
+.marker_center_bottom_arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid #da3319d1;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin: -50px auto 0 auto;
+}
+/** 거래처 */
+.marker_client {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  background-color: #7329afd1;
+  color: #ffffff;
+  padding: 2px 10px 2px 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+.marker_client:hover {
+  transform: scale(1.1);
+}
+.marker_client_bottom_point {
+  width: 60px;
+  height: 20px;
+  border-radius: 80%;
+  /* border-top-radius:50%;
+  border-right-radius:80%;
+  border-bottom-radius:50%;
+  border-left-radius:80%; */
+  background-color: #7329af3a;
+  margin: 0px auto 30px auto;
+}
+.marker_client_bottom_arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid #7329afd1;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin: -50px auto 0 auto;
+}

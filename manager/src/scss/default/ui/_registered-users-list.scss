@@ -1,0 +1,36 @@
+.registered-users-list {
+	list-style-type: none;
+	margin: rem-calc(7.5px);
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	
+	& > li {
+		width: 25%;
+		font-size: rem-calc(12px);
+		padding: rem-calc(7.5px);
+		color: $dark;
+		
+		& > a {
+			display: block;
+			margin-bottom: rem-calc(10px);
+		}
+		& img {
+			max-width: 100%;
+			border-radius: $border-radius;
+		}
+		& .username {
+			font-size: rem-calc(12px);
+			color: var(--app-component-color);
+			margin-bottom: 0;
+			font-weight: 600;
+			
+			& small {
+				display: block;
+				font-size: rem-calc(11px);
+				color: rgba(var(--app-component-color-rgb), .5);
+				line-height: rem-calc(15px);
+			}
+		}
+	}
+}

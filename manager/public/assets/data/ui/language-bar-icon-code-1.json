@@ -1,0 +1,7 @@
+<!-- include -->
+<script>
+import 'flag-icon-css/css/flag-icons.min.css';
+</script>
+
+<!-- html -->
+<div class="flag-icon flag-icon-ad" title="ad"></div>

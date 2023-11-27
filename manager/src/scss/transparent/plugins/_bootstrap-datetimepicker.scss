@@ -1,0 +1,333 @@
+body {
+	& .datetimepicker {
+		& .prev,
+		& .next {
+			&:before {
+				display: none;
+			}
+		}
+		& .datetimepicker-hours,
+		& .datetimepicker-minutes {
+			& table {
+				min-width: rem-calc(220px);
+			}
+		}
+		& .glyphicon {
+			font-size: rem-calc(14px);
+			color: $dark;
+			
+			@include fontawesome();
+			
+			&.glyphicon-chevron-up:before { content: '\f106'; }
+			&.glyphicon-chevron-down:before { content: '\f107'; }
+			&.icon-arrow-left:before { content: '\f104'; }
+			&.icon-arrow-right:before { content: '\f105'; }
+			&.glyphicon-time:before { content: '\f017'; }
+			&.glyphicon-calendar:before { content: '\f133'; }
+		}
+		&.dropdown-menu {
+			max-width: rem-calc(320px);
+			min-width: rem-calc(200px);
+			width: auto;
+			padding: rem-calc(5px);
+			color: $dark;
+			overflow: hidden;
+			border-radius: $border-radius-lg;
+			
+			@include media-breakpoint-down(xs) {
+				max-width: rem-calc(250px);
+			}
+			
+			& .datetimepicker-minutes,
+			& .datetimepicker-hours,
+			& .datetimepicker-days,
+			& .datetimepicker-months,
+			& .datetimepicker-years, {
+				& table {
+					& thead,
+					& tfoot {
+						& tr {
+							& th {
+								&.prev,
+								&.switch,
+								&.next,
+								&.today {
+									padding: rem-calc(5px);
+									border-radius: $border-radius;
+									
+									&:hover,
+									&:focus {
+										color: $dark;
+										background: $light;
+									}
+								}
+								&.dow {
+									padding: rem-calc(5px);
+								}
+							}
+						}
+					}
+					& tbody {
+						& tr {
+							& td {
+								padding: 0;
+								
+								& .decade,
+								& .year,
+								& .month,
+								& .hour,
+								&.day,
+								& .minute {
+									padding: rem-calc(7px) rem-calc(9px);
+									height: auto;
+									line-height: rem-calc(16px) !important;
+									color: lighten($dark, 30%);
+									font-weight: $font-weight-bold;
+									border-radius: $border-radius-lg;
+				
+									&:hover,
+									&:focus {
+										color: $dark;
+										background: $light;
+									}
+									&.active {
+										color: $white;
+										background: $component-active-bg !important;
+										text-shadow: none;
+					
+										&:hover,
+										&:focus {
+											text-shadow: none;
+										}
+									}
+									&.timepicker-hour,
+									&.timepicker-minute,
+									&.timepicker-second {
+										border: 1px solid $border-color;
+										display: block;
+										width: rem-calc(80px);
+										margin: 0 auto;
+										line-height: rem-calc(22px);
+										height: auto;
+										padding: rem-calc(6px) rem-calc(15px);
+										border-radius: $border-radius-lg;
+									}
+								}
+								&.day {
+									&.today {
+										background: lighten($dark, 70%);
+										color: $dark;
+										
+										&:before {
+											border-bottom-color: lighten($dark, 45%);
+										}
+										&.active {
+											color: $white;
+											
+											&:before {
+												border-bottom-color: lighten($blue, 30%);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			& > ul {
+				& > li {
+					& .datepicker {
+						padding: rem-calc(5px);
+						width: rem-calc(320px);
+						
+						@include media-breakpoint-down(xs) {
+							width: rem-calc(250px);
+						}
+
+					}
+					& .timepicker {
+						width: auto;
+						
+						& .timepicker-hours,
+						& .timepicker-minutes,
+						& .timepicker-picker {
+							padding: rem-calc(5px);
+						}
+						& .timepicker-picker {
+							width: rem-calc(200px);
+							margin: 0 auto;
+						}
+						& table {
+							& tr {
+								& td {
+									padding: 0;
+									height: auto;
+									line-height: inherit;
+									
+									&.hour,
+									&.minute {
+										padding: rem-calc(10px);
+										height: auto;
+										line-height: rem-calc(16px) !important;
+										color: lighten($dark, 30%);
+										font-weight: $font-weight-bold;
+										border-radius: $border-radius-lg;
+					
+										&:hover,
+										&:focus {
+											color: $dark;
+											background: $light;
+										}
+										&.active {
+											color: $white;
+											background: $dark !important;
+						
+											&:hover,
+											&:focus {
+												text-shadow: none;
+											}
+										}
+										&.timepicker-hour,
+										&.timepicker-minute,
+										&.timepicker-second {
+											border: 1px solid $border-color;
+											display: block;
+											width: rem-calc(80px);
+											margin: 0 auto;
+											line-height: rem-calc(22px);
+											height: auto;
+											padding: rem-calc(6px) rem-calc(15px);
+											border-radius: $border-radius-lg;
+										}
+									}
+									&.separator {
+										width: 1%;
+									}
+									& .btn {
+										padding: 0;
+										border: none;
+										
+										& span {
+											padding: rem-calc(10px);
+											height: auto;
+											line-height: rem-calc(16px) !important;
+											color: lighten($dark, 30%);
+											font-weight: $font-weight-bold;
+											border-radius: $border-radius-lg;
+					
+											&:hover,
+											&:focus {
+												background: $light;
+												color: $dark;
+											}
+											&.active {
+												color: $white;
+												background: $dark !important;
+						
+												&:hover,
+												&:focus {
+													text-shadow: none;
+												}
+											}
+											&.timepicker-hour,
+											&.timepicker-minute,
+											&.timepicker-second {
+												border: 1px solid $border-color;
+												display: block;
+												width: rem-calc(80px);
+												margin: 0 auto;
+												line-height: rem-calc(22px);
+												height: auto;
+												padding: rem-calc(6px) rem-calc(15px);
+												border-radius: $border-radius-lg;
+											}
+										}
+										&.btn-primary {
+											padding: rem-calc(5px) rem-calc(15px);
+											background: lighten($dark, 45%);
+											margin-right: rem-calc(5px);
+											margin-left: rem-calc(5px);
+											
+											&:hover,
+											&:focus {
+												background: lighten($dark, 30%);
+											}
+										}
+									}
+									& .timepicker-hour,
+									& .timepicker-minute {
+										height: auto;
+										line-height: rem-calc(30px);
+										border: 1px solid $border-color;
+										
+										&:hover,
+										&:focus {
+											background: none;
+											border-color: lighten($dark, 45%);
+										}
+									}
+								}
+							}
+						}
+					}
+					&.picker-switch {
+						width: 100%;
+						
+						& table {
+							& tbody {
+								& tr {
+									& td {
+										& span {
+											display: block;
+											width: auto;
+											margin: -1px 0 0;
+											background: $light;
+											height: rem-calc(36px);
+											line-height: rem-calc(36px);
+											border-radius: 0;
+				
+											&:hover {
+												background: lighten($dark, 73%);
+											}
+										}
+										& a {
+											text-decoration: none;
+										}
+									}
+								}
+							}
+						}
+					}
+					&.collapse {
+						&.in {
+							display: block;
+						}
+					}
+				}
+			}
+			&.bottom {
+				&:before {
+					display: none;
+				}
+				&:after {
+					border-left: 7px solid transparent;
+					border-right: 7px solid transparent;
+					border-bottom: 7px solid $white;
+					top: rem-calc(-7px);
+					left: rem-calc(15px);
+				}
+				&.pull-right {
+					&:after {
+						left: auto;
+						right: rem-calc(15px);
+					}
+				}
+			}
+		}
+		& + .input-group-addon {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}

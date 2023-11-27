@@ -1,0 +1,56 @@
+.widget-icon {
+	position: relative;
+	overflow: hidden;
+	width: rem-calc(40px);
+	height: rem-calc(40px);
+	font-size: rem-calc(28px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	&.user {
+		font-size: rem-calc(36px);
+		
+		& i {
+			display: block;
+			margin: 0 auto;
+			padding-top: 38%;
+		}
+	}
+	&.widget-icon-xs {
+		width: rem-calc(20px);
+		height: rem-calc(20px);
+		font-size: rem-calc(14px);
+		
+		&.user {
+			font-size: rem-calc(18px);
+		}
+	}
+	&.widget-icon-sm {
+		width: rem-calc(30px);
+		height: rem-calc(30px);
+		font-size: rem-calc(21px);
+		
+		&.user {
+			font-size: rem-calc(27px);
+		}
+	}
+	&.widget-icon-lg {
+		width: rem-calc(60px);
+		height: rem-calc(60px);
+		font-size: rem-calc(42px);
+		
+		&.user {
+			font-size: rem-calc(54px);
+		}
+	}
+	&.widget-icon-xl {
+		width: rem-calc(80px);
+		height: rem-calc(80px);
+		font-size: rem-calc(56px);
+		
+		&.user {
+			font-size: rem-calc(72px);
+		}
+	}
+}

@@ -1,0 +1,25 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	letter-spacing: $body-letter-spacing; 
+	-moz-osx-font-smoothing: grayscale;
+	
+	@if $enable-rtl {
+		direction: rtl;
+	}
+}
+b {
+	font-weight: bold;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { 
+	font-weight: $font-weight-normal;
+	color: rgba(var(--app-component-color-rgb), .65);
+}
+a {
+	&:focus {
+		outline: none;
+	}
+}
