@@ -6,6 +6,7 @@
 export default defineNuxtConfig({
   server: {
     port: 5194,
+    host: '0.0.0.0'
     //  https: {
     //   key : fs.readFileSync('C:/Apache24/conf/ssl_cookzzang/ssl_cookzzang.key'),
     //  cert : fs.readFileSync('C:/Apache24/conf/ssl_cookzzang/ssl.crt')
