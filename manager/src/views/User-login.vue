@@ -192,9 +192,9 @@ const select = (x) =>{
 				<!-- BEGIN login-header -->
 				<div class="login-header">
 					<div class="brand">
-						<div class="d-flex align-items-center" style="padding-bottom: 10px;">
+						<div class="d-flex align-items-center" style="padding-bottom: 10px; font-size:1rem;">
 							
-						<span style="border-radius: 20px;width: 100px;height: 100px; " v-bind:style="{ backgroundImage: 'url('+ '/assets/img/logo/ic_launcher_ilove_ci_foreground.png' + ')'}"></span> &nbsp;<b> SG115 - 성창푸드</b>
+						<span style="border-radius:5px;width: 108px;height: 108px; " v-bind:style="{ backgroundImage: 'url('+ '/assets/img/logo/icon_108.png' + ')'}"></span> &nbsp;<b> (주)성창푸드 - 관리웹</b>
 						</div>
 						<small style="padding-left:10px">관리자 페이지에 오신걸 환영합니다.</small>
 					</div> 

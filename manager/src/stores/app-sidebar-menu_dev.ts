@@ -28,6 +28,14 @@ export const useAppSidebarMenuDevStore = defineStore({
 					{ url: '/product/eventProductItem', title: '기획상품관리' },
 				]
 			},
+			{
+				url: '/operate/operateManagement', icon: 'fa fa-comments', title: '운영관리',
+				children: [
+					{ url: '/operate/operateManagement', title: '공지사항/팝업' },
+					{ url: '/operate/eventManagement', title: '이벤트/알림' },
+					{ url: '/operate/commonCodeManagement', title: '공통코드관리' },
+				]
+			},
 
 			// ----------------------------------------------------------------------------------------
 			// 신규적용(2023.10.17) - 아이사랑

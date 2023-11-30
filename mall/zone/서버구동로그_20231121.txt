@@ -61,7 +61,7 @@ computing gzip size...
 .nuxt/dist/client/_nuxt/notification.0bb2a7e7.png         14.20 kB
 .nuxt/dist/client/_nuxt/avater-1.1b19789e.png             14.58 kB
 .nuxt/dist/client/_nuxt/avater-2.98418edb.png             15.73 kB
-.nuxt/dist/client/_nuxt/logo_nobg_h.6aa10586.png          15.84 kB
+.nuxt/dist/client/_nuxt/.6aa10586.png          15.84 kB
 .nuxt/dist/client/_nuxt/telephone-call.d940e79d.png       18.33 kB
 .nuxt/dist/client/_nuxt/banner-3.6f44d5aa.webp            20.00 kB
 .nuxt/dist/client/_nuxt/mega-menu-bg.42b5c4fd.jpg         29.72 kB

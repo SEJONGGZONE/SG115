@@ -201,8 +201,8 @@
                         <i class="fas fa-circle fa-xs"></i> 단순 변심으로 인한 반품 및 교환은 어렵습니다.<br>
                         <i class="fas fa-circle fa-xs"></i> 반품배송비 : 편도 6,000원(최초 배송비가 무료인 경우 12,000원 부과)<br>
                         <i class="fas fa-circle fa-xs"></i> 교환배송비 : 12,000원<br>
-                        <i class="fas fa-circle fa-xs"></i> 보내실곳 : (30044)세종특별자치시 연서면 와룡로 415-1<br>
-                        <i class="fas fa-circle fa-xs"></i> 문의전화 : 043-862-4748 / 010-5014-7744
+                        <i class="fas fa-circle fa-xs"></i> 보내실곳 : (30044)대전광역시 대덕구 신탄진로115번안길 29<br>
+                        <i class="fas fa-circle fa-xs"></i> 문의전화 : 042-635-9978 / 010-5427-1974
                       </div>
                   </div>
 

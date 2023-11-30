@@ -21,7 +21,7 @@
                 <div style="width: 100px;position: absolute;left: calc(50% - 50px);padding-top: 20px;">
                     <div class="logo-mobile" style="cursor: pointer;height: 50px;">
                         <a @click="movePage('/')">
-                            <img src="~/assets/img/logo_nobg_h.png" alt="logo" style="height: 80%;">
+                            <img src="~/assets/img/icon_001.png" alt="logo" style="height:100%;">
                         </a>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-2 mt-2 logoArea">
                     <div class="logo" style="cursor: pointer;">
                         <a @click="movePage('/')">
-                            <img src="~/assets/img/logo_nobg_h.png" alt="logo" style="height: 80%;margin-top: 20px;z-index: 1000000;position: relative;">
+                            <img src="~/assets/img/icon_001.png" alt="logo" style="height: 80%;margin-top: 20px;z-index: 1000000;position: relative;">
                         </a>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                         </div>
 
                         <div class="header__action">
-                            <div data-aos="fade-left" class="welcome-user">
+                            <div data-aos="fade-up" class="welcome-user">
                                 <span v-if="isLogin"> {{ username }} 님 환영합니다.</span>
                             </div>
                             <div style="text-align: end;">
@@ -165,7 +165,7 @@
                                             <i class="fas fa-comments"></i>
                                         </a>
                                     </li>
-                                    <li data-aos="fade-left" data-aos-delay="600">
+                                    <li data-aos="fade-up" data-aos-delay="600">
                                         <a @click.prevent="handleOpenSearchBar" href="#" class="search-toggle">
                                             <i class="fas fa-search"></i>
                                         </a>
@@ -305,7 +305,7 @@ const {$bus} = useNuxtApp();
 onMounted(async()=>{
 
         window.addEventListener("scroll", handleSticky);
-        useHead({title: "쿡짱몰에 오신걸 환영합니다."});
+        useHead({title: "(주)성창FOOD 에 오신걸 환영합니다."});
         $bus.$off("chageCart")
         $bus.$on("chageCart", () => {
             if(nameS){

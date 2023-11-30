@@ -69,7 +69,7 @@
                     <div class="cursor-pointer">
                       <img data-aos="fade-up" src="~/assets/img/notification.png" alt="notification" style="width: 40px;height: 40px;margin-bottom: 10px;" @click="goGongji" title="공지사항으로 이동">
                       <h5 data-aos="fade-right" style="font-size: 20px;font-weight: 500;" @click="goGongji" title="공지사항으로 이동">공지사항</h5>
-                      <div data-aos="fade-left" style="font-size:15px;" v-for="(col, i) in noticeList" :key="i">
+                      <div data-aos="fade-up" style="font-size:15px;" v-for="(col, i) in noticeList" :key="i">
                         <a :href="`/noticeDetail?gno=${col.GNO}`" :title="col?.TITLE">{{ col?.TITLE }}</a><br/>
                       </div>
                     </div>
@@ -77,25 +77,25 @@
                 <div class="col-xl-3 col-lg-3 col-md-6 col-6" style="border-right: 1px solid #dedede;padding-left: 40px;">
                     <img data-aos="fade-up" src="~/assets/img/delivery.png" alt="delivery" style="width: 40px;height: 40px;margin-bottom: 10px;">
                     <h5 data-aos="fade-right" style="font-size: 20px;font-weight: 500;">무료 직배송 지역</h5>
-                    <span data-aos="fade-left" style="font-size:18px; color: #599ce8;font-weight:500;">
+                    <span data-aos="fade-up" style="font-size:18px; color: #599ce8;font-weight:500;">
                       대전/세종/청주/천안/아산<br/>
                     </span>
-                    <span data-aos="fade-left" style="font-size:15px;">일부지역 배송가능문의는 고객센터로<br/>확인바랍니다.</span>
+                    <span data-aos="fade-up" style="font-size:15px;">일부지역 배송가능문의는 고객센터로<br/>확인바랍니다.</span>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-6" style="border-right: 1px solid #dedede;padding-left: 40px;">
                     <div class="cursor-pointer">
                       <img data-aos="fade-up" src="~/assets/img/telephone-call.png" alt="telephone-call" style="width: 40px;height: 40px;margin-bottom: 10px;" @click="goQna" title="1:1 문의 게시판으로 이동">
                       <h5 data-aos="fade-right" style="font-size: 20px;font-weight: 500;" @click="goQna" title="1:1 문의 게시판으로 이동">고객센터</h5>
-                      <span data-aos="fade-left" style="font-size:18px;font-weight: 500;color:#222222;">010-5014-7744<br/></span>
-                      <span data-aos="fade-left" style="font-size:15px; color: #237627;">평일 10시~5시(점심시간 12시~1시)<br/></span>
-                      <span data-aos="fade-left" style="font-size:15px;">토요일/일요일/명절 휴무</span>
+                      <span data-aos="fade-up" style="font-size:18px;font-weight: 500;color:#222222;">010-5427-1974<br/></span>
+                      <span data-aos="fade-up" style="font-size:15px; color: #237627;">평일 10시~5시(점심시간 12시~1시)<br/></span>
+                      <span data-aos="fade-up" style="font-size:15px;">토요일/일요일/명절 휴무</span>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-6" style="padding-left: 40px;">
                     <img data-aos="fade-up" src="~/assets/img/credit-card.png" alt="credit-card" style="width: 40px;height: 40px;margin-bottom: 10px;">
                     <h5 data-aos="fade-right" style="font-size: 20px;font-weight: 500;">무통장입금안내</h5>
-                    <span data-aos="fade-left" style="font-size:18px;font-weight: 500;color:#222222;">농협 351-0777-4973-23<br/></span>
-                    <span data-aos="fade-left" style="font-size:15px;">예금주 : 주식회사 목원푸드</span>
+                    <span data-aos="fade-up" style="font-size:18px;font-weight: 500;color:#222222;">농협 351-0777-4973-23<br/></span>
+                    <span data-aos="fade-up" style="font-size:15px;">예금주 : 주식회사 성창푸드</span>
                 </div>
               </div>          
             </div>
@@ -107,14 +107,14 @@
                       <div data-aos="fade-up" class="col-xl-2 col-lg-2 col-md-3 col-3">
                         <div class="logo" style="cursor: pointer;">
                             <a @click="movePage('/')">
-                                <img src="~/assets/img/logo_nobg.png" alt="logo" class="set-logo">
+                                <img src="~/assets/img/icon_001.png" alt="logo" class="set-logo">
                             </a>
                         </div> 
                       </div>
                       <div data-aos="fade-down" class="col-xl-10 col-lg-10 col-md-9 col-9" style="font-size: 15px;"> 
                         <span style="font-size:15px;">
-                          사업자등록번호 : 779-88-00012    통신판매신고번호 : 2006-경기성남-0692호    상호명 : (주)목원푸드    대표 : 장명수<br/>
-                          세종특별자치시 연서면 와룡로 415-1    고객센터 : 043-862-4748 / 010-5014-7744 / along2848@naver.com
+                          사업자등록번호 : 779-88-00012    통신판매신고번호 : 2006-경기성남-0692호    상호명 : (주)성창푸드    대표 : 고재철<br/>
+                          대전광역시 대덕구 신탄진로115번안길 29    고객센터 : 042-635-9978 / 010-5427-1974 / gjc1974@naver.com
                         </span>
                       </div>        
                   </div>

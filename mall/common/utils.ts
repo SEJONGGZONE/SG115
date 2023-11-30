@@ -8,12 +8,11 @@ import axios from "axios";
 
 import Swal from "sweetalert2";
 
-import { useModalStore } from "@/store/useModal";
+// ------------------------------------------------------------------------------------------------------------------
+// REST-API, Setting
+// ------------------------------------------------------------------------------------------------------------------
 const instance = axios.create({
-  //http://sjwas.gzonesoft.co.kr:27002/swagger/ui/index
-  //24484
-  baseURL:
-    "https://sjwas.gzonesoft.co.kr:24485/api/DatabaseController/runProcedure",
+  baseURL: "http://sjwas.gzonesoft.co.kr:32206/api/DatabaseController/runProcedure",
   timeout: 500000,
   headers: {
     "Content-Type": "application/json",
@@ -21,10 +20,7 @@ const instance = axios.create({
   },
 });
 const CVOinstance = axios.create({
-  //http://sjwas.gzonesoft.co.kr:27002/swagger/ui/index
-  //24484
-  baseURL:
-    "https://sjwas.gzonesoft.co.kr:27002/api/DatabaseController/runProcedure",
+  baseURL: "https://sjwas.gzonesoft.co.kr:27002/api/DatabaseController/runProcedure",
   timeout: 500000,
   headers: {
     "Content-Type": "application/json",
@@ -34,10 +30,9 @@ const CVOinstance = axios.create({
 
 let fileBaseUrl = "http://sjwas.gzonesoft.co.kr:27002/api/";
 if (process.client && location.hostname === "www.cookzzang.com") {
-  fileBaseUrl = "https://sjwas.gzonesoft.co.kr:24485/api/";
+  fileBaseUrl = "http://sjwas.gzonesoft.co.kr:32206/api/";
 }
 const instanceFile = axios.create({
-  //http://sjwas.gzonesoft.co.kr:27002/swagger/ui/index
   baseURL: fileBaseUrl,
   timeout: 50000,
   headers: {
@@ -45,7 +40,9 @@ const instanceFile = axios.create({
     CodyApiKey: "1Bb6wI6DnVL8S8LQAbvAO+pSnKXCf7HwQ7GEn+FnrJk=",
   },
 });
-
+// ------------------------------------------------------------------------------------------------------------------
+// Toss 결제 세팅
+// ------------------------------------------------------------------------------------------------------------------
 const username = "live_sk_lpP2YxJ4K874pbQyJop3RGZwXLOb";
 const password = "";
 const credentials = `${username}:${password}`;
@@ -62,6 +59,9 @@ const tossInstance = axios.create({
   },
 });
 
+// ------------------------------------------------------------------------------------------------------------------
+// 그외..1
+// ------------------------------------------------------------------------------------------------------------------
 const cartDimmed = () => {
   let divElement = document.getElementById("dimmedDiv");
   divElement.classList.add("modal-backdrop");
@@ -96,6 +96,9 @@ const removeDimmed = () => {
   }
 };
 
+// ------------------------------------------------------------------------------------------------------------------
+// 그외..2
+// ------------------------------------------------------------------------------------------------------------------
 const setCookie = (name, value, days) => {
   var expires = "";
   if (days) {
@@ -124,6 +127,9 @@ const getCookie = (name) => {
   return "";
 };
 
+// ------------------------------------------------------------------------------------------------------------------
+// 그외..3
+// ------------------------------------------------------------------------------------------------------------------
 function fxAlert(msg: any, option) {
   let typeStr = option?.type ? option?.type : "success";
   let timerStr = option?.timer ? option?.timer : 1500;
@@ -167,6 +173,10 @@ function fxConfirm(title, msg: any) {
   });
 }
 
+// ------------------------------------------------------------------------------------------------------------------
+// 그외..4
+// ------------------------------------------------------------------------------------------------------------------
+
 /**
  * request 인터셉터
  */
@@ -195,6 +205,10 @@ instance.interceptors.response.use(
   }
 );
 
+// ------------------------------------------------------------------------------------------------------------------
+// 그외..5
+// ------------------------------------------------------------------------------------------------------------------
+
 function getAxios() {
   return instance;
 }
@@ -219,78 +233,6 @@ const formattedPrice = (price) => {
   }
   return price;
 };
-
-// function startLodingBar() {
-//   appOption.isDimmed = true;
-//   appOption.isProgressbar = true;
-// }
-// function removeLodingBar() {
-//   appOption.isDimmed = false;
-//   appOption.isProgressbar = false;
-// }
-
-// function startProgressbar() {
-//   appOption.isProgressbar = true;
-// }
-// function removeProgressbar() {
-//   appOption.isProgressbar = false;
-// }
-
-// function startDimmed() {
-//   appOption.isDimmed = true;
-// }
-// function removeDimmed() {
-//   appOption.isDimmed = false;
-// }
-
-// function showToast(msg){
-//   appVariable.toastMsg = msg
-// }
-// /**hover */
-// function addHoverClassToTr(mouseEvent){
-//   //cursor를 포함한 hover
-//   mouseEvent.target.classList.add("hover");
-//   addCursorClassToTr(mouseEvent);
-// };
-// function removeHoverClassFromTr(mouseEvent){
-//   //cursor를 포함한 hover
-//   mouseEvent.target.classList.remove("hover");
-//   removeCursorClassFromTr(mouseEvent);
-// };
-// function addHoverClassToTr1(mouseEvent){
-//   mouseEvent.target.classList.add("hover");
-// };
-// function removeHoverClassFromTr1(mouseEvent){
-//   mouseEvent.target.classList.remove("hover");
-// };
-
-// function addCursorClassToTr(mouseEvent){
-//   mouseEvent.target.classList.add("cursor");
-// };
-// function removeCursorClassFromTr(mouseEvent){
-//   mouseEvent.target.classList.remove("cursor");
-// };
-
-// function doSort(field, setting, arry){
-
-// 	let sort = "asc";
-// 	if (field == setting.order) {
-// 		if (setting.sort == "asc") {
-// 			sort = "desc";
-// 		}
-// 	}
-// 	setting.order = field;
-//   setting.sort = sort;
-
-// 	arry.sort(function(a, b){
-// 		var collator = new Intl.Collator(undefined, {
-// 			numeric: true,
-// 			sensitivity: "base",
-// 		});
-// 		let sortOrder = sort === "desc" ? -1 : 1;
-// 		return collator.compare(a[field], b[field]) * sortOrder;
-// 	});
-// }
 
 function excelDownload(data: any, fileName: any) {
   const worksheet = XLSX.utils.json_to_sheet(data);
@@ -336,21 +278,11 @@ function searchAdress() {
   });
 }
 
+// ------------------------------------------------------------------------------------------------------------------
+// 외부로..
+// ------------------------------------------------------------------------------------------------------------------
+
 export {
-  // startLodingBar,
-  //       removeLodingBar,
-  //       startProgressbar,
-  //       removeProgressbar,
-  //       startDimmed,
-  //       removeDimmed,
-  //       showToast,
-  //       addHoverClassToTr,
-  //       removeHoverClassFromTr,
-  //       addHoverClassToTr1,
-  //       removeHoverClassFromTr1,
-  //       addCursorClassToTr,
-  //       removeCursorClassFromTr,
-  //       doSort,
   cartDimmed,
   searchAdress,
   getCookie,

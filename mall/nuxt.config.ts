@@ -5,7 +5,7 @@
 
 export default defineNuxtConfig({
   server: {
-    port: 33780,
+    port: 5194,
     //  https: {
     //   key : fs.readFileSync('C:/Apache24/conf/ssl_cookzzang/ssl_cookzzang.key'),
     //  cert : fs.readFileSync('C:/Apache24/conf/ssl_cookzzang/ssl.crt')
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "쿡짱몰에 오신걸 환영합니다.",
+      title: "(주)성창FOOD에 오신걸 환영합니다.",
       // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}],
       script: [
         {

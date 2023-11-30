@@ -422,7 +422,7 @@ const doSearch2 = async () => {
             >
               <h3 class="m-0" v-html="col.MANAGER.CONTENTS" data-aos="fade-down" data-aos-once="true"></h3>
               <a
-              data-aos="fade-left" data-aos-once="true"
+              data-aos="fade-up" data-aos-once="true"
                 class="ml-auto btn btn-sm"
                 style="
                   border-radius: 0 !important;

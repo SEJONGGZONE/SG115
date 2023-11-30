@@ -2,7 +2,7 @@
   "name": "color-admin-vue",
   "version": "5.1.5",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --port 27006",
+    "dev": "vite --host 0.0.0.0 --port 5193",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --host 0.0.0.0 --port 27006",
     "test:unit": "vitest --environment jsdom",

@@ -7,18 +7,43 @@ export const useAppSidebarMenuStore = defineStore({
 			// ----------------------------------------------------------------------------------------
 			// 신규적용(2023.11.27) - 성창푸드
 			// ----------------------------------------------------------------------------------------
+			// {
+			// 	url: '/member/memberMng', icon: 'fa fa-user-group', title: '사용자관리',
+			// 	children: [
+			// 		// { url: '/client/clientMng',title: '거래처관리',  },
+			// 		// { url: '/client/centerMng',title: '센터관리',  },
+			// 		// { url: '/client/centerRouteMng',title: '센터알림',  },
+			// 		// { url: '/client/centerAlarmAny',title: '센터도착(외부)',  },
+			// 		// { url: '/map/maplist',title: '거래처 위치관리',  },
+			// 		 { url: '/member/memberMng', title: '사용자관리' },
+			// 		//{ url: '/member/memberMngNew', title: '회원관리(GRID)' },
+			// 		// { url: '/member/account', title: '거래처수기결제' },
+			// 		//{ url: '/member/accountV2', title: '사용 안함(window.open VER)' },
+			// 	]
+			// },
+			// {
+			// 	url: '/product/productManagement', icon: 'fa fa-layer-group', title: '상품관리',
+			// 	children: [
+			// 		{ url: '/product/productManagement', title: '상품조회/수정' },
+			// 		//{ url: '/product/imageView', title: '이미지 편집' },
+			// 	]
+			// },
+			// {
+			// 	url: '/product/productManagement', icon: 'fa fa-layer-group', title: '기획 관리',
+			// 	children: [
+			// 		{ url: '/product/eventProductList', title: '기획관리' },
+			// 		{ url: '/product/eventProductItem', title: '기획상품관리' },
+			// 		// { url: '/product/eventProductManagement', title: '(X)기획상품관리' },
+			// 	]
+			// },
+			
+			// ----------------------------------------------------------------------------------------
+			// 신규적용(2023.11.27) - 성창푸드
+			// ----------------------------------------------------------------------------------------
 			{
 				url: '/member/memberMng', icon: 'fa fa-user-group', title: '사용자관리',
 				children: [
-					// { url: '/client/clientMng',title: '거래처관리',  },
-					// { url: '/client/centerMng',title: '센터관리',  },
-					// { url: '/client/centerRouteMng',title: '센터알림',  },
-					// { url: '/client/centerAlarmAny',title: '센터도착(외부)',  },
-					// { url: '/map/maplist',title: '거래처 위치관리',  },
-					 { url: '/member/memberMng', title: '사용자관리' },
-					//{ url: '/member/memberMngNew', title: '회원관리(GRID)' },
-					// { url: '/member/account', title: '거래처수기결제' },
-					//{ url: '/member/accountV2', title: '사용 안함(window.open VER)' },
+					{ url: '/member/memberMng', title: '사용자관리' },
 				]
 			},
 			{
@@ -29,11 +54,18 @@ export const useAppSidebarMenuStore = defineStore({
 				]
 			},
 			{
-				url: '/product/productManagement', icon: 'fa fa-layer-group', title: '기획 관리',
+				url: '/product/eventProductList', icon: 'fa fa-layer-group', title: '기획관리',
 				children: [
 					{ url: '/product/eventProductList', title: '기획관리' },
 					{ url: '/product/eventProductItem', title: '기획상품관리' },
-					// { url: '/product/eventProductManagement', title: '(X)기획상품관리' },
+				]
+			},
+			{
+				url: '/operate/operateManagement', icon: 'fa fa-comments', title: '운영관리',
+				children: [
+					{ url: '/operate/operateManagement', title: '공지사항/팝업' },
+					{ url: '/operate/eventManagement', title: '이벤트/알림' },
+					{ url: '/operate/commonCodeManagement', title: '공통코드관리' },
 				]
 			},
 
@@ -86,15 +118,15 @@ export const useAppSidebarMenuStore = defineStore({
 			// 		{ url: '/operate/commonCodeManagement', title: '공통코드관리' },
 			// 	]
 			// },
-			{
-				url: '/map/nowposition', icon: 'fa fa-map', title: '위치관제',
-				children: [
-					{ url: '/map/nowposition', title: '차량현위치',  },
-					{ url: '/map/deliveryImage', title: '배송사진',  },
-					{ url: '/map/deliveryImageAny', title: '배송사진(외부)',  },
-				]
-			}, 
-			,
+			// {
+			// 	url: '/map/nowposition', icon: 'fa fa-map', title: '위치관제',
+			// 	children: [
+			// 		{ url: '/map/nowposition', title: '차량현위치',  },
+			// 		{ url: '/map/deliveryImage', title: '배송사진',  },
+			// 		{ url: '/map/deliveryImageAny', title: '배송사진(외부)',  },
+			// 	]
+			// }, 
+			// ,
 			// ----------------------------------------------------------------------------------------
 			// 템플릿 예제 
 			// ----------------------------------------------------------------------------------------
