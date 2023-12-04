@@ -19,6 +19,15 @@ const instance = axios.create({
     CodyApiKey: "1Bb6wI6DnVL8S8LQAbvAO+pSnKXCf7HwQ7GEn+FnrJk=",
   },
 });
+const instanceErp = axios.create({
+  baseURL: "http://sjwas.gzonesoft.co.kr:32206/api/DatabaseController/erpRunProcedure",
+  timeout: 500000,
+  headers: {
+    "Content-Type": "application/json",
+    CodyApiKey: "1Bb6wI6DnVL8S8LQAbvAO+pSnKXCf7HwQ7GEn+FnrJk=",
+  },
+});
+
 const CVOinstance = axios.create({
   baseURL: "https://sjwas.gzonesoft.co.kr:27002/api/DatabaseController/runProcedure",
   timeout: 500000,
@@ -28,12 +37,9 @@ const CVOinstance = axios.create({
   },
 });
 
-let fileBaseUrl = "http://sjwas.gzonesoft.co.kr:27002/api/";
-if (process.client && location.hostname === "www.cookzzang.com") {
-  fileBaseUrl = "http://sjwas.gzonesoft.co.kr:32206/api/";
-}
+
 const instanceFile = axios.create({
-  baseURL: fileBaseUrl,
+  baseURL: "http://sjwas.gzonesoft.co.kr:32206/api/",
   timeout: 50000,
   headers: {
     "Content-Type": "multipart/form-data",
@@ -212,6 +218,9 @@ instance.interceptors.response.use(
 function getAxios() {
   return instance;
 }
+function getAxiosErp() {
+  return instanceErp;
+}
 function getAxiosFile() {
   return instanceFile;
 }
@@ -294,6 +303,7 @@ export {
   excelDownload,
   numberWithCommas,
   getAxios,
+  getAxiosErp,
   getAxiosFile,
   setDateFormat,
   fxAlertOk,
