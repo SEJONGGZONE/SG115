@@ -281,7 +281,7 @@ const makeFileInfo = (fileInfo, type) => {
 
   const randomNumber = Math.floor(Math.random() * 1000)
   const randomString = randomNumber.toString().padStart(3, '0')
-  const memberType = selectRowData.value.TYPE
+  const memberType = selectRowData.value.GEONUM
 
   let fileName = `I_${memberType}_${year}${month}${day}${hours}${minutes}${seconds}_${randomString}` //사업자 이미지 번호 (I_3202200508_20230901)
   let url = `/join_web/${fileFormat}/${false}/${fileName}`
