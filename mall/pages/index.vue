@@ -136,7 +136,8 @@ const doAddCatrList = async (col, cnt) => {
     inputUser: userNoS.value ?? "", //nameS ?? ""
   };
   try {
-    data = await cartApi.cart_addCartList(param);
+    const dataObj = await cartApi.cart_addCartList(param)
+    data = dataObj.data
     if (data.RecordCount > 0) {
       common_utils.fxAlert("장바구니 추가 되었습니다.");
       $bus.$emit("chageCart");
@@ -202,7 +203,8 @@ const doSearch1 = async () => {
     inputUser: "",
   };
   try {
-    data = await mainApi.main_excuteEventMng(param);
+    const dataObj = await mainApi.main_excuteEventMng(param);
+    data = dataObj.data;
     if (data.RecordCount > 0) {
       doSearch1_table.value = data.RecordSet;
       searchEventList(); //기획별 상품 리스트
@@ -226,7 +228,8 @@ const doSearch2 = async () => {
     inputUser: userNoS.value ?? "", //userId ?? ""
   };
   try {
-    data = await mainApi.main_excuteFaveItem(param);
+    const dataObj = await mainApi.main_excuteFaveItem(param);
+    data = dataObj.data;
     if (data.RecordCount > 0) {
       doSearch2_table.value = data.RecordSet;
     }
@@ -438,6 +441,16 @@ const doSearch2 = async () => {
                 >더보기</a
               >
             </div>
+            
+            <img :src="col?.MANAGER.IMG_URL" 
+                @click="
+                      navigateToEventList(
+                        col.MANAGER.GEONUM,
+                        col.MANAGER.TITLE,
+                        '20'
+                      )
+                    "
+            />
             <product-list
               :isShowHeader="false"
               :isShowSort="false"

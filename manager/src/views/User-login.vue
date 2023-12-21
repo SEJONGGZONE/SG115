@@ -84,7 +84,8 @@ const clickLogin = async () =>{
 			userId : memberId.value,
 			userPw : memberPw.value
 		}
-		let data = await loginApi.executeLogin(param)
+		let dataObj = await loginApi.executeLogin(param)
+		let data = dataObj.data
 		if (data.RecordSet.length > 0) {
 			var userInfo = data.RecordSet[0]; 
 			showAlertSuccess(userInfo.RET_MSG)
@@ -114,7 +115,7 @@ const clickLogin = async () =>{
 
 				const combined = `${year}${month}${day}${hours}${minutes}${seconds}${randomThreeDigits}`;
 				// 정상처리, 페이지이동..
-				router.push('/member/memberMng?'+combined)
+				router.push('/member/memberMngSungChang?'+combined)
 				
 			} else {
 					

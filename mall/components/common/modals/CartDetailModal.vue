@@ -126,7 +126,8 @@ export default defineComponent({
                     inputUser : userNoS ?? ""//nameS ?? ""
                 }
                 try {
-                data = await cartApi.cart_addCartList(param)
+                const dataObj = await cartApi.cart_addCartList(param)
+                data = dataObj.data
                 if(data.RecordCount > 0){
                     common_utils.fxAlert("장바구니 추가 되었습니다.")
                     $bus.$emit("chageCart")
@@ -150,93 +151,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<!-- 
-
-<script setup> 
-import * as common_utils from "@/common/utils.ts";
-import CookImage from '@/components/common/others/CookImage.vue'
-import StarIcon from '~/components/common/others/StarIcon.vue'
-
-import * as cartApi from '@/api';
-
-const eventList = ref([])  
-
-const cartCnt = ref(1)
-const emit = defineEmits(["closeModal"]);
-const props = defineProps({
-    modalInfo: {
-        type : Object,
-        default : []
-    },
-    isOpen:{
-        type : Boolean,
-        default : false
-    }
-});
-  const isOpenChk = ref(props.isOpen) 
-    watch(isOpenChk, (newValue, oldValue)=> {
-  console.log(`myProp 변경: ${oldValue} -> ${newValue}`);
-    })
- 
-const actionOpenCheck  = computed(()=>{
-    if(props.isOpen){
-        openModal()
-    }
-    return isOpen
-}) 
-  
-const openModal = () => {
-    cartCnt.value = 1
-    document.getElementById("productOpen").click()
-}
-
-
-
-const addCart= (col, cnt) =>{//장바구니 담기
-      //로그인여부 확인하기
-      if(!isLogin.value){
-        common_utils.fxAlert("로그인 후 이용해 주세요");
-        window.location.href = `/login`;//로그인화면으로 이동
-        return
-      }
-      doAddCatrList(col,cnt)
-      //useCartStore().add_cart_product(col.value)
-}
-//관심상품 목록
-const formattedPrice= (price)=> {
-    if (typeof price === 'number') {
-      return price.toLocaleString();
-    }
-    return price;
-}
-   const {$bus} = useNuxtApp();
-  const doAddCatrList = async (col, cnt)=>{//장바구니 상품 추가
-      
-        let data;
-        let param = {
-          cartNo : "",
-              seq : "",
-              clcode : clcodeS ?? "",
-              userNo : userNoS ?? "",
-              itcode : col.ITCODE,
-              qty : cnt ?? '1',
-              amount : Number(col.AMOUNT.replace(/,/g, '')),
-              inputUser : userNoS ?? ""//nameS ?? ""
-        }
-        try {
-          data = await cartApi.cart_addCartList(param)
-          if(data.RecordCount > 0){
-            common_utils.fxAlert("장바구니 추가 되었습니다.")
-            $bus.$emit("chageCart")
-            cartCnt.value = 1
-          }
-        } catch (error) {
-          console.error(error);
-        }
-  }
-  
-const favItemCntToStar=(faveItemCnt) =>{//관심상품 별 카운트 계산
-    return Math.floor(faveItemCnt/10)
-}
-</script>  -->

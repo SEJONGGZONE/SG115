@@ -1,4 +1,4 @@
-import { getAxios, getCvoAxios } from "@/common/utils.ts";
+import { getAxios, getCvoAxios, getAxiosErp } from "@/common/utils.ts";
 
 /***************************************************공지사항관리 */
 export function operateNoticeSel(params) {
@@ -7,7 +7,7 @@ export function operateNoticeSel(params) {
     "@I_CLCODE": params.clCode ?? "",
     "@I_INPUT_USER": params.inputUser ?? "",
   };
-  return getAxios().post(`/WEB_NOTICE_SEL`, data);
+  return getAxiosErp().post(`/WEB_NOTICE_SEL`, data);
 }
 export function CvoGpsServiceSave(params) {
   let data = {
@@ -58,7 +58,7 @@ export function operateQnaSav(params) {
     "@I_WS_NEWUSER": params.wsNewuser, //최초 작성자
     "@I_INPUT_USER": params.inputUser, //등록사용자번호
   };
-  return getAxios().post(`/WEB_BOARD_SAV`, data);
+  return getAxiosErp().post(`/WEB_BOARD_SAV`, data);
 }
 /** 삭제 */
 export function operateQnaDel(params) {
@@ -66,7 +66,7 @@ export function operateQnaDel(params) {
     "@I_GEONUM": params.geonum,
     "@I_INPUT_USER": params.inputUser, //등록사용자번호
   };
-  return getAxios().post(`/WEB_BOARD_DEL`, data);
+  return getAxiosErp().post(`/WEB_BOARD_DEL`, data);
 }
 /** 댓글_저징 */
 export function operateQnaRefSav(params) {
@@ -81,7 +81,7 @@ export function operateQnaRefSav(params) {
     "@I_USER": params.user, //등록자
     "@I_INPUT_USER": params.inputUser,
   };
-  return getAxios().post(`/WEB_BOARD_REPLAY_SAV`, data);
+  return getAxiosErp().post(`/WEB_BOARD_REPLAY_SAV`, data);
 }
 /** 댓글_삭제 */
 export function operateQnaRefDel(params) {
@@ -89,5 +89,5 @@ export function operateQnaRefDel(params) {
     "@I_GEONUM": params.geonum,
     "@I_INPUT_USER": params.inputUser, //등록사용자번호
   };
-  return getAxios().post(`/WEB_BOARD_REPLAY_DEL`, data);
+  return getAxiosErp().post(`/WEB_BOARD_REPLAY_DEL`, data);
 }

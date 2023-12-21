@@ -235,7 +235,8 @@ const doAddCatrList = async (col, cnt)=>{//장바구니 상품 추가
               inputUser : userNoS ?? ""//nameS ?? ""
       }
       try {
-        data = await cartApi.cart_addCartList(param)
+        const dataObj = await cartApi.cart_addCartList(param)
+        data = dataObj.data
         /*if(data.RecordCount > 0){
           $bus.$emit("chageCart")
         }*/
@@ -251,7 +252,8 @@ const doDelCartList = async (col)=>{//장바구니 상품 삭제
             seq : col.SEQ ?? ""
     }
     try {
-      data = await cartApi.cart_delCartList(param)
+      const dataObj = await cartApi.cart_delCartList(param)
+      data = dataObj.data
         /*if(data.ResultCode === '00'){
             $bus.$emit("chageCart")
         }*/
@@ -268,7 +270,8 @@ const doSearchCatrList = async ()=>{//장바구니 상품 조회
             userNo : store.getUserInfo?.USER_NO ?? ""
     }
     try {
-      data = await cartApi.cart_getCartList(param)
+      const dataObj = await cartApi.cart_getCartList(param)
+      data = dataObj.data
       if(data.RecordCount > 0){
         cartList.push(...data.RecordSet);
         cartListLen.value = data.RecordCount 

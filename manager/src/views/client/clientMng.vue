@@ -776,7 +776,7 @@ const requestErpClientSel = async () => {
   // 7.API요청..
   let data, result;
   try {
-    result = await common_utils.getAxiosERP().post(`/ERP_CLIENT_SEL `, reqData)
+    result = await common_utils.getAxiosErp().post(`/ERP_CLIENT_SEL `, reqData)
     data = result.data;
     if (data.RecordCount > 0) {
       // 그리드 데이타 지우기
@@ -900,7 +900,7 @@ const requestErpClientImage = async (ddate, clcode) => {
   // API요청..
   let data, result;
   try {
-    result = await common_utils.getAxiosERP().post(`/CVO_623_CLIENTIMAGE_SEL `, reqData)
+    result = await common_utils.getAxiosErp().post(`/CVO_623_CLIENTIMAGE_SEL `, reqData)
     data = result.data;
     if (data.RecordCount > 0) {
       
@@ -978,7 +978,7 @@ const doSave = async () => {
   // 7.API요청..
   let data, result;
   try {
-    result = await common_utils.getAxiosERP().post(`/ERP_CLIENT_POS_SAV `, reqData)
+    result = await common_utils.getAxiosErp().post(`/ERP_CLIENT_POS_SAV `, reqData)
     data = result.data;
     if (data.RecordCount > 0) {
       console.log(data);

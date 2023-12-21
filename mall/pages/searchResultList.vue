@@ -90,7 +90,8 @@ const doSearch = async ()=>{//리스트 정보
 
     }
     try {
-      data = await listApi.list_categoryList(param)
+      const dataObj = await listApi.list_categoryList(param)
+      data = dataObj.data;
       if(data.RecordCount > 0){
         //list.value = data.RecordSet;
         list.value.push(...data.RecordSet);

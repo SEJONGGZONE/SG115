@@ -1,4 +1,4 @@
-import { getAxios } from "@/common/utils.ts";
+import { getAxios, getAxiosErp } from "@/common/utils.ts";
 
 import axios from "axios";
 /************************************************** 회원관리 */
@@ -85,10 +85,10 @@ export function webHistoryUserInfo(params) {
     "@I_USER_AGENT": userAgent,
   };
 
-  return getAxios().post(`/WEB_HISTORY_USER_SAVE`, data);
+  return getAxiosErp().post(`/WEB_HISTORY_USER_SAVE`, data);
 }
 
-/** 상품 조회 저장*/
+/** 상품 조회 히스토리 저장*/
 
 export function webHistoryItemSave(params) {
   var userAgent = navigator.userAgent.toLowerCase();
@@ -100,5 +100,5 @@ export function webHistoryItemSave(params) {
     "@I_USER_AGENT": userAgent,
   };
 
-  return getAxios().post(`/WEB_HISTORY_ITEM_SAVE`, data);
+  return getAxiosErp().post(`/WEB_HISTORY_ITEM_SAVE`, data);
 }

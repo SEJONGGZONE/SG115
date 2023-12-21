@@ -275,7 +275,8 @@ const clickLogin = async ()=>{//로그인 요청
     userType : userType.value
   }
   
-  let data = await loginApi.login_executeLogin(param) 
+  let dataObj = await loginApi.login_executeLogin(param) 
+  let data = dataObj.data
     if (data.RecordSet.length > 0) {
       userInfo = data.RecordSet[0];
       if (userInfo.RET_CODE == "100") { //------------------------------------ 로그인 성공 

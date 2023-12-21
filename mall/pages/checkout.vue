@@ -93,7 +93,8 @@ const doSearchCatrList = async ()=>{//장바구니 상품 조회
             userNo : userNoS ?? ""
     }
     try {
-      data = await cartApi.cart_getCartList(param)
+      const dataObj = await cartApi.cart_getCartList(param)
+      data = dataObj.data
       if(data.RecordCount > 0){
         if(cartType.value === '20'){
           cartList.value.push(data.RecordSet[data.RecordSet.length-1]); 

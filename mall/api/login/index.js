@@ -1,5 +1,5 @@
 
-import { getAxios } from "@/common/utils.ts"; 
+import { getAxios, getAxiosErp } from "@/common/utils.ts"; 
 /************************************************** 회원관리 */
 
 
@@ -12,7 +12,7 @@ export function executeLogin(params){
             '@I_USER_TYPE':params.userType
     }  
 
-    return getAxios().post(`/WEB_LOGIN_SEL`,data)
+    return getAxiosErp().post(`/WEB_LOGIN_SEL`,data)
 }
 /** 회원관리 */
 export function excuteRegiste(params){ 
@@ -40,7 +40,7 @@ export function excuteRegiste(params){
         '@I_CORP_FILE_NO':params.corpFileNo
     }  
 
-    return getAxios().post(`/WEB_USER_SAVE`,data)
+    return getAxiosErp().post(`/WEB_USER_SAVE`,data)
 }
 /** 임시 비밀번호 요청/신규비밀번호 저장 */
 export function resetPassWord(params){ 
@@ -50,6 +50,6 @@ export function resetPassWord(params){
             '@I_PASSWORD' : params.password
     }  
 
-    return getAxios().post(`/WEB_RESET_PASSWORD`,data)
+    return getAxiosErp().post(`/WEB_RESET_PASSWORD`,data)
 }
  

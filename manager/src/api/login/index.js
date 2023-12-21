@@ -1,4 +1,4 @@
-import { getAxios } from "@/common/utils.ts";
+import { getAxiosErp } from "@/common/utils.ts";
 /************************************************** 회원관리 */
 export const loginApi = {
   /** 로그인 */
@@ -10,6 +10,6 @@ export const loginApi = {
       "@I_USER_TYPE": 99,
     };
 
-    return getAxios().post(`/WEB_LOGIN_SEL`, data);
+    return getAxiosErp().post(`/WEB_LOGIN_SEL`, data);
   },
 };

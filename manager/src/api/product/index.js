@@ -1,4 +1,4 @@
-import { getAxios, getAxiosFile } from "@/common/utils.ts";
+import { getAxiosErp, getAxiosFile } from "@/common/utils.ts";
 export const productApi = {
   /** 파일 업로드 */
   fileUpload(params, url) {
@@ -22,7 +22,7 @@ export const productApi = {
       "@I_INPUT_USER": params.inputUser,
       "@I_ITCODE": params.itCode,
     };
-    return getAxios().post(`/ADM_ITEMLIST_01`, data);
+    return getAxiosErp().post(`/ADM_ITEMLIST_01`, data);
   },
 
   /** 상품 상세 대표 , 상세 조회 */
@@ -30,7 +30,7 @@ export const productApi = {
     let data = {
       "@I_ITCODE": params.itCode,
     };
-    return getAxios().post(`/ADM_POP_ITEMIMG_SEL`, data);
+    return getAxiosErp().post(`/ADM_POP_ITEMIMG_SEL`, data);
   },
 
   /** 상품 상세 대표 , 상세 삭제 */
@@ -41,7 +41,7 @@ export const productApi = {
       "@I_TYPE": params.type,
       "@I_ITCODE": params.itCode,
     };
-    return getAxios().post(`/ADM_POP_ITEMIMG_DEL`, data);
+    return getAxiosErp().post(`/ADM_POP_ITEMIMG_DEL`, data);
   },
 
   /** 카테고리 조회 */
@@ -52,14 +52,14 @@ export const productApi = {
       "@I_NAME": params.name,
     };
 
-    return getAxios().post(`/GET_CATEGORY`, data);
+    return getAxiosErp().post(`/GET_CATEGORY`, data);
   },
   /** 관심수 list */
   getFavItemCntList(params) {
     let data = {
       "@I_ITCODE": params.itCode,
     };
-    return getAxios().post(`/ADM_FAVITEM_CLIENT_SEL`, data);
+    return getAxiosErp().post(`/ADM_FAVITEM_CLIENT_SEL`, data);
   },
   /** 추가정보 list */
   getAddInfoList(params) {
@@ -68,7 +68,7 @@ export const productApi = {
       "@I_INPUT_USER": params.inputUser,
       "@I_NAME": params.name,
     };
-    return getAxios().post(`/GET_CATEGORY`, data);
+    return getAxiosErp().post(`/GET_CATEGORY`, data);
   },
 
   /************************** 기획관리 */
@@ -81,7 +81,7 @@ export const productApi = {
       "@I_PAGE_NUM": params.pageNumber,
       "@I_INPUT_USER": params.inputUser,
     };
-    return getAxios().post(`/ADM_EVENT_MNG_SEL`, data);
+    return getAxiosErp().post(`/ADM_EVENT_MNG_SEL`, data);
   },
 
   eventManagementSave(params) {
@@ -99,7 +99,7 @@ export const productApi = {
       "@I_CONTENTS": params.content,
       "@I_SORT_NUM": params.sortNum,
     };
-    return getAxios().post(`/ADM_EVENT_MNG_SAV`, data);
+    return getAxiosErp().post(`/ADM_EVENT_MNG_SAV`, data);
   },
 
   eventManagementDelete(params) {
@@ -109,7 +109,7 @@ export const productApi = {
       "@I_DEL_YN": params.delYn,
       "@I_INPUT_USER": params.inputUser,
     };
-    return getAxios().post(`/ADM_EVENT_MNG_DEL`, data);
+    return getAxiosErp().post(`/ADM_EVENT_MNG_DEL`, data);
   },
 
   /************************** 기획상품관리 */
@@ -122,7 +122,7 @@ export const productApi = {
       "@I_ITEM_LIST": params.itemList,
       "@I_INPUT_USER": params.inputUser,
     };
-    return getAxios().post(`/ADM_EVENT_ITEM_SAV`, data);
+    return getAxiosErp().post(`/ADM_EVENT_ITEM_SAV`, data);
   },
   eventProductDelete(params) {
     //기획상품관리 등록 데이터 삭제
@@ -131,7 +131,7 @@ export const productApi = {
       "@I_DEL_YN": params.delYn,
       "@I_INPUT_USER": params.inputUser,
     };
-    return getAxios().post(`/ADM_EVENT_ITEM_DEL`, data);
+    return getAxiosErp().post(`/ADM_EVENT_ITEM_DEL`, data);
   },
 
   eventProductList(params) {
@@ -142,7 +142,7 @@ export const productApi = {
       "@I_PAGE_NUM": params.pageNumber,
       "@I_INPUT_USER": params.inputUser,
     };
-    return getAxios().post(`/ADM_EVENT_ITEM_SEL`, data);
+    return getAxiosErp().post(`/ADM_EVENT_ITEM_SEL`, data);
   },
 
   itemImageSave(params) {
@@ -153,6 +153,6 @@ export const productApi = {
       "@I_SEQ": params.seq,
       "@I_FILENO": params.fileno,
     };
-    return getAxios().post(`/ADM_ITEMIMAGE_SAV`, data);
+    return getAxiosErp().post(`/ADM_ITEMIMAGE_SAV`, data);
   },
 };

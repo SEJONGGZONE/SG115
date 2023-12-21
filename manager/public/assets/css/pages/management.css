@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   padding: 10px 10px 0px 30px;
-  margin:0px;
+  margin: 0px;
   background-color: #f4f4f1;
-  height:100%;
+  height: 100%;
 }
 .lnb:not(.fold) + div {
   padding-left: 190px;
@@ -25,14 +25,14 @@
 .section__management .group__title h2 {
   font-size: 16px;
   font-weight: 600;
-  color:#FFFFFF;
-  background-color:#6B90E1;
-  border-radius:20px;
-  border:0px solid #454545;
-  padding:10px 20px;
-  margin-bottom:0px;
-  margin-left:5px;
-  margin-right:10px;
+  color: #ffffff;
+  background-color: #6b90e1;
+  border-radius: 20px;
+  border: 0px solid #454545;
+  padding: 10px 20px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  margin-right: 10px;
 }
 .section__management .group__title .part__buttons button {
   display: flex;
@@ -80,28 +80,27 @@
   justify-content: center;
   height: 40px;
   font-size: 14px;
-  border-radius:5px;
+  border-radius: 5px;
   margin-right: 3px;
 }
-.group__contents .part__data_list .part__search_box{
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+.group__contents .part__data_list .part__search_box {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 .group__contents .part__data_list .part__search_box button {
-
   width: 75px;
-    background-color: #4a827d;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    font-size: 14px;
-    border-radius: 5px;
-    margin-right: 3px;
+  background-color: #4a827d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 3px;
 }
 .section__management .group__search .part__search_box button span {
   margin-left: 8px;
@@ -112,10 +111,10 @@
   display: flex;
   flex-direction: row;
   flex: 1;
-  gap: 0px 20px; 
+  gap: 0px 20px;
   overflow: auto;
-  padding:0px;
-  margin:0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .group__contents .part__data_list {
@@ -190,8 +189,8 @@
   height: 35px;
 }
 .group__contents .part__data_list table tr:hover {
-  background-color: #8484AD;
-  color: #FFFFFF;
+  background-color: #8484ad;
+  color: #ffffff;
 }
 
 .group__contents .part__data_list table th:nth-of-type(1),
@@ -221,10 +220,10 @@
 }
 .group__contents .part__data_list table tr.active td {
   background-color: #565693;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .group__contents .part__data_list table tr.active td:nth-of-type(2) {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .group__contents .part__data_list table th:nth-of-type(3),
@@ -282,7 +281,7 @@
   gap: 0px 15px;
 }
 
-.group__contents .part__data_detail { 
+.group__contents .part__data_detail {
   top: 0px;
   right: 0px;
   flex: 0 0 400px;
@@ -312,10 +311,10 @@
 .group__contents .part__data_detail .item__contents {
   flex: 1;
 }
-.group__contents .part__data_detail .item__contents .form-label{
+.group__contents .part__data_detail .item__contents .form-label {
   font-size: 14px;
-  color:#404040;
-  padding-left:5px;
+  color: #404040;
+  padding-left: 5px;
 }
 .group__contents .part__data_detail .item__contents select {
   height: 35px;
@@ -340,7 +339,6 @@
   margin-top: 15px;
 }
 .group__contents .part__data_detail .item__contents > div input[type='text'] {
-  
   height: 35px;
   border: 1px solid #d8d8d8;
   border-radius: 0px;
@@ -364,13 +362,7 @@
   justify-content: center;
 }
 
-.group__contents
-  .part__data_detail
-  .item__contents
-  > div
-  .radio_group
-  label
-  input {
+.group__contents .part__data_detail .item__contents > div .radio_group label input {
   appearance: none;
   width: 15px;
   height: 15px;
@@ -378,13 +370,7 @@
   border-radius: 50%;
   margin-right: 10px;
 }
-.group__contents
-  .part__data_detail
-  .item__contents
-  > div
-  .radio_group
-  label
-  input:checked {
+.group__contents .part__data_detail .item__contents > div .radio_group label input:checked {
   border: 4px solid #4a827d;
 }
 .group__contents .part__data_detail .item__buttons {
@@ -448,8 +434,8 @@
 @media (max-width: 900px) {
   .section__management {
     padding: 10px 15px 10px 15px;
-  } 
-  .section__management .group__title{
+  }
+  .section__management .group__title {
     padding-left: 15px;
   }
   .group__contents .part__data_detail {
@@ -461,7 +447,7 @@
   }
 }
 
-@media (max-width: 650px) { 
+@media (max-width: 650px) {
   .group__contents .part__data_detail {
     padding: 20px 10px;
     width: 200px;
@@ -473,14 +459,13 @@
   .group__contents .part__data_detail .item__buttons {
     gap: 0px 10px;
   }
-  .lnb:not(.fold)+.section__management {
+  .lnb:not(.fold) + .section__management {
     padding-left: 10px;
   }
 }
 
-
 .pointer {
-  cursor: pointer; 
+  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -493,4 +478,3 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-

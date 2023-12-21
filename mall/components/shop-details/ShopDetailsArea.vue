@@ -450,7 +450,8 @@ const doSearchCategory = async ()=>{//카테고리2 영역
         name : ''
     }
     try {
-      data = await productApi.product_category(param)
+      const dataObj = await productApi.product_category(param)
+      data = dataObj.data
       if(data.RecordCount > 0){
         category2List.value = data.RecordSet.filter(item => item.NAME && item.NAME.trim() !== '');;
         category2List.value.map((item)=>{
@@ -474,7 +475,8 @@ const doAddWishList = async (col)=>{//관심상품 상품 추가
               itname : col.ITNAME
       }
       try {
-        data = await listApi.list_addFavList(param)
+        const dataObj = await listApi.list_addFavList(param)
+        data = dataObj.data
         if(data.ResultCode === '00'){
           common_utils.fxAlert("관심상품 목록에 추가되었습니다.");
         }
@@ -490,7 +492,8 @@ const doAddWishList = async (col)=>{//관심상품 상품 추가
               itcode : col.ITCODE  
       }
       try {
-        data = await listApi.list_delFavList(param)
+        const dataObj = await listApi.list_delFavList(param)
+        data = dataObj.data
         if(data.ResultCode === '00'){
           common_utils.fxAlert("관심상품 목록에 제거되었습니다.");
         }
@@ -513,7 +516,8 @@ const doAddCatrList = async (col, cnt)=>{//장바구니 상품 추가
               inputUser : userNoS ?? ""//nameS ?? ""
       }
       try {
-        data = await cartApi.cart_addCartList(param)
+        const dataObj = await cartApi.cart_addCartList(param)
+        data = dataObj.data
         if(data.RecordCount > 0){
           common_utils.fxAlert("장바구니 추가 되었습니다.")
           $bus.$emit("chageCart")
@@ -538,7 +542,8 @@ const doAddBuyCart = async (col, cnt)=>{//바로구매 장바구니 추가
               inputUser : userNoS ?? ""//nameS ?? ""
       }
       try {
-        data = await cartApi.cart_addBuyCart(param)
+        const dataObj = await cartApi.cart_addBuyCart(param)
+        data = dataObj.data
         if(data.RecordCount > 0){   
           const cartNo = data.RecordSet[0].CART_NO
           localStorage.setItem("BUY_CART_NO",cartNo)
@@ -570,9 +575,8 @@ const doSearch = async ()=>{//리스트 정보
       }  
       
     try {
-        const response = await categoryApi.list_categoryList(param)
-        
-        console.log(response)
+        const responseObj = await categoryApi.list_categoryList(param)
+        const response = responseObj.data
         if(response.RecordCount > 0){
             relatedItem.value.push( ...response.RecordSet)
             if(response.RecordCount === pageSize.value){

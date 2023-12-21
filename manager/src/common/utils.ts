@@ -42,7 +42,7 @@ const instanceCVOUtil = axios.create({
     CodyApiKey: '1Bb6wI6DnVL8S8LQAbvAO+pSnKXCf7HwQ7GEn+FnrJk=',
   },
 })
-const instanceERP = axios.create({
+const instanceErp = axios.create({
   baseURL: '/api/DatabaseController/erpRunProcedure',
   timeout: 50000,
   headers: {
@@ -91,8 +91,8 @@ function getAxiosCVO() {
 function getAxiosCVOUtil() {
   return instanceCVOUtil
 }
-function getAxiosERP() {
-  return instanceERP
+function getAxiosErp() {
+  return instanceErp
 }
 
 function startLoadingBar() {
@@ -362,8 +362,8 @@ function getDateFromString(timeString) {
 //   getAxiosCVO() {
 //     return instanceCVO
 //   },
-//   getAxiosERP() {
-//     return instanceERP
+//   getAxiosErp() {
+//     return instanceErp
 //   },
 
 //   startLoadingBar() {
@@ -910,7 +910,7 @@ export {
   startLoadingBar, removeLoadingBar, startProgressbar, removeProgressbar, startDimmed, removeDimmed, showToast, 
   addHoverClassToTr, removeHoverClassFromTr, addHoverClassToTr1, removeHoverClassFromTr1, addCursorClassToTr, 
   removeCursorClassFromTr, doSort, excelDownload, numberWithCommas, 
-  getAxios, getAxiosFile, getAxiosCVO, getAxiosCVOUtil, getAxiosERP, 
+  getAxios, getAxiosFile, getAxiosCVO, getAxiosCVOUtil, getAxiosErp, 
   setDateFormat, getDtmFormatOnlyDigits, formatDate_MM_DD, formatTime_HH_MM_SS, formatTime_HH_MM, distanceStringK, 
   getNameofWeek, nowYYYY_MM_DD_HH_MM_SS, getDateFromString, 
 }

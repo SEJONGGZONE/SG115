@@ -1,5 +1,5 @@
 
-import { getAxios,getAxiosFile } from "@/common/utils.ts"; 
+import { getAxios,getAxiosFile,getAxiosErp } from "@/common/utils.ts"; 
 /** 파일 업로드 */
 export async function fileUpload(params,url) {
     params.enctype = 'multipart/form-data';
@@ -32,8 +32,7 @@ export function category(params){
         "@I_INPUT_USER": params.inputUser,
         "@I_NAME": params.name
     }  
-
-    return getAxios().post(`/WEB_CATEGORY_SEL`,data)
+    return getAxiosErp().post(`/WEB_CATEGORY_SEL`,data)
 }
 /** 관심수 list */
 export function getFavItemCntList(params){ 

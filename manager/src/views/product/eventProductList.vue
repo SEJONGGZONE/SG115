@@ -433,7 +433,7 @@ const doSave = async () => {
     geonum: selectRowData?.value?.GEONUM ?? "",
     type: rType.value ?? "",
     title: selectRowData?.value?.TITLE ?? "",
-    imgFileNo: "", // imgFileNo.value ?? selectRowData?.value?.IMG_FILE_NO,
+    imgFileNo: imgFileNo.value ?? selectRowData?.value?.IMG_FILE_NO,
     date1: "", // setDateFormat(selectRowData?.value?.DATE1)?? '',
     date2: "", // setDateFormat(selectRowData?.value?.DATE2)?? '',
     scheduleUseYn: "Y", // selectRowData?.value?.SCHEDULE_USE_YN ?? 'Y',

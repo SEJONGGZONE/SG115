@@ -1,5 +1,5 @@
 
-import { getAxios } from "@/common/utils.ts"; 
+import { getAxios,getAxiosErp } from "@/common/utils.ts"; 
 
 /************************************************** 카테고리 목록 */
 
@@ -19,7 +19,7 @@ export function categoryList(params){
         '@I_ORDER_TYPE_40': params.orderType30,//상품명
         '@I_INPUT_USER': params.inputUser,
     }   
-    return getAxios().post(`/WEB_ITEMLIST_SEL`,data) 
+    return getAxiosErp().post(`/WEB_ITEMLIST_SEL`,data) 
     
 }
 

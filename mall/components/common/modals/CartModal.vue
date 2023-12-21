@@ -178,7 +178,8 @@ const addCart= (col, cnt) =>{//장바구니 담기
               inputUser : userNoS ?? ""//nameS ?? ""
         }
         try {
-          data = await cartApi.cart_addCartList(param)
+          const dataObj = await cartApi.cart_addCartList(param)
+          data = dataObj.data
           if(data.RecordCount > 0){
             common_utils.fxAlert("장바구니 추가 되었습니다.")
             $bus.$emit("chageCart")

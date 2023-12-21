@@ -1,5 +1,5 @@
 
-import { getAxios } from "@/common/utils.ts"; 
+import { getAxios,getAxiosErp } from "@/common/utils.ts"; 
 
 /************************************************** 회원관리 */
 
@@ -19,7 +19,7 @@ export function addCartList(params){
     }  
  
 
-    return getAxios().post(`/WEB_CART_SAVE`,data)
+    return getAxiosErp().post(`/WEB_CART_SAVE`,data)
 }
 /** 장바구니 바로 구매 추가 */
 export function addBuyCart(params){  
@@ -36,7 +36,7 @@ export function addBuyCart(params){
     }  
  
 
-    return getAxios().post(`/WEB_CART_SAVE`,data)
+    return getAxiosErp().post(`/WEB_CART_SAVE`,data)
 }
 
 /** 장바구니 리스트 조회 */
@@ -47,7 +47,7 @@ export function getCartList(params){
         '@I_USER_NO': params.userNo
     }  
 
-    return getAxios().post(`/WEB_CART_SEL`,data)
+    return getAxiosErp().post(`/WEB_CART_SEL`,data)
     
 }
 
@@ -59,6 +59,6 @@ export function delCartList(params){
         '@I_SEQ': params.seq
     }  
 
-    return getAxios().post(`/WEB_CART_DEL`,data)
+    return getAxiosErp().post(`/WEB_CART_DEL`,data)
     
 }

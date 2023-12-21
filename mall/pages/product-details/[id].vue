@@ -38,7 +38,8 @@ const doSearchCategory = async () => {
     orderType30: "",
   };
 
-  const response = await categoryApi.list_categoryList(param);
+  const responseObj = await categoryApi.list_categoryList(param);
+  const response = responseObj.data;
   if (response.RecordCount > 0) {
     resultData.value = response.RecordSet[0];
     //최근 본 상품 저장

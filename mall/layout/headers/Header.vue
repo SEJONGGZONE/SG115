@@ -466,7 +466,8 @@ const doSearch=async() =>{
       };
 
       try {
-        const data = await mainApi.main_excuteEventMng(param);
+        const dataObj = await mainApi.main_excuteEventMng(param);
+        const data = dataObj.data;
         if (data.RecordCount > 0) {
             dataList.value = data.RecordSet.filter(item => item.TYPE === '20');
         }
@@ -483,7 +484,8 @@ const doDelCartList = async (col)=>{//장바구니 상품 삭제
             seq : col.SEQ ?? ""
     }
     try {
-      data = await cartApi.cart_delCartList(param)
+        const dataObj = await cartApi.cart_delCartList(param)
+        const data = dataObj.data;
         if(data.ResultCode === '00'){
             cartList.splice(0);
             doSearchCatrList()
@@ -502,7 +504,8 @@ const doSearchCatrList = async ()=>{//장바구니 상품 조회
             userNo : userNo.value?? ""
     }
     try {
-      data = await cartApi.cart_getCartList(param)
+      const dataObj = await cartApi.cart_getCartList(param)
+      const data = dataObj.data;
       if(data.RecordCount > 0){
         cartList.push(...data.RecordSet);
         cartListLen.value = data.RecordCount
@@ -527,7 +530,8 @@ const doSearchCategory = async ()=>{//카테고리1 영역
         name : ''
     }
     try {
-        data = await productApi.product_category(param)
+        const dataObj = await productApi.product_category(param)
+        const data = dataObj.data;
         if(data.RecordCount > 0){
             categoryList.value.push(...data.RecordSet);
         }

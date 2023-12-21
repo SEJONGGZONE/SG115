@@ -148,7 +148,8 @@ const doSearchCategory = async () => {
     name: "",
   };
   try {
-    data = await productApi.product_category(param);
+    const dataObj = await productApi.product_category(param);
+    data = dataObj.data
     if (data.RecordCount > 0) {
       category2List.value = data.RecordSet.map((item) => {
         item.NAME = item.NAME?.trim();
@@ -179,7 +180,8 @@ const doSearch = async () => {
     orderType30: orderType30.value ?? "",
   };
   try {
-    data = await listApi.list_categoryList(param);
+    const dataObj = await listApi.list_categoryList(param);
+    data = dataObj.data
     if (data.RecordCount > 0) {
       list.value.push(...data.RecordSet);
       if (data.RecordCount === pageSize.value) {

@@ -1,5 +1,5 @@
 
-import { getAxios } from "@/common/utils.ts"; 
+import { getAxios, getAxiosErp } from "@/common/utils.ts"; 
 
 /************************************************** 회원관리 */
 
@@ -12,7 +12,7 @@ export function excuteEventMng(params){
         '@I_INPUT_USER': params.inputUser
     }  
 
-    return getAxios().post(`/WEB_EVENTMNG_SEL`,data)
+    return getAxiosErp().post(`/WEB_EVENTMNG_SEL`,data)
     
 }
 
@@ -26,7 +26,7 @@ export function excuteFaveItem(params){
         '@I_INPUT_USER': params.inputUser
     }  
 
-    return getAxios().post(`/WEB_FAVITEM_SEL`,data)
+    return getAxiosErp().post(`/WEB_FAVITEM_SEL`,data)
     
 }
 
@@ -42,6 +42,6 @@ export function addConsult(params){
         '@I_INPUT_USER': params.inputUser
     }  
 
-    return getAxios().post(`/WEB_CONSULT_SAV`,data)
+    return getAxiosErp().post(`/WEB_CONSULT_SAV`,data)
     
 }

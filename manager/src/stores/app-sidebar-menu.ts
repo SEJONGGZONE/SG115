@@ -41,15 +41,15 @@ export const useAppSidebarMenuStore = defineStore({
 			// 신규적용(2023.11.27) - 성창푸드
 			// ----------------------------------------------------------------------------------------
 			{
-				url: '/member/memberMng', icon: 'fa fa-user-group', title: '사용자관리',
+				url: '/member/memberMngSungChang', icon: 'fa fa-user-group', title: '사용자관리',
 				children: [
-					{ url: '/member/memberMng', title: '사용자관리' },
+					{ url: '/member/memberMngSungChang', title: '사용자관리' },
 				]
 			},
 			{
-				url: '/product/productManagement', icon: 'fa fa-layer-group', title: '상품관리',
+				url: '/product/productManagementSungChang', icon: 'fa fa-layer-group', title: '상품관리',
 				children: [
-					{ url: '/product/productManagement', title: '상품조회/수정' },
+					{ url: '/product/productManagementSungChang', title: '상품조회/수정' },
 					//{ url: '/product/imageView', title: '이미지 편집' },
 				]
 			},

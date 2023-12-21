@@ -48,7 +48,7 @@ const logout = () =>{
     <div class="part__lnb fold">
       <div class="part__login_info">
         <div class="item__profile">
-          <img src="/assets/img/logo/logo_01_200.png" alt="성창푸드" />
+          <img src="/assets/img/sungchang/logo_01_200.png" alt="성창푸드" />
         </div>
         <!-- <b class="item__name">{{getUserName}}</b> -->
       </div>

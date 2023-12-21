@@ -1,4 +1,4 @@
-import { getAxios, getAxiosERP } from "@/common/utils.ts";
+import { getAxiosErp } from "@/common/utils.ts";
 /************************************************** 회원관리 */
 export const memberApi = {
   /** 회원/거래처 관리>회원관리_리스트_조회 */
@@ -10,7 +10,7 @@ export const memberApi = {
       "@I_PAGE_NUM": params.pageNumber,
       "@I_INPUT_USER": "9999",
     };
-    return getAxios().post(`/ADM_USER_SEL`, data);
+    return getAxiosErp().post(`/ADM_USER_SEL`, data);
   },
 
   /** 회원/거래처 관리>회원관리_리스트_상세_저장 */
@@ -31,7 +31,7 @@ export const memberApi = {
       "@I_PAY_YN": params.payYn,
     };
 
-    return getAxios().post(`/ADM_USER_SAVE`, data);
+    return getAxiosErp().post(`/ADM_USER_SAVE`, data);
   },
 
   /** 회원/거래처 관리>거래처 수기 결제_리스트_조회*/
@@ -44,7 +44,7 @@ export const memberApi = {
       "@I_INPUT_USER": "9999",
     };
 
-    return getAxios().post(`/ADM_CLIENT_SEL`, data);
+    return getAxiosErp().post(`/ADM_CLIENT_SEL`, data);
   },
   /** 회원/거래처 관리>거래처 수기 결제/관리자 수기결제 단독화면_상세_저장 */
   accoutPaymentSave(params) {
@@ -57,7 +57,16 @@ export const memberApi = {
       "@I_INPUT_USER": "시스템",
     };
 
-    return getAxios().post(`/PAYMENT_KEYIN_ADMIN`, data);
+    return getAxiosErp().post(`/PAYMENT_KEYIN_ADMIN`, data);
+  },
+  /** [성창]사용자관리,사업자서류 업로드후 이미지정보 저장 */
+  userImageSave(params) {
+    // 첨부파일
+    let data = {
+      '@I_USERNO': params.userNo,
+      '@I_FILENO': params.fileno,
+    }
+    return getAxiosErp().post(`/ADM_USERIMAGE_SAV`, data)
   },
 
   // ERP-거래처 정보 조회
@@ -71,12 +80,12 @@ export const memberApi = {
       '@I_CENTER_LAT': params.centerLat,
       '@I_CENTER_LON': params.centerLon
     }
-    return getAxiosERP().post(`/ERP_CLIENT_SEL `, data)
+    return getAxiosErp().post(`/ERP_CLIENT_SEL `, data)
   },
 
   // ERP-공통API조회
   erpCommonCall(procName, data) {
-    return getAxiosERP().post(procName, data)
+    return getAxiosErp().post(procName, data)
   },
 
   
