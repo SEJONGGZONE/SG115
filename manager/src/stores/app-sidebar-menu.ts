@@ -64,7 +64,7 @@ export const useAppSidebarMenuStore = defineStore({
 				url: '/operate/operateManagement', icon: 'fa fa-comments', title: '운영관리',
 				children: [
 					{ url: '/operate/operateManagement', title: '공지사항/팝업' },
-					{ url: '/operate/eventManagement', title: '이벤트/알림' },
+					// { url: '/operate/eventManagement', title: '이벤트/알림' },
 					{ url: '/operate/commonCodeManagement', title: '공통코드관리' },
 				]
 			},

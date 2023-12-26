@@ -1,4 +1,4 @@
-import { getAxios, getAxiosCVO } from '@/common/utils.ts'
+import { getAxiosErp, getAxiosCVO } from '@/common/utils.ts'
 
 export const operateApi = {
   /***************************************************공지사항관리 */
@@ -8,7 +8,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/ADM_NOTICE_SEL `, data)
+    return getAxiosErp().post(`/ADM_NOTICE_SEL `, data)
   },
   CvoGpsServiceSave(params) {
     let data = { companyCd: '00002', deviceNo: '01047321808', vehicleCd: '88-1563', vehicleNo: '88아1563', traceDate: '20230923', traceTime: '101321', eventCode: '05', gpsYn: 'Y', chargeYn: 'Y', latitude: '36.5980613', longitude: '127.3018132', direction: '192', speed: '0', remark: '/DIS20230923095758031', intervalDistance: '0', batteryLevel: '82' }
@@ -34,7 +34,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/ADM_NOTICE_SAV `, data)
+    return getAxiosErp().post(`/ADM_NOTICE_SAV `, data)
   },
   operateManagementDelete(params) {
     let data = {
@@ -43,7 +43,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/ADM_NOTICE_DEL `, data)
+    return getAxiosErp().post(`/ADM_NOTICE_DEL `, data)
   },
   /***************************************************이벤트 알림관리 */
   eventManagement(params) {
@@ -54,7 +54,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/ADM_ALARM_SEL `, data)
+    return getAxiosErp().post(`/ADM_ALARM_SEL `, data)
   },
   eventManagementSave(params) {
     let data = {
@@ -77,7 +77,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/ADM_ALARM_SAV `, data)
+    return getAxiosErp().post(`/ADM_ALARM_SAV `, data)
   },
   eventManagementDelete(params) {
     let data = {
@@ -86,7 +86,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/ADM_ALARM_DEL `, data)
+    return getAxiosErp().post(`/ADM_ALARM_DEL `, data)
   },
 
   /***************************************************공통 코드 관리 */
@@ -103,7 +103,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/COMM_CODE_SAV `, data)
+    return getAxiosErp().post(`/COMM_CODE_SAV `, data)
   },
 
   commCodeDel(params) {
@@ -113,7 +113,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/COMM_CODE_DEL `, data)
+    return getAxiosErp().post(`/COMM_CODE_DEL `, data)
   },
 
   commCodeSel(params) {
@@ -123,7 +123,7 @@ export const operateApi = {
       '@I_INPUT_USER': params.inputUser,
     }
 
-    return getAxios().post(`/COMM_CODE_SEL `, data)
+    return getAxiosErp().post(`/COMM_CODE_SEL `, data)
   },
 
   /***************************************************거래처관리 */
@@ -137,7 +137,7 @@ export const operateApi = {
       '@I_PAGE_NUM': params.pageNumber,
       '@I_INPUT_USER': params.inputUser,
     }
-    return getAxios().post(`/ADM_CLIENT_SEL `, data)
+    return getAxiosErp().post(`/ADM_CLIENT_SEL `, data)
   },
 
   //거래처 위치 저장
@@ -149,7 +149,7 @@ export const operateApi = {
       '@I_LON': params.lon,
       '@I_ADDRESS': params.address,
     }
-    return getAxios().post(`/ADM_CLIENT_POS_SAV `, data)
+    return getAxiosErp().post(`/ADM_CLIENT_POS_SAV `, data)
   },
 
   //거래처 위치 조회
@@ -162,7 +162,7 @@ export const operateApi = {
       '@I_PAGE_NUM': params.pageNumber,
       '@I_INPUT_USER': params.inputUser,
     }
-    return getAxios().post(`/ADM_CLIENT_POS_SEL `, data)
+    return getAxiosErp().post(`/ADM_CLIENT_POS_SEL `, data)
   },
 
   // CVO-차량현위치 조회

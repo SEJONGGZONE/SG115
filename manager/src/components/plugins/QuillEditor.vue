@@ -13,9 +13,13 @@
       @ready="onEditorReady($event)" 
       :style="{ height: height }"
     />
+    <div class="output code" style="display: none;">
+      <code class="hljs" v-html="contentCode"></code>
+    </div>
   </div>
 </template>
 <script>
+import hljs from 'highlight.js'
 import { QuillEditor } from '@vueup/vue-quill';
 import '@vueup/vue-quill/dist/vue-quill.snow.css';
 
@@ -56,6 +60,7 @@ export default {
         },
       },
       content: "",
+      contentCode: "",
     };
   },
   methods: {
@@ -63,7 +68,8 @@ export default {
       return this.$refs.myTextEditor.getHTML() 
     },
     setContent(html){ 
-      this.$refs.myTextEditor.setHTML(html) 
+      this.$refs.myTextEditor.setHTML(html);
+      this.content = html;
     },
     onEditorChange: debounce(function(value) {
       this.content = value.target.innerHTML
@@ -95,3 +101,36 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+  .example {
+    display: flex;
+    flex-direction: column;
+
+    .editor {
+      height: 40rem;
+      overflow: hidden;
+    }
+
+    .output {
+      width: 100%;
+      height: 20rem;
+      margin: 0;
+      margin-top:0.3rem;
+      border: 0.05rem solid #ffb3b3;
+      overflow-y: auto;
+      resize: vertical;
+      background-color: #ffb3b337;
+
+      &.code {
+        padding: 1rem;
+        height: 16rem;
+      }
+
+      &.ql-snow {
+        border-top: none;
+        height: 24rem;
+      }
+    }
+  }
+</style>

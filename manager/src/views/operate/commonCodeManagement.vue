@@ -230,7 +230,8 @@ const masterSaveCode = async () => {
   } else {
     selectRow.value = tableDL.rows.length;
   }
-  const result = await operateApi.commCodeSave(params);
+  const resultObj = await operateApi.commCodeSave(params);
+  const result = resultObj.data;
   console.log(result);
   if (result.ResultCode === "00") {
     showAlert("저장되었습니다.");
@@ -256,7 +257,8 @@ const masterDelCode = () => {
       };
 
       selectRow.value = 0;
-      const result = await operateApi.commCodeDel(params);
+      const resultObj = await operateApi.commCodeDel(params);
+      const result = resultObj.data;
       if (result.ResultCode === "00") {
         showAlert("삭제 되었습니다.");
         tableDR.rows = [];
@@ -303,8 +305,8 @@ const subSaveCode = async () => {
     sortNum: selectRowDataDR.value.SORT_NUM,
     inputUser: userId,
   };
-  const result = await operateApi.commCodeSave(params);
-  console.log(result);
+  const resultObj = await operateApi.commCodeSave(params);
+  const result = resultObj.data;
   if (result.ResultCode === "00") {
     showAlert("저장되었습니다.");
     tableDR.rows = [];
@@ -323,7 +325,8 @@ const subDelCode = () => {
         codeCd: selectRowDataDR.value.CODE_CD,
         inputUser: userId,
       };
-      const result = await operateApi.commCodeDel(params);
+      const resultObj = await operateApi.commCodeDel(params);
+      const result = resultObj.data;
       if (result.ResultCode === "00") {
         showAlert("삭제 되었습니다.");
         tableDR.rows = [];
@@ -387,7 +390,8 @@ const selectCommonCode = async (codeClass) => {
 
   let data;
   try {
-    data = await operateApi.commCodeSel(param);
+    const dataObj = await operateApi.commCodeSel(param);
+    data = dataObj.data;
     if (data.ResultCode === "00") {
       if (codeClass === "master") {
         tableDL.rows = data.RecordSet;

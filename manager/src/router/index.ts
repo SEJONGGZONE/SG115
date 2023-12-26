@@ -16,6 +16,7 @@ const router = createRouter({
     { path: '/product/eventProductList', component: () => import('../views/product/eventProductList.vue') },
     { path: '/product/eventProductItem', component: () => import('../views/product/eventProductItem.vue') },
     { path: '/product/imageView', component: () => import('../views/product/imageView.vue') },
+    { path: '/product/TImageEditor', component: () => import('../views/product/TImageEditor.vue') },
     { path: '/map/findCarMan', component: () => import('../views/map/findCarMan.vue') },
     { path: '/map/useGeoLocation', component: () => import('../views/map/useGeoLocation.vue') },
     // { path: '/product/eventProductManagement', component: () => import('../views/product/eventProductManagement.vue') },

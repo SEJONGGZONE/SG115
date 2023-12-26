@@ -42,9 +42,51 @@ const setParam = () => {
   paymentNo.value = route.query.PAYMENT_NO;
 };
 
+// ----------------------------------------------------------------
+// 신규 이미지 에디터 적용작업(2023-12-21)
+// ----------------------------------------------------------------
+import TuiImageEditor from 'tui-image-editor'
+import FileSaver from 'file-saver'
+// ----------------------------------------------------------------
+
+// ----------------------------------------------------------------
+// 신규 이미지 에디터 적용작업(2023-12-21)
+// ----------------------------------------------------------------
+const initTuiImageEditor = () => {
+  const instance = new TuiImageEditor(document.querySelector('#my-image-editor'), {
+    cssMaxWidth: 700,
+    cssMaxHeight: 500,
+    includeUI: {
+      theme: {
+        'menu.normalIcon.path': '/assets/svg/icon-d.svg',
+        'menu.normalIcon.name': 'icon-d',
+        'menu.activeIcon.path': '/assets/svg/icon-b.svg',
+        'menu.activeIcon.name': 'icon-b',
+        'menu.disabledIcon.path': '/assets/svg/icon-a.svg',
+        'menu.disabledIcon.name': 'icon-a',
+        'menu.hoverIcon.path': '/assets/svg/icon-c.svg',
+        'menu.hoverIcon.name': 'icon-c',
+        'submenu.normalIcon.path': '/assets/svg/icon-a.svg',
+        'submenu.normalIcon.name': 'icon-a',
+        'submenu.activeIcon.path': '/assets/svg/icon-c.svg',
+        'submenu.activeIcon.name': 'icon-c'
+      },
+    }
+  });
+  instance.loadImageFromURL('/assets/img/product/img_edt_sample.jpg', 'My sample image');
+}
+// ----------------------------------------------------------------
+
+
 onMounted(() => {
   setParam();
-  doSearch();
+
+  setTimeout(() => {
+    // 신규 이미지 에디터 적용작업(2023-12-21)
+    initTuiImageEditor();
+  }, 1000);
+
+  //doSearch();
   appOption.appSidebarHide = true;
   appOption.appHeaderHide = true;
   appOption.appContentClass = "p-0";
@@ -237,6 +279,10 @@ const radioChange = () => {
 };
 </script>
 <template>
+  <div id="my-image-editor" style="height: 500px; border:1px solid red; margin:20px;">
+    <canvas></canvas>
+  </div>
+  
   <!-- BEGIN register -->
   <div
     class="register register-with-news-feed"

@@ -21,7 +21,7 @@ body {
 				font-size: $font-size-base;
 			}
 			&.is-not-in-month {
-				display: none;
+				display: block;
 			}
 			&.is-today {
 				& .vc-day-content {

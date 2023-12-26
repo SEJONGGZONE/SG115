@@ -55,22 +55,22 @@ const table = reactive({
       width: "3%",
     },
     {
-      label: "제목",
-      field: "TITLE",
-      width: "10%",
+      label: "게시기간",
+      field: "DATE1",
+      width: "25%",
       sortable: true,
     },
     {
-      label: "게시기간",
-      field: "DATE1",
-      width: "10%",
+      label: "제목",
+      field: "TITLE",
+      width: "5%",
       sortable: true,
     },
   ],
   rows: [],
   totalRecordCount: 0,
   sortable: {
-    order: "DATE1",
+    order: "NO",
     sort: "asc",
   },
   isShowMoreBtn: false,
@@ -90,7 +90,8 @@ const doSearch = async () => {
 
   let data;
   try {
-    data = await operateApi.operateManagement(param);
+    const dataObj = await operateApi.operateManagement(param);
+    data = dataObj.data;
     table.isLoading = false;
     quillEditorRef.value.setContent("");
     if (data.RecordCount > 0) {
@@ -125,6 +126,9 @@ const tableLoadingFinish = (elements) => {
   table.isLoading = false;
 };
 
+const selectDate1 = ref(null) // 달력 컴포넌트
+const selectDate2 = ref(null) // 달력 컴포넌트
+
 /* row click event */
 const handleRowClick = (rowData, event) => {
   selectRowData.value = JSON.parse(JSON.stringify(rowData));
@@ -137,6 +141,11 @@ const handleRowClick = (rowData, event) => {
   selectRowData.value.DATE2 = selectRowData.value.DATE2.trim()
     ? new Date(selectRowData.value.DATE2)
     : "";
+  
+  // 달력이동
+  selectDate1.value.move(selectRowData.value.DATE1);
+  selectDate2.value.move(selectRowData.value.DATE2);
+
   console.log("2. ", selectRowData.value.DATE1);
 };
 
@@ -204,7 +213,8 @@ const deleteBtn = async () => {
 
   let data;
   try {
-    data = await operateApi.operateManagementDelete(param);
+    const dataObj = await operateApi.operateManagementDelete(param);
+    data = dataObj.data;
     if (data.ResultCode === "00") {
       showAlertSuccess("삭제되었습니다.");
       table.rows = [];
@@ -230,7 +240,8 @@ const doSave = async () => {
 
   let data;
   try {
-    data = await operateApi.operateManagementSave(param);
+    const dataObj = await operateApi.operateManagementSave(param);
+    data = dataObj.data;
     if (data.ResultCode === "00") {
       showAlertSuccess("저장되었습니다.");
       table.rows = [];
@@ -281,9 +292,22 @@ let koreanLocale = {
   weekAbbreviation: "주",
   rangeHeaderText: "날짜 범위 선택",
 };
+
+
+const selectedColor = ref('red');
+const attrs = ref([
+  {
+    key: 'test',
+    highlight: true,
+    dates: { start: new Date(2023, 11, 1), end: new Date(2023, 11, 19) },
+  }
+]);
+
+
 </script>
+
 <template>
-  <div class="section section__management">
+  <div class="section section__management" style="gap: 2px">
     <div class="group__search">
       <div
         class="part__search_box"
@@ -309,8 +333,9 @@ let koreanLocale = {
         </div>
       </div>
     </div>
-    <div class="group__contents">
-      <div class="part__data_list" style="flex: 1">
+    <div class="group__contents_sungchang">
+      <!-- 메인데이타 -->
+      <div class="part__data_list left_side" style="flex: unset; height: auto">
         <div class="item__scroll" id="productDiv">
           <div class="unit__scroll">
             <table>
@@ -370,14 +395,12 @@ let koreanLocale = {
                       <span>{{ index + 1 }}</span>
                     </div>
                   </td>
-                  <td>
+                  <td style="text-align: left">
+                      <span>{{ obj.DATE1 }}~{{ obj.DATE2 }}</span>
+                  </td>
+                  <td style="text-align: left">
                     <div>
                       <span> {{ obj.TITLE }}</span>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <span>{{ obj.DATE1 }} ~ {{ obj.DATE2 }}</span>
                     </div>
                   </td>
                 </tr>
@@ -391,112 +414,118 @@ let koreanLocale = {
           </div>
         </div>
       </div>
-      <div
-        class="part__data_detail"
-        style="overflow: scroll; height: 70vh; flex: 2"
-      >
-        <div class="item__title">
-          <i class="fa-solid fa-angle-right item__angle"></i>
-          <span>상세보기</span>
-        </div>
-        <div class="item__contents">
-          <div>
-            <p>제목</p>
-            <input type="text" v-model="selectRowData.TITLE" />
-          </div>
-          <div>
-            <div class="mb-3">
-              <label class="form-label">게시기간</label>
-              <div class="row">
-                <div class="col" style="position: relative">
-                  <!--<Datepicker :disabled="selectRowData.SCHEDULE_USE_YN === 'N' ? true : false" v-model="selectRowData.DATE1" placeholder="선택하세요" format='yyyy-MM-dd'  language='ko' :locale="koreanLocale" :noMinutesOverlay="true" />-->
-                  <Datepicker
-                    class="form-control"
-                    style="height: 42px; padding-left: 2rem"
-                    v-model="selectRowData.DATE1"
-                    placeholder="선택하세요"
-                    format="yyyy-MM-dd"
-                    :locale="ko"
-                  />
-                  <i
-                    class="far fa-calendar-check fa-lg"
-                    style="
-                      position: absolute;
-                      left: 20px;
-                      top: 50%;
-                      transform: translateY(-50%);
-                      z-index: 999;
-                    "
-                  ></i>
-                </div>
-                <div
-                  class="col-sm-auto"
-                  style="padding-right: 0px; padding-left: 0px"
-                >
-                  ~
-                </div>
-                <div class="col" style="position: relative">
-                  <!--<Datepicker :disabled="selectRowData.SCHEDULE_USE_YN === 'N' ? true : false" v-model="selectRowData.DATE2" placeholder="선택하세요" format='yyyy-MM-dd'  language='ko' :locale="koreanLocale" :noMinutesOverlay="true"/>-->
-                  <Datepicker
-                    class="form-control"
-                    style="height: 42px; padding-left: 2rem"
-                    v-model="selectRowData.DATE2"
-                    placeholder="선택하세요"
-                    format="yyyy-MM-dd"
-                    :locale="ko"
-                  />
-                  <i
-                    class="far fa-calendar-check fa-lg"
-                    style="
-                      position: absolute;
-                      left: 20px;
-                      top: 50%;
-                      transform: translateY(-50%);
-                      z-index: 999;
-                    "
-                  ></i>
-                </div>
+      <div id="dragMe" class="resizer_h" @mousedown="mouseDownHandlerForDrag($event)"></div>
+      <!-- 상세 -->
+      <div class="part__data_detail right_side" style="height:auto; display: table-cell; vertical-align: top;">
+        <div class="item__scroll">
+          <div class="unit__scroll" style="border:0px solid red;">
+            <div>
+              <div class="item__contents_sungchang">
+                  <div style="border: 0px solid red;">
+                    <div
+                      class="row"
+                      style="border: 1px solid #eaeaea; width: 100%">
+                      <div>
+                        <div>
+                          <div>
+                            <label class="form-label">제목</label>
+                            <input type="text" v-model="selectRowData.TITLE" />
+                          </div>
+                          <div style="text-align: end; font-size: x-small">
+                            <label v-if="selectRowData.UPDATE_DATE"
+                              >Update {{ selectRowData.UPDATE_DATE }}</label
+                            >
+                          </div>
+                        </div>
+                        <div>
+                          <label class="form-label">사용여부</label>
+                          <div class="radio_group" style="gap:0 1rem;">
+                            <label> <input type="radio" id="radio1-1" value="Y" v-model="selectRowData.DAY_USE_YN" /><span for="radio1-1">ON</span> </label>
+                            <label> <input type="radio" id="radio1-2" value="N" v-model="selectRowData.DAY_USE_YN" /><span for="radio1-2">OFF</span> </label>
+                          </div>
+                        </div>
+                        <!-- <div
+                              class="d-flex justify-content-end align-items-center mt-2 mb-2"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexCheckDefault"
+                                v-model="selectRowData.DAY_USE_YN"
+                                true-value="N"
+                                false-value="Y"
+                                @click="chkBtn"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexCheckDefault"
+                                style="margin-left: 5px"
+                                >ON/OFF</label
+                              >
+                            </div> -->
+                        <div style="border: 0px solid red; margin-top:1rem; margin-bottom:1rem;">
+                          <label class="form-label">게시기간</label>
+                          <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap:0 1rem;">
+                            <div>
+                              <VDatePicker ref="selectDate1" v-model="selectRowData.DATE1"/> 
+                            </div>
+                            <div style="font-size:1.5rem;">~</div>
+                            <div>
+                              <VDatePicker ref="selectDate2" v-model="selectRowData.DATE2"/> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
-              <div
-                class="d-flex justify-content-end align-items-center mt-2 mb-2"
-              >
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="flexCheckDefault"
-                  v-model="selectRowData.DAY_USE_YN"
-                  true-value="N"
-                  false-value="Y"
-                  @click="chkBtn"
-                />
-                <label
-                  class="form-check-label"
-                  for="flexCheckDefault"
-                  style="margin-left: 5px"
-                  >사용안함</label
-                >
-              </div>
+              <quill-editor theme="snow" ref="quillEditorRef" 
+                            style="margin:0.5rem 0.4rem 0rem -0.4rem; border:0px solid red; height:11.5rem;"
+                            />
             </div>
           </div>
-          <div>
-            <p>내용</p>
-            <quill-editor
-              theme="snow"
-              ref="quillEditorRef"
-              style="border: 1px solid #ced4da; border-radius: 4px"
-            />
-            <div style="text-align: end; font-size: x-small">
-              <label v-if="selectRowData.UPDATE_DATE"
-                >Update {{ selectRowData.UPDATE_DATE }}</label
-              >
-            </div>
-          </div>
-          <div></div>
         </div>
       </div>
     </div>
   </div>
+  
 </template>
 
+<!-- CSS 전역 -->
 <style>
+tr {
+  cursor: pointer;
+}
+/** 캘린더CSS 강제수정, 오늘날짜-배경,글자 */
+body .vc-container .vc-day.is-today .vc-day-content {
+  background-color: #FFFFFF !important;
+  color: #a8a8a8 !important;
+}
+/** 캘린더CSS 강제수정, 선택된 날짜-배경 */
+body .vc-container .vc-highlights .vc-highlight {
+  background-color: #ba31ff !important;
+}
+/** 캘린더CSS 강제수정, 선택된 날짜-글자 */
+body .vc-container .vc-highlights + .vc-day-content {
+  color: #FFFFFF !important;
+}
+
+</style>
+
+<!-- CSS 영역한정(좌우조절용) -->
+<style scoped>
+.left_side {
+  width: 50%;
+  /* 중앙 정렬 */
+  display: flex;
+  /*justify-content: center;*/
+  min-width: 25%;
+}
+.right_side {
+  flex: 1;
+  /* 중앙 정렬 */
+  display: flex;
+  justify-content: center;
+  min-width: 25%;
+}
 </style>

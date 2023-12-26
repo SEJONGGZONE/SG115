@@ -23,8 +23,8 @@ import {
   startProgressbar,
   removeProgressbar,
 } from "@/common/utils.ts";
-
 import { useAlert } from "@/composables/showAlert";
+
 const { showAlert, showAlertSuccess, showConfirm } = useAlert();
 //사용자 및 페이지 정보
 const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
@@ -107,8 +107,8 @@ const tableSet = reactive({
       sortable: true,
     },
     {
-      label: "제조사",
-      field: "ITMAKER",
+      label: "바코드",
+      field: "ITBASE_EABARCODE",
       width: "10%",
       sortable: true,
     },
@@ -180,7 +180,6 @@ onMounted(() => {
   setCategory1();
   setCategory2();
   doSearch();
-
   // 모달객체를 밖으로 추가해준다.
   setTimeout(() => {
     const arrPrvModels = document
@@ -699,6 +698,8 @@ const previewImage = (itCode) => {
   const url = "https://www.cookzzang.com/product-details/" + itCode;
   window.open(url);
 };
+
+
 /******************************************************************************* 버튼 및 액션 이벤트 end */
 </script>
 <template>
@@ -711,7 +712,7 @@ const previewImage = (itCode) => {
               </button>
             </div>
           </div> -->
-
+    
     <!-- 검색영역 -->
     <div class="group__search">
       <div class="part__search_box">
@@ -756,6 +757,7 @@ const previewImage = (itCode) => {
         </button>
       </div>
     </div>
+    
     <!-- 이미지 업로드 임시 태그(모달창 띄우기) -->
     <div
       id="modalProductManagerDiv"
@@ -878,7 +880,7 @@ const previewImage = (itCode) => {
                   </td>
                   <td class="vtl-tbody-td">
                     <div>
-                      <span>{{ obj.ITMAKER }}</span>
+                      <span>{{ obj.ITBASE_EABARCODE }}</span>
                     </div>
                   </td>
                   <td class="vtl-tbody-td" style="text-align: left">
@@ -1267,6 +1269,7 @@ const previewImage = (itCode) => {
               </div>
               <!--오른쪽 -- 미리보기/편집 영역-->
               <div class="col-lg-8">
+                <!-- This division element needs the css height -->
                 <div
                   style="
                     border: 1px solid rgb(133, 129, 129);
@@ -1301,6 +1304,24 @@ const previewImage = (itCode) => {
   opacity: 0.5; /* 투명도를 50%로 설정 */
   pointer-events: none; /* 이벤트를 비활성화하여 마우스 클릭 등을 막음 */
 }
+
+.code-description {
+  padding: 22px 52px;
+  background-color: rgba(81, 92, 230, 0.1);
+  line-height: 1.4em;
+}
+
+.code-description,
+.code-description a {
+  font-family: Arial;
+  font-size: 14px;
+  color: #515ce6;
+}
+
+.code-html {
+  padding: 20px 52px;
+}
+
 
 /* https://loy124.tistory.com/203        */
 .main-container {

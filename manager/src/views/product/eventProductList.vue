@@ -384,7 +384,8 @@ const doSearch = async () => {
   };
   let data;
   try {
-    data = await productApi.eventManagementList(param);
+    const dataObj = await productApi.eventManagementList(param);
+    data = dataObj.data;
     table.isLoading = false;
     if (data.RecordCount > 0) {
       table.rows.push(...data.RecordSet);
@@ -415,7 +416,8 @@ const doDelete = async (row) => {
   };
   let data;
   try {
-    data = await productApi.eventManagementDelete(param);
+    const dataObj = await productApi.eventManagementDelete(param);
+    data = dataObj.data;
     if (data.ResultCode === "00") {
       showAlertSuccess("삭제되었습니다.");
       table.rows = [];
@@ -433,7 +435,7 @@ const doSave = async () => {
     geonum: selectRowData?.value?.GEONUM ?? "",
     type: rType.value ?? "",
     title: selectRowData?.value?.TITLE ?? "",
-    imgFileNo: imgFileNo.value ?? selectRowData?.value?.IMG_FILE_NO,
+    imgFileNo: imgFileNo.value ?? selectRowData?.value?.IMG_FILE_NO ?? "",
     date1: "", // setDateFormat(selectRowData?.value?.DATE1)?? '',
     date2: "", // setDateFormat(selectRowData?.value?.DATE2)?? '',
     scheduleUseYn: "Y", // selectRowData?.value?.SCHEDULE_USE_YN ?? 'Y',
@@ -445,7 +447,8 @@ const doSave = async () => {
 
   let data;
   try {
-    data = await productApi.eventManagementSave(param);
+    const dataObj = await productApi.eventManagementSave(param);
+    data = dataObj.data;
     if (data.ResultCode === "00") {
       showAlertSuccess("저장되었습니다.");
       table.rows = [];
@@ -479,7 +482,8 @@ const doImgSave = async () => {
 
   startLoadingBar();
 
-  const data = await productApi.fileUpload(formData, url);
+  const dataObj = await productApi.fileUpload(formData, url);
+  const data = dataObj.data;
   console.log("///data:::", data);
   if (data.data.ResultCode === "00") {
     //showAlertSuccess("저장되었습니다.")
@@ -493,14 +497,15 @@ const doImgSave = async () => {
   }
 };
 </script>
+
 <template>
-  <div class="section section__management">
+  <div class="section section__management" style="gap: 2px">
     <!-- <div class="group__title">
-            <h2>기획관리</h2>
-        </div>   -->
-    <div class="group__contents container1">
-      <!-- 좌측리스트영역 -->
-      <div class="part__data_list left" style="flex: unset">
+      <h2>기획관리</h2>
+    </div> -->
+    <div class="group__contents_sungchang">
+      <!-- 메인데이타 -->
+      <div class="part__data_list left_side" style="flex: unset; height: auto">
         <div class="group__search">
           <div
             class="part__search_box"
@@ -508,11 +513,13 @@ const doImgSave = async () => {
               display: flex;
               align-items: center;
               justify-content: space-between;
+              padding-top: 0px;
+              margin-top:-10px;
             "
           >
-            <div class="group__title">
+            <!-- <div class="group__title">
               <h2>기획관리</h2>
-            </div>
+            </div> -->
             <div style="display: flex">
               <button type="button" @click="newBtn()">
                 <i class="fa fa-pen-to-square fa-fw"></i>신규
@@ -647,15 +654,10 @@ const doImgSave = async () => {
           </button>
         </div>
       </div>
-      <!-- 좌우조절 -->
-      <div
-        class="resizer"
-        id="dragMe"
-        @mousedown="mouseDownHandler($event)"
-      ></div>
-      <!-- 우측상세영역 -->
-      <div class="part__data_detail right" style="flex: 1">
-        <div style="overflow: auto; height: 100%">
+      <div id="dragMe" class="resizer_h" @mousedown="mouseDownHandlerForDrag($event)"></div>
+      <!-- 상세 -->
+      <div class="part__data_detail right_side" style="height: auto">
+        <div style="height: 100%">
           <!-- <div class="item__title" >
 						<i class="fa-solid fa-angle-right item__angle"></i>
 						<span>상세보기</span>
@@ -761,7 +763,6 @@ const doImgSave = async () => {
               <!--2차 끝-->
 
               <div class="mb-3" style="margin-top: 10px">
-                <quill-editor theme="snow" ref="quillEditorRef" />
                 <div style="text-align: end; font-size: small">
                   <label v-if="selectRowData.WS_EDTDATE"
                     >Update {{ selectRowData.WS_EDTDATE }}/{{
@@ -772,53 +773,34 @@ const doImgSave = async () => {
               </div>
             </div>
           </div>
+          <quill-editor theme="snow" ref="quillEditorRef" style="border:0px solid red; height:20rem;"/>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style>
-.table-container {
-  height: 500px; /* 원하는 높이 값으로 설정 */
-  overflow-y: scroll;
-  border-collapse: collapse; /* 테두리 선이 겹치지 않도록 설정합니다. */
-  border: 1px solid gainsboro; /* 테두리 선의 스타일과 색상을 지정합니다. */
-}
-.ellipsis {
-  width: 200px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-}
-.margin10 {
-  margin-bottom: 10px;
-}
 
-.container1 {
-  display: flex;
-  height: 16rem;
-  width: 100%;
+<style>
+tr {
+  cursor: pointer;
 }
-.resizer {
-  background-color: #eb2b2b;
-  cursor: ew-resize;
-  width: 3px;
-  margin: 0px -10px;
-}
-.left {
-  width: 35%;
+</style>
+
+<!-- CSS 영역한정(좌우조절용) -->
+<style scoped>
+.left_side {
+  width: 45%;
   /* 중앙 정렬 */
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   min-width: 25%;
 }
-.right {
+.right_side {
   flex: 1;
   /* 중앙 정렬 */
   display: flex;
   justify-content: center;
-  min-width: 35%;
+  min-width: 25%;
 }
 </style>
