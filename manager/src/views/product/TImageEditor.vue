@@ -68,7 +68,7 @@
         // 로고제거
         document.getElementsByClassName("tui-image-editor-header-logo")[0].style.display = "none";
         // 배경설정1,메인
-        document.getElementsByClassName("tui-image-editor-main-container")[0].style.backgroundColor = "#ffffff";
+        document.getElementsByClassName("tui-image-editor-main-container")[0].style.backgroundColor = "#eaeaea";
         // 배경설정1,하단
         //document.getElementsByClassName("tui-image-editor-menu")[0].style.backgroundColor = "#ffffff";
         //this.editorInstance.loadImageFromURL('/assets/img/product/img_edt_sample.jpg', 'My sample image');

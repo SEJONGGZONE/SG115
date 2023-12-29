@@ -27,6 +27,8 @@ import {
 import { ko } from "date-fns/locale";
 import Datepicker from "vue3-datepicker";
 
+import 'simple-line-icons/css/simple-line-icons.css';
+
 import { useAlert } from "@/composables/showAlert";
 const { showAlert, showAlertSuccess } = useAlert();
 //사용자 및 페이지 정보
@@ -501,7 +503,8 @@ const setCategory1 = async () => {
   };
   let data;
   try {
-    data = await productApi.category(param);
+    const dataObj = await productApi.category(param);
+    data = dataObj.data;
     catergory1data.value = data.RecordSet;
     if (data.RecordCount > 0) {
       for (let i = 0; i < data.RecordCount; i++) {
@@ -522,7 +525,8 @@ const setCategory2 = async () => {
   };
   let data;
   try {
-    data = await productApi.category(param);
+    const dataObj = await productApi.category(param);
+    data = dataObj.data;
     catergory2data.value = data.RecordSet;
     if (data.RecordCount > 0) {
       itsCode2.value = catergory2data.value[0].CODE;
@@ -544,7 +548,9 @@ const doSearch = async () => {
   };
   let data;
   try {
-    data = await productApi.eventManagementList(param);
+    
+    const dataObj = await productApi.eventManagementList(param);
+    data = dataObj.data;
     table.isLoading = false;
     if (data.RecordCount > 0) {
       table.rows.push(...data.RecordSet);
@@ -575,7 +581,8 @@ const doSearchDR = async () => {
   };
   let data;
   try {
-    data = await productApi.eventProductList(param);
+    const dataObj = await productApi.eventProductList(param);
+    data = dataObj.data;
     if (data.RecordCount > 0) {
       tableDR.rows.push(...data.RecordSet);
       if (data.RecordCount === pageSizeDR.value) {
@@ -611,7 +618,8 @@ const doSearchDL = async () => {
   };
   let data;
   try {
-    data = await productApi.productManagement(param);
+    const dataObj = await productApi.productManagement(param);
+    data = dataObj.data;
     if (data.RecordCount > 0) {
       let tempTableDL = data.RecordSet;
       tableDL.rows = tempTableDL.filter((bItem) => {
@@ -652,7 +660,8 @@ const doSave = async () => {
 
   let data;
   try {
-    data = await productApi.eventProductSave(param);
+    const dataObj = await productApi.eventProductSave(param);
+    data = dataObj.data;
     if (data.ResultCode === "00") {
       showAlertSuccess("저장되었습니다.");
       table.rows = [];
@@ -672,12 +681,14 @@ const doSave = async () => {
     class="section section__management"
     style="border: 0px solid red; padding-bottom: 0px"
   >
-    <div class="group__title">
+    <!-- <div class="group__title">
       <h2>기획상품관리</h2>
+    </div> -->
+    <div class="group__contents_sungchang margin10" style="border: 0px solid red; flex-direction: column;">
+      <div class="main_title">
+        <i class="icon-list"></i>&nbsp;&nbsp;기획 상품관리
     </div>
-    <div class="group__title" style="border: 0px solid red"></div>
-    <div class="group__contents margin10" style="border: 0px solid red">
-      <div class="part__data_list" style="">
+      <div class="part__data_list" style="border-radius:0px;">
         <div class="item__scroll" id="productDiv">
           <div class="unit__scroll">
             <table>
@@ -742,8 +753,7 @@ const doSave = async () => {
                 </tr>
               </thead>
               <tbody>
-                <tr
-                  :class="selectRowData?.GEONUM === obj.GEONUM ? 'active' : ''"
+                <tr :class="selectRowData?.GEONUM === obj.GEONUM ? 'active' : obj.GEONUM%2 === 0?'link':''" 
                   class="pointer"
                   style="text-decoration: none"
                   v-if="table.rows.length > 0"
@@ -803,7 +813,7 @@ const doSave = async () => {
         </div>
       </div>
     </div>
-    <div class="group__contents" style="flex: 2.2">
+    <div class="group__contents_sungchang" style="flex: 2.2">
       <div
         class="part__data_detail"
         style="overflow: auto; height: auto; flex: 1"
@@ -868,7 +878,7 @@ const doSave = async () => {
               </div>
               <!-- 결과리스트 -->
               <div
-                class="group__contents"
+                class="group__contents_sungchang"
                 style="margin-top: -10px; height: auto"
               >
                 <div class="part__data_list" style="height: auto">
@@ -947,10 +957,7 @@ const doSave = async () => {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr
-                            :class="
-                              selectRowDataDL?.RANK === obj.RANK ? 'active' : ''
-                            "
+                          <tr :class="selectRowData?.RANK === obj.RANK ? '' : obj.RANK%2 === 0?'link':''" 
                             v-if="tableDL.rows.length > 0"
                             v-for="(obj, index) in tableDL.rows"
                             :key="index"
@@ -1079,7 +1086,7 @@ const doSave = async () => {
                 "
               >
                 <div
-                  class="group__contents"
+                  class="group__contents_sungchang"
                   style="height: auto; border: 0px solid red"
                 >
                   <div class="part__data_list" style="height: auto">
@@ -1160,12 +1167,7 @@ const doSave = async () => {
                             </tr>
                           </thead>
                           <tbody>
-                            <tr
-                              :class="
-                                selectRowDataDR?.RANK === obj.RANK
-                                  ? 'active'
-                                  : ''
-                              "
+                            <tr :class="selectRowData?.RANK === obj.RANK ? '' : obj.RANK%2 === 0?'link':''" 
                               v-if="tableDR.rows.length > 0"
                               v-for="(obj, index) in tableDR.rows"
                               :key="index"
@@ -1226,6 +1228,8 @@ const doSave = async () => {
 </template>
 
 <style>
+
+
 .table-container-300 {
   height: 300px; /* 원하는 높이 값으로 설정 */
   overflow-y: scroll;

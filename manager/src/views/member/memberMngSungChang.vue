@@ -8,6 +8,8 @@ import { VueDraggableNext as draggable } from 'vue-draggable-next'
 import { memberApi, productApi } from '@/api'
 import { utils } from '@/common/utils.ts'
 
+import 'simple-line-icons/css/simple-line-icons.css';
+
 import { useAppOptionStore } from '@/stores/app-option'
 const appOption = useAppOptionStore()
 //사용자 및 페이지 정보
@@ -598,7 +600,10 @@ const clickSearch = async () => {
       <div id="dragMe" class="resizer_h" @mousedown="mouseDownHandlerForDrag($event)"></div>
       <!-- 상세 -->
       <div class="part__data_detail right_side" style="height: auto" v-if="detailShow">
-        <div class="item__contents_sungchang">
+          <div class="right_side_detail_title">
+            <i class="icon-note"></i>&nbsp;&nbsp;사용자(거래처) 상세정보
+          </div>
+          <div class="item__contents_sungchang">
           <div>
             <label class="form-label">거래처명</label><br />
             <input readonly type="text" v-model="selectRowData.COMPANY_NAME"/>
@@ -638,7 +643,7 @@ const clickSearch = async () => {
           <div>
             <label class="form-label">사업자등록증</label><br />
             <img :src="showDetailImage" @click="handleImageClick" />
-            <button @click="handleImageClick" class="btn btn-outline-primary me-1 mb-1 btn_file">
+            <button @click="handleImageClick" class="btn btn-outline-primary me-1 mb-1 btn_file" style="background-color: #ffffff9b;">
               <i class="fa-solid fa-plus"></i> 파일첨부
             </button>
           </div>
@@ -739,13 +744,6 @@ const clickSearch = async () => {
 tr {
   cursor: pointer;
 }
-
-
-
-
-
-
-
 
 
 .sample_color {

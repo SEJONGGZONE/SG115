@@ -46,7 +46,7 @@ const logout = () =>{
       <i class="fa-solid fa-arrow-left"></i>
     </button>
     <div class="part__lnb fold">
-      <div class="part__login_info">
+      <div class="part__login_info" style="padding:0 0.2rem;">
         <div class="item__profile">
           <img src="/assets/img/sungchang/logo_01_200.png" alt="성창푸드" />
         </div>

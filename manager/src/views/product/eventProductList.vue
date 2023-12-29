@@ -22,6 +22,8 @@ import Datepicker from "vue3-datepicker";
 import quillEditor from "@/components/plugins/QuillEditor.vue";
 import { useAlert } from "@/composables/showAlert";
 
+import 'simple-line-icons/css/simple-line-icons.css';
+
 const { showAlert, showAlertSuccess } = useAlert();
 //사용자 및 페이지 정보
 const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
@@ -624,7 +626,7 @@ const doImgSave = async () => {
                   </td>
                   <td>
                     <div>
-                      <span>{{ obj.TYPE === "10" ? "테마" : "일반" }}</span>
+                      <span>{{ obj.TYPE === "10" ? "메뉴에 표시" : "메인화면 노출" }}</span>
                     </div>
                   </td>
                   <!-- <td>
@@ -657,26 +659,17 @@ const doImgSave = async () => {
       <div id="dragMe" class="resizer_h" @mousedown="mouseDownHandlerForDrag($event)"></div>
       <!-- 상세 -->
       <div class="part__data_detail right_side" style="height: auto">
-        <div style="height: 100%">
-          <!-- <div class="item__title" >
-						<i class="fa-solid fa-angle-right item__angle"></i>
-						<span>상세보기</span>
-					</div> -->
-          <div class="group__search" style="">
-            <div
-              class="part__search_box"
-              style="float: right; border-bottom: 1px solid #eaeaea"
-            >
-              <button type="button" @click="saveBtn()">
-                <i class="fa fa-circle-check fa-fw"></i>저장
-              </button>
-            </div>
-          </div>
-          <div class="item__contents">
+        <div class="right_side_detail_title">
+            <i class="icon-note"></i>&nbsp;&nbsp;기획관리 상세정보
+            <label style="font-size:0.6rem; font-weight:500; margin-left:0.2rem; color:#f6f6f6"
+                                    v-if="selectRowData.WS_EDTDATE"> - Update {{ selectRowData.WS_EDTDATE }}</label>
+        </div>
+        <div style="height: 100%;">
+          <div class="item__contents_sungchang" style="background-image:none;">
             <div>
               <div
                 class="row"
-                style="border-top: 0px solid #eaeaea; width: 100%"
+                style="border-top: 0px solid #eaeaea; width: 100%; margin-bottom:0.5rem;"
               >
                 <div>
                   <div class="row">
@@ -700,8 +693,8 @@ const doImgSave = async () => {
                       />
                     </div>
                     <div class="col-xl-6 col-lg-6">
-                      <label class="form-label">대표 이미지</label>
-                      <div class="row" style="align-items: end">
+                      <label class="form-label">이미지 설정</label>
+                      <div class="row" style="align-items:end">
                         <div class="h-55px col-auto" style="padding-right: 0px">
                           <img
                             id="showImg"
@@ -710,7 +703,7 @@ const doImgSave = async () => {
                                 ? selectImg
                                 : '/assets/img/logo/noimg.png'
                             "
-                            class="mw-100 mh-70 rounded"
+                            style="padding: 0.1rem 0.1rem; background-color:#FFFFFF00; width:2.5rem;"
                           />
                         </div>
                         <div
@@ -724,13 +717,9 @@ const doImgSave = async () => {
                             accept=".jpg, .jpeg, .png"
                             @change="changeFile"
                           />
-                          <a
-                            href="javascript:void(0);"
-                            style="z-index: 1052 !important"
-                            class="btn btn-primary btn"
-                            @click.prevent="openFile"
-                            >찾아보기</a
-                          >
+                          <button @click="openFile" class="btn btn-outline-primary me-1 mb-1 btn_file" style="background-color: #ffffff9b; margin-left:1rem;">
+                            <i class="fa-solid fa-plus"></i> 파일첨부
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -744,7 +733,7 @@ const doImgSave = async () => {
                             value="10"
                             v-model="rType"
                           />
-                          <span for="radio1-1"> 테마</span>
+                          <span for="radio1-1">메뉴에 표시</span>
                         </label>
                         <label>
                           <input
@@ -753,28 +742,26 @@ const doImgSave = async () => {
                             value="20"
                             v-model="rType"
                           />
-                          <span for="radio1-2"> 일반</span>
+                          <span for="radio1-2">메인화면 노출</span>
                         </label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!--2차 끝-->
-
-              <div class="mb-3" style="margin-top: 10px">
-                <div style="text-align: end; font-size: small">
-                  <label v-if="selectRowData.WS_EDTDATE"
-                    >Update {{ selectRowData.WS_EDTDATE }}/{{
-                      selectRowData.WS_EDTUSER
-                    }}</label
-                  >
-                </div>
-              </div>
             </div>
           </div>
-          <quill-editor theme="snow" ref="quillEditorRef" style="border:0px solid red; height:20rem;"/>
+          <div>
+            <label class="form-label" style="font-size:0.6rem; padding-left:0.2rem;">노출문구</label>
+            <quill-editor theme="snow" ref="quillEditorRef" style="border:0px solid red; height:20rem; background-color:#FFFFFF;"/>
+          </div>
+          <div class="item__buttons" style="justify-content: end; margin-top:0.5rem; border:0px solid red;">
+            <!-- <button class="btn_close" @click="cancleBtn"><i class="fa-regular fa-circle-xmark"></i><span>닫기</span></button> -->
+            <button class="btn_save" @click="saveBtn"><i class="fa-regular fa-circle-check"></i><span>저장</span></button>
+          </div>
         </div>
+
+        
       </div>
     </div>
   </div>
@@ -785,6 +772,9 @@ const doImgSave = async () => {
 tr {
   cursor: pointer;
 }
+
+
+
 </style>
 
 <!-- CSS 영역한정(좌우조절용) -->
@@ -801,6 +791,7 @@ tr {
   /* 중앙 정렬 */
   display: flex;
   justify-content: center;
-  min-width: 25%;
+  min-width: 38%;
+  background-image: url('/assets/img/sungchang/logo_background_001.png');
 }
 </style>

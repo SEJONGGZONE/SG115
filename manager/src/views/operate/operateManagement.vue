@@ -23,6 +23,7 @@ import {
 import { ko } from "date-fns/locale";
 import Datepicker from "vue3-datepicker";
 import quillEditor from "@/components/plugins/QuillEditor.vue";
+import 'simple-line-icons/css/simple-line-icons.css';
 
 import { useAlert } from "@/composables/showAlert";
 const { showAlert, showAlertSuccess } = useAlert();
@@ -381,8 +382,7 @@ const attrs = ref([
                 </tr>
               </thead>
               <tbody>
-                <tr
-                  :class="selectRowData?.GNO == obj.GNO ? 'active' : ''"
+                <tr :class="selectRowData?.RANK === obj.RANK ? 'active' : obj.RANK%2 === 0?'link':''" 
                   v-if="table.rows"
                   v-for="(obj, index) in table.rows"
                   :key="index"
@@ -417,10 +417,15 @@ const attrs = ref([
       <div id="dragMe" class="resizer_h" @mousedown="mouseDownHandlerForDrag($event)"></div>
       <!-- 상세 -->
       <div class="part__data_detail right_side" style="height:auto; display: table-cell; vertical-align: top;">
+        <div class="right_side_detail_title">
+          <i class="icon-note"></i>&nbsp;&nbsp;상세정보
+          <label style="font-size:0.5rem; font-weight:700; margin-left:0.2rem; color:#FFFFFF"
+                  v-if="selectRowData.UPDATE_DATE"> - Update {{ selectRowData.UPDATE_DATE }}</label>
+        </div>
         <div class="item__scroll">
           <div class="unit__scroll" style="border:0px solid red;">
             <div>
-              <div class="item__contents_sungchang">
+              <div class="item__contents_sungchang" style="background-image:none;">
                   <div style="border: 0px solid red;">
                     <div
                       class="row"
@@ -430,11 +435,6 @@ const attrs = ref([
                           <div>
                             <label class="form-label">제목</label>
                             <input type="text" v-model="selectRowData.TITLE" />
-                          </div>
-                          <div style="text-align: end; font-size: x-small">
-                            <label v-if="selectRowData.UPDATE_DATE"
-                              >Update {{ selectRowData.UPDATE_DATE }}</label
-                            >
                           </div>
                         </div>
                         <div>
@@ -480,7 +480,7 @@ const attrs = ref([
                   </div>
               </div>
               <quill-editor theme="snow" ref="quillEditorRef" 
-                            style="margin:0.5rem 0.4rem 0rem -0.4rem; border:0px solid red; height:11.5rem;"
+                            style="margin:0.5rem 0.4rem 0rem -0.4rem; border:0px solid red; height:11.5rem; background-color:#FFFFFF;"
                             />
             </div>
           </div>
@@ -526,6 +526,7 @@ body .vc-container .vc-highlights + .vc-day-content {
   /* 중앙 정렬 */
   display: flex;
   justify-content: center;
-  min-width: 25%;
+  min-width: 35%;
+  background-image: url('/assets/img/sungchang/logo_background_001.png');
 }
 </style>

@@ -110,6 +110,7 @@ export default {
     .editor {
       height: 40rem;
       overflow: hidden;
+      font-size: 1rem;
     }
 
     .output {
