@@ -468,7 +468,9 @@ const searchBtnEnter = (event) => {
 
   // 1. 목록 지우기
   table.rows = []
-  // 2. 목록 요청하기
+  // 2. 페이지 번호 초기화
+  pageNumber.value = 1
+  // 3. 목록 요청하기
   doSearch();
 };
 

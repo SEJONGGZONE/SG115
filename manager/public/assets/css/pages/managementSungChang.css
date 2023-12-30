@@ -59,6 +59,7 @@
   border-bottom: 0px solid #eaeaea;
   box-shadow: 1px 1px 20px 1px #f9699973;
   padding: 0.2rem;
+  background-image: url('/assets/img/sungchang/logo_background_001.png');
 }
 
 .group__contents_sungchang .part__data_list .unit__scroll {
@@ -107,6 +108,7 @@
   overflow: hidden;
 }
 .group__contents_sungchang .part__data_list table tr {
+  background-color: #ffffff;
   height: 35px;
 }
 .group__contents_sungchang .part__data_list table tr:hover {
