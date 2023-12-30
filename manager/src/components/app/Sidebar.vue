@@ -60,7 +60,7 @@ const logout = () =>{
       <div class="part__menu_list">
         <ul class="menu_list"> 
           <template v-for="menu in appSidebarMenu">  
-            <sidebar-nav v-if="menu.title" v-bind:menu="menu"  ></sidebar-nav>
+            <sidebar-nav v-if="menu.title" v-bind:menu="menu"  style="width:180px;"></sidebar-nav>
           </template>
         </ul>
       </div>

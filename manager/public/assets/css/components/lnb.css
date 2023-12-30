@@ -128,10 +128,18 @@
   transition: max-height 0.8s ease;
 }
 .lnb .part__menu_list > ul > li > ul > li button {
-  padding: 0px 0px 0px 60px;
+  padding: 0px;
+  margin-left: 1.4rem;
+  transition: all 0.2s linear;
+}
+.lnb .part__menu_list > ul > li > ul > li button:hover {
+  color: #4d1ba3;
+  transform: scale(1.1);
 }
 .lnb .part__menu_list > ul > li > ul > li button.active {
-  color: #4a827d;
+  color: #4d1ba3;
+  transform: scale(1.1);
+  font-weight: 600;
 }
 .lnb .part__menu_list > ul > li > ul > li button span {
   font-size: 14px;

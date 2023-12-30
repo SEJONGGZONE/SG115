@@ -490,6 +490,9 @@
   border-radius: 0.2rem;
   height: 1.4rem;
   color: #582090;
+  text-align: left;
+  font-size: 0.55rem;
+  font-weight: 600;
 }
 
 /* 리스트(성창) 영역내 버튼(통합검색) */
@@ -522,7 +525,7 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  background-color: #4a827d;
+  background-color: #54258a;
   color: #fff;
   width: 180px;
   height: 1.5rem;

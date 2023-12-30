@@ -1311,6 +1311,9 @@ const previewImage = (itCode) => {
   min-width: 25%;
 }
 
+.sample {
+  color: #4d1ba3;
+}
 
 
 </style>

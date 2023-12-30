@@ -509,7 +509,7 @@ const clickSearch = async () => {
             </button>
           </div>
         </div>
-        <div class="item__scroll" id="memberListDiv">
+        <div class="item__scroll" id="memberListDiv" style="margin-bottom: 1rem;">
           <div class="unit__scroll">
             <table>
               <!-- 리스트헤더(타이틀) -->
@@ -594,9 +594,14 @@ const clickSearch = async () => {
           </div>
         </div>
 
-        <div class="item__buttons" v-if="table.isShowMoreBtn">
-          <button class="btn_more" @click="searchMoteBtn"><i class="fa-solid fa-plus"></i>더보기</button>
+        
+        <!-- 더보기버튼 -->
+        <div class="item__buttons" v-if="table.isShowMoreBtn" style="gap: 0px; margin-bottom: -0.2rem;">
+          <button @click="searchMoteBtn" style="margin: 0px">
+            <i class="fa-solid fa-plus"></i>더보기
+          </button>
         </div>
+
       </div>
       <div id="dragMe" class="resizer_h" @mousedown="mouseDownHandlerForDrag($event)"></div>
       <!-- 상세 -->

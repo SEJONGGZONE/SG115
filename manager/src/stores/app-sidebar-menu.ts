@@ -47,21 +47,22 @@ export const useAppSidebarMenuStore = defineStore({
 				]
 			},
 			{
-				url: '/product/productManagementSungChang', icon: 'fa fa-layer-group', title: '상품관리',
+				url: '/product/productManagementSungChang', icon: 'fa fa-cart-shopping', title: '상품관리',
 				children: [
-					{ url: '/product/productManagementSungChang', title: '상품조회/수정' },
+					{ url: '/product/productManagementSungChang', title: '상품조회/수정'},
 					//{ url: '/product/imageView', title: '이미지 편집' },
+					{ url: '/product/TImageEditor', title: '이미지 편집기' },
 				]
 			},
 			{
-				url: '/product/eventProductList', icon: 'fa fa-layer-group', title: '기획관리',
+				url: '/product/eventProductList', icon: 'fa fa-calendar-check', title: '기획관리',
 				children: [
 					{ url: '/product/eventProductList', title: '기획관리' },
 					{ url: '/product/eventProductItem', title: '기획상품관리' },
 				]
 			},
 			{
-				url: '/operate/operateManagement', icon: 'fa fa-comments', title: '운영관리',
+				url: '/operate/operateManagement', icon: 'fa fa-sliders', title: '운영관리',
 				children: [
 					{ url: '/operate/operateManagement', title: '공지사항/팝업' },
 					// { url: '/operate/eventManagement', title: '이벤트/알림' },

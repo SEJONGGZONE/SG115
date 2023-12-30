@@ -302,7 +302,7 @@ onMounted(() => {
 /******************************************************************************* 버튼 및 액션 이벤트 start */
 
 const selectFirstRow = () => {
-  const firstRow = document.querySelector(".selected");
+  const firstRow = document.querySelector(".eventListTable");
   if (firstRow) {
     firstRow.click();
   }
@@ -755,7 +755,7 @@ const doSave = async () => {
               </thead>
               <tbody>
                 <tr :class="selectRowData?.GEONUM === obj.GEONUM ? 'active' : obj.GEONUM%2 === 0?'link':''" 
-                  class="pointer"
+                  class="eventListTable"
                   style="text-decoration: none"
                   v-if="table.rows.length > 0"
                   v-for="(obj, index) in table.rows"
@@ -814,7 +814,7 @@ const doSave = async () => {
         </div>
       </div>
     </div>
-    <div class="group__contents_sungchang" style="flex: 2.2">
+    <div class="group__contents_sungchang" style="flex: 2.2" v-if="selectRowData.TITLE">
       <div
         class="part__data_detail"
         style="overflow: auto; height: auto; flex: 1"
@@ -1230,6 +1230,10 @@ const doSave = async () => {
 
 <style>
 
+
+.eventListTable {
+  cursor: pointer;
+}
 
 .table-container-300 {
   height: 300px; /* 원하는 높이 값으로 설정 */
