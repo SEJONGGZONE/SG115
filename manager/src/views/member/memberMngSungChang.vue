@@ -8,8 +8,6 @@ import { VueDraggableNext as draggable } from 'vue-draggable-next'
 import { memberApi, productApi } from '@/api'
 import { utils } from '@/common/utils.ts'
 
-import 'simple-line-icons/css/simple-line-icons.css';
-
 import { useAppOptionStore } from '@/stores/app-option'
 const appOption = useAppOptionStore()
 //사용자 및 페이지 정보
@@ -499,6 +497,9 @@ const clickSearch = async () => {
     <div class="group__contents_sungchang">
       <!-- 메인데이타 -->
       <div class="part__data_list left_side" style="flex: unset; height: auto;">
+        <div class="left_side_detail_title">
+          <i class="icon-list"></i>&nbsp;&nbsp;사용자관리 - 사용자(거래처) 관리
+        </div>
         <!-- 검색어 -->
         <div class="grid_searcharea" style="border-bottom: 1px solid #0b048678;">
           <input type="text" v-on:keyup.prevent="searchBtnEnter" v-model="searchKeyword" placeholder="거래처명,주소,전화번호,코드 조회가능.."/>
@@ -747,7 +748,7 @@ tr {
 
 
 .sample_color {
-  color: #7e7e7e;
+  color: #8542d1;
 }
 </style>
 

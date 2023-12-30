@@ -27,8 +27,6 @@ import {
 import { ko } from "date-fns/locale";
 import Datepicker from "vue3-datepicker";
 
-import 'simple-line-icons/css/simple-line-icons.css';
-
 import { useAlert } from "@/composables/showAlert";
 const { showAlert, showAlertSuccess } = useAlert();
 //사용자 및 페이지 정보
@@ -685,10 +683,13 @@ const doSave = async () => {
       <h2>기획상품관리</h2>
     </div> -->
     <div class="group__contents_sungchang margin10" style="border: 0px solid red; flex-direction: column;">
-      <div class="main_title">
+      <!-- <div class="main_title">
         <i class="icon-list"></i>&nbsp;&nbsp;기획 상품관리
-    </div>
+    </div> -->
       <div class="part__data_list" style="border-radius:0px;">
+        <div class="left_side_detail_title">
+          <i class="icon-list"></i>&nbsp;&nbsp;기획관리 - 기획상품 관리
+        </div>
         <div class="item__scroll" id="productDiv">
           <div class="unit__scroll">
             <table>
@@ -1080,8 +1081,8 @@ const doSave = async () => {
                   text-align: center;
                   overflow: auto;
                   height: auto;
-                  padding: 0px;
-                  margin: 0px;
+                  padding: 1rem 0 0 0;
+                  margin: 0 0 0 0;
                   border: 0px solid red;
                 "
               >

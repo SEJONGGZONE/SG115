@@ -23,7 +23,6 @@ import {
 import { ko } from "date-fns/locale";
 import Datepicker from "vue3-datepicker";
 import quillEditor from "@/components/plugins/QuillEditor.vue";
-import 'simple-line-icons/css/simple-line-icons.css';
 
 import { useAlert } from "@/composables/showAlert";
 const { showAlert, showAlertSuccess } = useAlert();
@@ -309,7 +308,7 @@ const attrs = ref([
 
 <template>
   <div class="section section__management" style="gap: 2px">
-    <div class="group__search">
+    <!-- <div class="group__search">
       <div
         class="part__search_box"
         style="
@@ -333,10 +332,21 @@ const attrs = ref([
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="group__contents_sungchang">
       <!-- 메인데이타 -->
       <div class="part__data_list left_side" style="flex: unset; height: auto">
+        <div class="left_side_detail_title">
+          <i class="icon-list"></i>&nbsp;&nbsp;운영관리 - 공지사항/팝업
+        </div>
+        <!-- 검색어입력/버튼 -->
+        <div class="grid_searcharea" style="justify-content: end;">
+          <div class="item__buttons">
+            <button class="btn_search" @click="newBtn" style="width:5rem">
+              <i class="fa fa-pen-to-square fa-fw"></i><span style="margin-left:0px;">신규</span>
+            </button>
+          </div>
+        </div>
         <div class="item__scroll" id="productDiv">
           <div class="unit__scroll">
             <table>
@@ -421,6 +431,17 @@ const attrs = ref([
           <i class="icon-note"></i>&nbsp;&nbsp;상세정보
           <label style="font-size:0.5rem; font-weight:700; margin-left:0.2rem; color:#FFFFFF"
                   v-if="selectRowData.UPDATE_DATE"> - Update {{ selectRowData.UPDATE_DATE }}</label>
+        </div>
+        <!-- 검색어입력/버튼 -->
+        <div class="grid_searcharea" style="justify-content: end; background-color:#FFFFFF;">
+          <div class="item__buttons">
+            <button class="btn_search" @click="saveBtn" style="width:5rem">
+              <i class="fa fa-save fa-fw"></i><span style="margin-left:0px;">저장</span>
+            </button>
+            <button class="btn_search" @click="deleteBtn" style="width:5rem">
+              <i class="fa fa-trash-can fa-fw"></i><span style="margin-left:0px;">삭제</span>
+            </button>
+          </div>
         </div>
         <div class="item__scroll">
           <div class="unit__scroll" style="border:0px solid red;">

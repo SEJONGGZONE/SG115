@@ -713,50 +713,6 @@ const previewImage = (itCode) => {
             </div>
           </div> -->
     
-    <!-- 검색영역 -->
-    <div class="group__search">
-      <div class="part__search_box">
-        <select
-          class="selectBox"
-          @change="optioCodeChg1"
-          :v-model="catergory1data"
-        >
-          <option
-            v-for="item in catergory1data"
-            :value="item.CODE"
-            :key="item.CODE"
-          >
-            {{ item.NAME }}
-          </option>
-        </select>
-
-        <select
-          class="selectBox"
-          @change="optioCodeChg2"
-          :v-model="catergory2data"
-        >
-          <option
-            v-for="item in catergory2data"
-            :value="item.CODE"
-            :key="item.CODE"
-          >
-            {{ item.NAME }}
-          </option>
-        </select>
-        <input
-          type="text"
-          v-on:keyup.enter="searchBtn()"
-          v-model="searchKeyword"
-          placeholder="검색어를 입력하세요"
-        />
-        <button @click="searchBtn()">
-          <i class="fa-solid fa-magnifying-glass"></i><span>검색</span>
-        </button>
-        <button @click="excelFileDownload()">
-          <i class="fa-solid fa-download"></i><span>엑셀</span>
-        </button>
-      </div>
-    </div>
     
     <!-- 이미지 업로드 임시 태그(모달창 띄우기) -->
     <div
@@ -769,8 +725,75 @@ const previewImage = (itCode) => {
     />
     <!-- 이미지 편집 -->
 
-    <div class="group__contents">
-      <div class="part__data_list" style="height: 100%; padding-bottom: 0px">
+    <div class="group__contents_sungchang">
+      <div class="part__data_list left_side" style="height: 100%; padding-bottom: 0px">
+        <div class="left_side_detail_title">
+          <i class="icon-list"></i>&nbsp;&nbsp;상품관리 - 상품조회/수정
+        </div>
+        <!-- 검색어 -->
+        <div class="grid_searcharea" style="">
+          <select
+            class="selectBox"
+            @change="optioCodeChg1"
+            :v-model="catergory1data"
+          >
+            <option
+              v-for="item in catergory1data"
+              :value="item.CODE"
+              :key="item.CODE"
+            >
+              {{ item.NAME }}
+            </option>
+          </select>
+          <select
+            class="selectBox"
+            @change="optioCodeChg2"
+            :v-model="catergory2data"
+          >
+            <option
+              v-for="item in catergory2data"
+              :value="item.CODE"
+              :key="item.CODE"
+            >
+              {{ item.NAME }}
+            </option>
+          </select>
+
+          <input
+            type="text"
+            v-on:keyup.enter="searchBtn()"
+            v-model="searchKeyword"
+            placeholder="상품명,제조사,제원,바코드로 조회가능.."
+          />
+
+          <div class="item__buttons" style="">
+            <button class="btn_search" @click="searchBtn">
+              <i class="fa-solid fa-magnifying-glass"></i><span>통합검색</span>
+            </button>
+            <button class="btn_search" @click="excelFileDownload">
+              <i class="fa-solid fa-download"></i><span>엑셀다운</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 검색영역 -->
+        <!-- <div class="grid_searcharea" style="">
+          <div class="part__search_box">
+            
+
+            
+            
+            <button @click="searchBtn()">
+              <i class="fa-solid fa-magnifying-glass"></i><span>검색</span>
+            </button>
+            <button @click="excelFileDownload()">
+              <i class="fa-solid fa-download"></i><span>엑셀</span>
+            </button>
+            
+          </div>
+        </div> -->
+        
+        
         <!-- 메인리스트 -->
         <div class="item__scroll" id="productDiv">
           <div class="unit__scroll">
@@ -1300,383 +1323,15 @@ const previewImage = (itCode) => {
 </template>
 
 <style scoped>
-.dimmed {
-  opacity: 0.5; /* 투명도를 50%로 설정 */
-  pointer-events: none; /* 이벤트를 비활성화하여 마우스 클릭 등을 막음 */
-}
 
-.code-description {
-  padding: 22px 52px;
-  background-color: rgba(81, 92, 230, 0.1);
-  line-height: 1.4em;
-}
-
-.code-description,
-.code-description a {
-  font-family: Arial;
-  font-size: 14px;
-  color: #515ce6;
-}
-
-.code-html {
-  padding: 20px 52px;
-}
-
-
-/* https://loy124.tistory.com/203        */
-.main-container {
-  width: 1200px;
-  height: 400px;
-  margin: 0 auto;
-}
-
-.room-deal-information-container {
-  margin-top: 50px;
-  color: #222222;
-  border: 1px solid #dddddd;
-}
-
-.room-deal-information-title {
-  text-align: center;
-  line-height: 60px;
-  border-bottom: 1px solid #dddddd;
-}
-
-.room-deal-information-content-wrapper {
-  min-height: 50px;
+.left_side {
+  width: 75%;
+  /* 중앙 정렬 */
   display: flex;
+  /*justify-content: center;*/
+  min-width: 25%;
 }
 
-.room-deal-informtaion-content-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  background-color: #f9f9f9;
-}
 
-.room-deal-information-content {
-  width: 100%;
-}
 
-.room-deal-option-selector {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-}
-
-.room-deal-option-item {
-  width: 100px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.room-deal-option-item:last-child {
-  margin-left: 10px;
-}
-
-.room-deal-option-notice {
-  margin-left: auto;
-  color: #888888;
-}
-
-.room-deal-option-item-deposit {
-  margin-left: 10px;
-}
-
-.room-deal-information-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.room-deal-information-option {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.room-deal-information-option:last-child {
-  border-bottom: 1px solid #dddddd;
-}
-
-.room-deal-information-item-type {
-  color: #fff;
-  background-color: #61b6e5;
-  min-width: 50px;
-  height: 26px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-}
-
-.room-deal-information-item-wrapper {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-  height: 46px;
-  width: 100%;
-}
-
-.room-deal-information-item-wrapper > input {
-  border: 1px solid #dddddd;
-  width: 140px;
-  height: 100%;
-  padding: 0 15px;
-}
-
-.room-deal-inforamtion-won {
-  margin: 0 10px;
-}
-
-.room-deal-information-example {
-  color: #888888;
-}
-
-.room-deal-information-option:not(:first-child) {
-  margin-top: 10px;
-}
-
-.room-deal-inforamtion-divide {
-  margin: 0 8px;
-  color: #222222;
-  font-weight: 100;
-}
-
-.room-deal-close-button-wrapper {
-  margin-left: auto;
-  cursor: pointer;
-}
-
-.room-deal-close-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  background-color: #666666;
-  color: rgb(220, 220, 220);
-}
-
-.room-deal-cliked {
-  background-color: rgb(235, 235, 235);
-  color: rgb(170, 170, 170);
-}
-
-.room-file-upload-example {
-  height: 100%;
-}
-
-.room-write-content-container {
-  border-top: 1px solid #dddddd;
-  min-height: 260px;
-}
-
-.room-picture-notice {
-  margin: 20px;
-  padding: 20px 40px;
-  border: 1px solid #dddddd;
-}
-
-.file-preview-content-container {
-  width: auto;
-  height: 100%;
-}
-
-.room-file-upload-wrapper {
-  border: 1px solid #dddddd;
-  /* background-color: #f4f4f4; */
-  /* min-height: 350px; */
-  color: #888888;
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  height: auto;
-}
-
-.room-file-upload-wrapper-m {
-  border: 1px solid #dddddd;
-  /* background-color: #f4f4f4; */
-  color: #888888;
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  height: auto;
-  width: auto;
-}
-
-.room-file-upload-example-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-}
-
-.room-file-image-example-wrapper {
-  text-align: center;
-}
-
-.room-file-notice-item {
-  margin-top: 5px;
-  text-align: left;
-}
-
-.room-file-notice-item-green {
-  color: green;
-}
-
-.image-box-m {
-  margin-top: 30px;
-  padding-bottom: 20px;
-  text-align: center;
-}
-
-.image-box-m input[type="file"] {
-  position: absolute;
-  width: 0;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-}
-
-.image-box-m label {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #232d4a;
-  color: #fff;
-  vertical-align: middle;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.image-box {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.image-box input[type="file"] {
-  position: absolute;
-  width: 0;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-}
-
-.image-box label {
-  display: inline-block;
-  padding: 2px 20px;
-  background-color: #ff4f42;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
-  vertical-align: middle;
-  cursor: pointer;
-  border-radius: 30px;
-  box-shadow: 5px 5px 5px #c3c3c3;
-}
-
-.file-preview-wrapper {
-  padding: 10px;
-  position: relative;
-}
-
-.file-preview-wrapper > img {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border: 1px solid lightgrey;
-  z-index: 10;
-  object-fit: scale-down;
-  box-shadow: 5px 5px 5px #d7d7d7;
-  padding: 2px;
-  cursor: pointer;
-}
-
-.file-preview-wrapper-m > img {
-  position: relative;
-  width: 400px;
-  height: 300px;
-  border: 1px solid lightgrey;
-  z-index: 10;
-  padding: 10px;
-  object-fit: scale-down;
-  box-shadow: 5px 5px 5px #d7d7d7;
-  padding: 2px;
-  cursor: pointer;
-}
-
-.file-close-button {
-  position: absolute;
-  /* align-items: center; */
-  line-height: 18px;
-  z-index: 99;
-  right: 0px;
-  top: 2px;
-  color: #fff;
-  font-weight: 600;
-  background-color: #ff0000;
-  border-radius: 15px;
-  border: 1.5px solid #ffffff;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 5px 5px 5px #00000052;
-}
-
-.file-preview-container {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.file-preview-wrapper-upload {
-  margin: 10px;
-  padding-top: 20px;
-  /* background-color: #FFFFFF; */
-  width: 150px;
-  height: 150px;
-}
-
-.room-write-button-wrapper {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #222222;
-}
-
-.room-write-button-wrapper > div {
-  width: 160px;
-  height: 50px;
-  border: 1px solid #dddddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.room-write-button {
-  margin-left: 15px;
-  color: #fff;
-  background-color: #1564f9;
-}
-
-.room-write-button:hover {
-  opacity: 0.8;
-}
-.cropper-area {
-  width: 1000px;
-  margin: 10px 10px 10px 10px;
-}
 </style>

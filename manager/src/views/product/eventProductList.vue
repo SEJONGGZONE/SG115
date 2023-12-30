@@ -22,8 +22,6 @@ import Datepicker from "vue3-datepicker";
 import quillEditor from "@/components/plugins/QuillEditor.vue";
 import { useAlert } from "@/composables/showAlert";
 
-import 'simple-line-icons/css/simple-line-icons.css';
-
 const { showAlert, showAlertSuccess } = useAlert();
 //사용자 및 페이지 정보
 const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
@@ -508,28 +506,18 @@ const doImgSave = async () => {
     <div class="group__contents_sungchang">
       <!-- 메인데이타 -->
       <div class="part__data_list left_side" style="flex: unset; height: auto">
-        <div class="group__search">
-          <div
-            class="part__search_box"
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              padding-top: 0px;
-              margin-top:-10px;
-            "
-          >
-            <!-- <div class="group__title">
-              <h2>기획관리</h2>
-            </div> -->
-            <div style="display: flex">
-              <button type="button" @click="newBtn()">
-                <i class="fa fa-pen-to-square fa-fw"></i>신규
-              </button>
-              <button type="button" style="width: 100px" @click="deleteBtn()">
-                <i class="fa fa-trash-can fa-fw"></i>선택 삭제
-              </button>
-            </div>
+        <div class="left_side_detail_title">
+          <i class="icon-list"></i>&nbsp;&nbsp;기획관리 - 기획(이벤트) 관리
+        </div>
+        <!-- 검색어입력/버튼 -->
+        <div class="grid_searcharea" style="justify-content: end;">
+          <div class="item__buttons" style="justify-content: end;">
+            <button class="btn_search" @click="newBtn" style="width:5rem">
+              <i class="fa fa-pen-to-square fa-fw"></i><span style="margin-left:0px;">신규 추가</span>
+            </button>
+            <button class="btn_search" @click="deleteBtn" style="width:5rem">
+              <i class="fa fa-trash-can fa-fw"></i><span style="margin-left:0px;">선택 삭제</span>
+            </button>
           </div>
         </div>
         <div class="item__scroll" id="productDiv">

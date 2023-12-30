@@ -416,14 +416,17 @@ const selectCommonCode = async (codeClass) => {
 </script>
 <template>
   <!-- 코드값 조회 영역 -->
-  <div class="section section__management" style="gap: 2px 0px; height: 40vh">
-    <div class="group__title">
+  <div class="section section__management" style="gap: 2px 0px; height: 100%; padding-bottom: 0rem;">
+    <!-- <div class="group__title">
       <h2>공통코드관리</h2>
     </div>
-    <div></div>
-    <div class="group__contents">
-      <!-- 상위(기초)코드 영역 -->
-      <div class="part__data_list" style="height: auto">
+    <div></div> -->
+    <div class="group__contents_sungchang">
+      <!-- 상위코드 영역 -->
+      <div class="part__data_list" style="height: 100vh;">
+        <div class="left_side_detail_title">
+          <i class="icon-list"></i>&nbsp;&nbsp;운영관리 - 공통코드 관리(상위)
+        </div>
         <div class="item__scroll">
           <div class="unit__scroll">
             <table>
@@ -503,9 +506,73 @@ const selectCommonCode = async (codeClass) => {
             </table>
           </div>
         </div>
+        <!-- 버튼 -->
+        <div class="grid_searcharea" style="justify-content: end; margin-top: 0.5rem;">
+          <div class="item__buttons" >
+            <button class="btn_search" @click="masterInitCode" style="width:5rem">
+              <i class="fa fa-pen-to-square fa-fw"></i><span style="margin-left:0px;">신규</span>
+            </button>
+            <button class="btn_search" @click="masterSaveCode" style="width:5rem">
+              <i class="fa fa-save fa-fw"></i><span style="margin-left:0px;">저장</span>
+            </button>
+            <button class="btn_search" @click="masterDelCode" style="width:5rem">
+              <i class="fa fa-trash-can fa-fw"></i><span style="margin-left:0px;">삭제</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="part__data_detail">
+          <div class="item__title" style="font-size:1rem;">
+            <i class="fa-solid fa-angle-right item__angle"></i>
+            <span style="font-size:1rem;">상위코드</span>
+          </div>
+          <div class="item__contents">
+            <div style="display: inline-flex; gap: 0px 20px">
+              <div>
+                <p>코드번호</p>
+                <input
+                  type="text"
+                  :disabled="isMAsterDisabled"
+                  v-model="selectRowDataDL.CODE_CD"
+                  @input="inputCode(this)"
+                  maxlength="3"
+                />
+              </div>
+              <div>
+                <p>코드명</p>
+                <input type="text" v-model="selectRowDataDL.CODE_NAME" />
+              </div>
+              <div>
+                <p>순서</p>
+                <input
+                  type="text"
+                  v-model="selectRowDataDL.SORT_NUM"
+                  @input="inputCode(this)"
+                  maxlength="1"
+                />
+              </div>
+            </div>
+            <div style="display: inline-flex; gap: 0px 20px;">
+              <div>
+                <p>설명1</p>
+                <input type="text" v-model="selectRowDataDL.DESC_01" />
+              </div>
+              <div>
+                <p>설명2</p>
+                <input type="text" v-model="selectRowDataDL.DESC_02" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- 상위(기초)코드, 값(코드) 영역 -->
-      <div class="part__data_list" style="height: auto">
+      <!-- 하위코드 영역 -->
+      <div class="part__data_list right_side" style="height: 100vh;">
+        <div class="left_side_detail_title" style="">
+          <i class="icon-list"></i>&nbsp;&nbsp;
+          <label style="font-weight:600; margin-left:0.2rem; color:#f6f6f6"
+                 v-if="selectRowDataDL.CODE_NAME"> '{{ selectRowDataDL.CODE_NAME }}'</label>
+            <span style="font-size:0.6rem;"> - 하위코드</span>
+        </div>
         <div class="item__scroll">
           <div class="unit__scroll">
             <table>
@@ -597,89 +664,28 @@ const selectCommonCode = async (codeClass) => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- 코드값 입력/수정 영역 -->
-  <div
-    class="section section__management"
-    style="padding-top: 10px; height: auto"
-  >
-    <div class="group__contents">
-      <div class="part__data_list">
-        <div class="part__search_box" style="justify-content: end">
-          <button type="button" @click="masterInitCode()">
-            <i class="fa fa-pen-to-square fa-fw"></i> 신규
-          </button>
-          <button type="button" @click="masterSaveCode()">
-            <i class="fa fa-circle-check fa-fw"></i> 저장
-          </button>
-          <button type="button" @click="masterDelCode()">
-            <i class="fa fa-trash-can fa-fw"></i> 삭제
-          </button>
+
+        <!-- 버튼 -->
+        <div class="grid_searcharea" style="justify-content: end; margin-top: 0.5rem;">
+          <div class="item__buttons" >
+            <button class="btn_search" @click="subInitCode" style="width:5rem">
+              <i class="fa fa-pen-to-square fa-fw"></i><span style="margin-left:0px;">신규</span>
+            </button>
+            <button class="btn_search" @click="subSaveCode" style="width:5rem">
+              <i class="fa fa-save fa-fw"></i><span style="margin-left:0px;">저장</span>
+            </button>
+            <button class="btn_search" @click="subDelCode" style="width:5rem">
+              <i class="fa fa-trash-can fa-fw"></i><span style="margin-left:0px;">삭제</span>
+            </button>
+          </div>
         </div>
+        <!-- 상세내용 -->
         <div class="part__data_detail">
-          <div class="item__title">
+          <div class="item__title" style="font-size:1rem;">
             <i class="fa-solid fa-angle-right item__angle"></i>
-            <span>상위코드</span>
+            <span style="font-size:1rem;">하위코드</span>
           </div>
-          <div class="item__contents">
-            <div style="display: inline-flex; gap: 0px 20px">
-              <div>
-                <p>코드번호</p>
-                <input
-                  type="text"
-                  :disabled="isMAsterDisabled"
-                  v-model="selectRowDataDL.CODE_CD"
-                  @input="inputCode(this)"
-                  maxlength="3"
-                />
-              </div>
-              <div>
-                <p>코드명</p>
-                <input type="text" v-model="selectRowDataDL.CODE_NAME" />
-              </div>
-              <div>
-                <p>순서</p>
-                <input
-                  type="text"
-                  v-model="selectRowDataDL.SORT_NUM"
-                  @input="inputCode(this)"
-                  maxlength="1"
-                />
-              </div>
-            </div>
-            <div style="display: inline-flex; gap: 0px 20px">
-              <div>
-                <p>설명1</p>
-                <input type="text" v-model="selectRowDataDL.DESC_01" />
-              </div>
-              <div>
-                <p>설명2</p>
-                <input type="text" v-model="selectRowDataDL.DESC_02" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="part__data_list">
-        <div class="part__search_box" style="justify-content: end">
-          <button type="button" @click="subInitCode()">
-            <i class="fa fa-pen-to-square fa-fw"></i> 신규
-          </button>
-          <button type="button" @click="subSaveCode()">
-            <i class="fa fa-circle-check fa-fw"></i> 저장
-          </button>
-          <button type="button" @click="subDelCode()">
-            <i class="fa fa-trash-can fa-fw"></i> 삭제
-          </button>
-        </div>
-        <div class="part__data_detail">
-          <div class="item__title">
-            <i class="fa-solid fa-angle-right item__angle"></i>
-            <span>하위코드</span>
-          </div>
-          <div class="item__contents">
+          <div class="item__contents" style="border: 0px solid red;">
             <div style="display: inline-flex; gap: 0px 20px">
               <div>
                 <p>코드번호</p>
@@ -731,10 +737,25 @@ const selectCommonCode = async (codeClass) => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
+.left_side {
+  width: 50%;
+  /* 중앙 정렬 */
+  display: flex;
+  /*justify-content: center;*/
+  min-width: 50%;
+}
+.right_side {
+  flex: 1;
+  /* 중앙 정렬 */
+  display: flex;
+  justify-content: center;
+  min-width: 50%;
+}
 </style>

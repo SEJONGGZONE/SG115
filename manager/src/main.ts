@@ -34,7 +34,7 @@ import VCalendar from "v-calendar";
 
 import common from "@/plugin/common.js";
 
-
+import 'simple-line-icons/css/simple-line-icons.css';
 import "v-calendar/dist/style.css";
 
 import { createNaverMap } from "./naverMap";

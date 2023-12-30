@@ -8,7 +8,7 @@ import apexchart from '@/components/plugins/Apexcharts.vue';
 import jsVectorMap from 'jsvectormap';
 import 'jsvectormap/dist/maps/world.js';
 import 'jsvectormap/dist/css/jsvectormap.min.css';
-import 'simple-line-icons/css/simple-line-icons.css';
+
 const appVariable = useAppVariableStore();
 
 
