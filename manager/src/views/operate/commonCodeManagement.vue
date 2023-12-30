@@ -522,9 +522,9 @@ const selectCommonCode = async (codeClass) => {
         </div>
 
         <div class="part__data_detail">
-          <div class="item__title" style="font-size:1rem;">
+          <div class="item__title" style="font-size:0.7rem;">
             <i class="fa-solid fa-angle-right item__angle"></i>
-            <span style="font-size:1rem;">상위코드</span>
+            <span>상위코드</span>
           </div>
           <div class="item__contents">
             <div style="display: inline-flex; gap: 0px 20px">
@@ -681,9 +681,9 @@ const selectCommonCode = async (codeClass) => {
         </div>
         <!-- 상세내용 -->
         <div class="part__data_detail">
-          <div class="item__title" style="font-size:1rem;">
+          <div class="item__title" style="font-size:0.7rem;">
             <i class="fa-solid fa-angle-right item__angle"></i>
-            <span style="font-size:1rem;">하위코드</span>
+            <span>하위코드</span>
           </div>
           <div class="item__contents" style="border: 0px solid red;">
             <div style="display: inline-flex; gap: 0px 20px">
@@ -744,6 +744,18 @@ const selectCommonCode = async (codeClass) => {
 </template>
 
 <style scoped>
+
+.item__contents p {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #8613a5 !important;
+}
+.item__title span {
+  font-size: 0.7rem !important;
+  font-weight: 600;
+  color: #8613a5 !important;
+}
+
 .left_side {
   width: 50%;
   /* 중앙 정렬 */

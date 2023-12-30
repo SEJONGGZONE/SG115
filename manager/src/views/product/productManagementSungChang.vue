@@ -31,7 +31,7 @@ const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
 const userClcode = userInfo.CLCODE;
 const userId = userInfo.ID;
 const pageNumber = ref(1);
-const pageSize = ref(15);
+const pageSize = ref(14);
 const isImageChange = ref(false);
 
 const imageEditor = ref(null); //이미지 에디터 컴포넌트
@@ -723,10 +723,8 @@ const previewImage = (itCode) => {
       data-backdrop="static"
       data-keyboard="false"
     />
-    <!-- 이미지 편집 -->
-
     <div class="group__contents_sungchang">
-      <div class="part__data_list left_side" style="height: 100%; padding-bottom: 0px">
+      <div class="part__data_list left_side" style="height: 100%;">
         <div class="left_side_detail_title">
           <i class="icon-list"></i>&nbsp;&nbsp;상품관리 - 상품조회/수정
         </div>
@@ -775,27 +773,8 @@ const previewImage = (itCode) => {
             </button>
           </div>
         </div>
-
-        <!-- 검색영역 -->
-        <!-- <div class="grid_searcharea" style="">
-          <div class="part__search_box">
-            
-
-            
-            
-            <button @click="searchBtn()">
-              <i class="fa-solid fa-magnifying-glass"></i><span>검색</span>
-            </button>
-            <button @click="excelFileDownload()">
-              <i class="fa-solid fa-download"></i><span>엑셀</span>
-            </button>
-            
-          </div>
-        </div> -->
-        
-        
         <!-- 메인리스트 -->
-        <div class="item__scroll" id="productDiv">
+        <div class="item__scroll" id="productDiv" style="margin-bottom: 1rem;">
           <div class="unit__scroll">
             <table>
               <thead>
@@ -947,7 +926,7 @@ const previewImage = (itCode) => {
           </div>
         </div>
         <!-- 더보기버튼 -->
-        <div class="item__buttons" v-if="tableSet.isShowMoreBtn" style="gap: 0px">
+        <div class="item__buttons" v-if="tableSet.isShowMoreBtn" style="gap: 0px; margin-bottom: -0.2rem;">
           <button @click="searchMoteBtn" style="margin: 0px">
             <i class="fa-solid fa-plus"></i>더보기
           </button>
