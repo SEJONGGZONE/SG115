@@ -66,7 +66,6 @@
 <script setup lang="ts">
 
 import Layout from "@/layout/LayoutFour.vue";
-import companyImg from "~/assets/img/no_img.png";
 import * as mainApi from '@/api';
 import { useUserStore } from '@/store/useUser';
 import * as common_utils from "@/common/utils.ts";

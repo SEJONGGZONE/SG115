@@ -126,14 +126,14 @@ const table = reactive({
     {
       label: "기획명",
       field: "TITLE",
-      width: "80%",
+      width: "40%",
       sortable: true,
       isKey: true,
     },
     {
-      label: "게시상태",
-      field: "SCHEDULE_USE_YN",
-      width: "10%",
+      label: "기획유형",
+      field: "TYPE_NAME",
+      width: "40%",
       sortable: true,
       isKey: true,
     },
@@ -152,8 +152,8 @@ const table = reactive({
     // isKey: true,
     // },
     {
-      label: "비고/설명",
-      field: "BIGO",
+      label: "보기순서",
+      field: "SORT_NUM",
       width: "25%",
       sortable: false,
       isKey: true,
@@ -162,7 +162,7 @@ const table = reactive({
   rows: [],
   totalRecordCount: 0,
   sortable: {
-    order: "RANK",
+    order: "TYPE",
     sort: "asc",
   },
   isShowMoreBtn: false,
@@ -273,6 +273,11 @@ const tableDL = reactive({
       width: "6%",
       sortable: true,
       isKey: true,
+    },
+    {
+      label: "편집하기",
+      field: "SHOW_IMAGE",
+      width: "10%",
     },
   ],
   rows: [],
@@ -673,6 +678,13 @@ const doSave = async () => {
   }
   newBtn();
 };
+
+
+const previewImage = (itCode) => {
+  const url = "/product/productManagementSungChang?itcode=" + itCode;
+  window.open(url);
+};
+
 </script>
 <template>
   <div
@@ -778,9 +790,7 @@ const doSave = async () => {
                   </td>
                   <td>
                     <div>
-                      <span>{{
-                        obj.SCHEDULE_USE_YN === "Y" ? "사용함" : "사용안함"
-                      }}</span>
+                      <span>{{ obj.TYPE_NAME }}</span>
                     </div>
                   </td>
                   <!-- <td >
@@ -791,7 +801,7 @@ const doSave = async () => {
 									</td> -->
                   <td>
                     <div>
-                      <span class="ellipsis">{{ obj.BIGO }}</span>
+                      <span class="ellipsis">{{ obj.SORT_NUM }}</span>
                     </div>
                   </td>
                 </tr>
@@ -988,6 +998,16 @@ const doSave = async () => {
                             </td>
                             <td style="text-align: right">
                               <div v-html="obj.ITEASDAN"></div>
+                            </td>
+                            <td style="text-align: right">
+                              <div>
+                                <span
+                                  ><input
+                                    type="button"
+                                    value="편집"
+                                    @click="previewImage(obj.ITCODE)"
+                                /></span>
+                              </div>
                             </td>
                           </tr>
                           <tr v-else>

@@ -673,6 +673,9 @@
   margin-right: 200px;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
 .pt-5 {
   padding-top: 5px;
 }
@@ -831,6 +834,10 @@
 
 .pt-200 {
   padding-top: 200px;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .pb-5 {
@@ -993,6 +1000,10 @@
   padding-bottom: 200px;
 }
 
+.pl-0 {
+  padding-left: 0px;
+}
+
 .pl-5 {
   padding-left: 5px;
 }
@@ -1151,6 +1162,10 @@
 
 .pl-200 {
   padding-left: 200px;
+}
+
+.pr-0 {
+  padding-right: 0px;
 }
 
 .pr-5 {

@@ -1,5 +1,51 @@
 <template>
-  <section class="product__area" :class="isShowHeader ? 'pt-90 pb-100' :'pt-30 pb-20'">
+  <section class="main_section product_wrap">
+    <div class="product_wrap">
+      <div class="inner">
+        <div class="prd_list">
+            <div class="prd_item" v-for="(col,i) in productList" :key="i">
+                <div class="thumbox">
+                  <nuxt-link :href="`/product-details/${col.ITCODE}`" class="link">
+                      <img :src="col.ITEM_MAIN_IMAGE ? col.ITEM_MAIN_IMAGE : '/_nuxt/assets/img/no_img_sungchang.png'" alt="" class="img-full">
+                  </nuxt-link>
+                </div>
+                <div class="txtbox">
+                    <nuxt-link :href="`/product-details/${col.ITCODE}`" class="tit_link">
+                      <p class="name" v-html="col.ITNAME"></p>
+                    </nuxt-link>
+                    <div class="infobox">
+                        <div class="left">
+                            <p class="sale_price" v-html="col.ORG_AMT+'원'"></p>
+                            <p class="pricebox">
+                                <span class="percent" v-html="col.DC_RATE+'%'"></span>
+                                <span class="price" v-html="col.DC_AMT+'원'"></span>
+                            </p>
+                        </div>
+                        <div class="right">
+                            <div class="rate">
+                                <span class="rate_icon"></span>
+                                <span class="rate_txt">4.1</span>
+                            </div>
+                            <div class="review">(1,092)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnbox">
+                    <a href="#none" class="btn wish_btn">
+                        <span class="icon_wish"></span>
+                    </a>
+                    <a href="#none" class="btn cart_btn">
+                        <span class="icon_cart"></span>
+                        <span class="txt">담기</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="product__area pt-0 pb-0" style="display:none;">
     <div class="custom-container">
       <div class="row" v-if="isShowHeader">
         <div class="col-xl-12">
@@ -14,7 +60,7 @@
       </div>
 
     <!--리스트 영역-->
-    <section class="shop__area " :class="isShowSort ? 'pt-30' :'pt-60 pb-30'"  >
+    <section class="shop__area pt-0 pb-0">
       <div class="container">
           <div class="row">
               <div class="col-xl-12">
@@ -480,6 +526,6 @@ const doAddWishList = async (col)=>{//관심상품 상품 추가
 <style scoped>
 .radius{
   border-radius: 0.6rem!important
-
 }
+
 </style>

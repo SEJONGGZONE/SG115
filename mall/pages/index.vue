@@ -150,7 +150,7 @@ const doAddCatrList = async (col, cnt) => {
 const event_list = ref([]); //각 기획관리(20)의 상품 리스트
 //onst doSearch10 = ref() //기획관리(10) 리스트
 const doSearch20 = ref(); //기획관리(20) 리스트
-const searchEventList = async () => {
+const searchEventItemList = async () => {
   //(manager)상품관리 > 기획상품관리 목록 조회api
 
   let data;
@@ -167,17 +167,27 @@ const searchEventList = async () => {
     orderType30: "",
   };
   try {
-    data = await mainApi.list_eventList(param);
+    let dataObj = await mainApi.list_eventItemSel(param);
+    data = dataObj.data;
     if (data.RecordCount > 0) {
-      let eventList = data.RecordSet;
+      let eventItemList = data.RecordSet;
       let tempList = [];
 
       //doSearch10.value = doSearch1_table.value.filter(item=> item.TYPE === '10')//일반만
+
+      console.log(doSearch1_table.value);
+
       doSearch20.value = doSearch1_table.value.filter(
         (item) => item.TYPE === "20"
       ); //일반만
+
+      console.log('******************************** >>>>>>>>>>>>>>>>>>')
+      console.log(eventItemList);
+      console.log(doSearch1_table.value);
+      console.log('******************************** >>>>>>>>>>>>>>>>>>')
+
       doSearch20.value.map((item) => {
-        tempList = eventList.filter(
+        tempList = eventItemList.filter(
           (eventItem) => item.GEONUM === eventItem.EVENT_NO
         );
         event_list.value.push({
@@ -192,6 +202,9 @@ const searchEventList = async () => {
   }
 };
 
+/**
+ * 이벤트(기획) 정보얻기.. > 그후 해당상품정보도 얻기..
+ */
 const doSearch1 = async () => {
   //(mabager)상품관리 > 기획관리 목록 조회api (type : 10-테마, 20-일반)
 
@@ -203,11 +216,11 @@ const doSearch1 = async () => {
     inputUser: "",
   };
   try {
-    const dataObj = await mainApi.main_excuteEventMng(param);
+    const dataObj = await mainApi.main_getEventList(param);
     data = dataObj.data;
     if (data.RecordCount > 0) {
       doSearch1_table.value = data.RecordSet;
-      searchEventList(); //기획별 상품 리스트
+      searchEventItemList(); // 기획별 상품 리스트
     }
   } catch (error) {
     console.error(error);
@@ -407,7 +420,7 @@ const doSearch2 = async () => {
       </div>
       <div
         class="banner__area"
-        :class="!isShowFavorite.value && index === 0 ? 'pt-100' : 'pt-60'"
+        :class="!isShowFavorite.value && index === 0 ? 'pt-10' : 'pt-10'"
         v-if="event_list.length > 0"
         v-for="(col, index) in event_list"
         :key="index"
@@ -416,12 +429,11 @@ const doSearch2 = async () => {
       >
         <div
           class="container custom-container themehome"
-          style="margin-bottom: -100px"
         >
           <div>
             <div
-              class="d-flex align-items-center"
-              style="margin-top: 0px; margin-bottom: 0px"
+              class="d-flex align-items-end"
+              style="border-bottom:2px solid #222222; width:auto; margin:0rem 5rem;"
             >
               <h3 class="m-0" v-html="col.MANAGER.CONTENTS" data-aos="fade-down" data-aos-once="true"></h3>
               <a
@@ -441,16 +453,6 @@ const doSearch2 = async () => {
                 >더보기</a
               >
             </div>
-            
-            <img :src="col?.MANAGER.IMG_URL" 
-                @click="
-                      navigateToEventList(
-                        col.MANAGER.GEONUM,
-                        col.MANAGER.TITLE,
-                        '20'
-                      )
-                    "
-            />
             <product-list
               :isShowHeader="false"
               :isShowSort="false"
@@ -475,7 +477,7 @@ const doSearch2 = async () => {
 </template>
 
 <!-- 페이지 스타일시트 -->
-<style lang="scss">
+<style lang="scss" scoped>
 .cat_icon_area {
   display: flex;
   align-items: center;

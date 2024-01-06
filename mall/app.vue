@@ -71,7 +71,8 @@ const isShowNoticePop = () =>{ //팝업창 보여줄지 결정
 const searchNotice = async ()=>{//공지사항 조회
   let param = { 
   }
-  let data = await operateApi.operate_operateNoticeSel(param)
+  let dataObj = await operateApi.operate_operateNoticeSel(param)
+  let data = dataObj.data;
       if (data.ResultCode == "00") {
         let notice = data.RecordSet.map(item=>{
           item.MSG = item.MSG.replaceAll("\r\n","<br>");

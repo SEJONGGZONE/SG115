@@ -214,7 +214,7 @@ const ischk=()=>{
   </section>
 </template>
 
-<style>
+<style scoped>
 span {
     cursor: pointer;
     line-height: 1.5;

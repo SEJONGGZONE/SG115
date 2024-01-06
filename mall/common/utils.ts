@@ -11,8 +11,10 @@ import Swal from "sweetalert2";
 // ------------------------------------------------------------------------------------------------------------------
 // REST-API, Setting
 // ------------------------------------------------------------------------------------------------------------------
+const SERVER_URL = "http://sjwas.gzonesoft.co.kr:32206";
+
 const instance = axios.create({
-  baseURL: "http://sjwas.gzonesoft.co.kr:32206/api/DatabaseController/runProcedure",
+  baseURL: SERVER_URL + "/api/DatabaseController/runProcedure",
   timeout: 500000,
   headers: {
     "Content-Type": "application/json",
@@ -20,7 +22,7 @@ const instance = axios.create({
   },
 });
 const instanceErp = axios.create({
-  baseURL: "http://sjwas.gzonesoft.co.kr:32206/api/DatabaseController/erpRunProcedure",
+  baseURL: SERVER_URL + "/api/DatabaseController/erpRunProcedure",
   timeout: 500000,
   headers: {
     "Content-Type": "application/json",
@@ -39,7 +41,7 @@ const CVOinstance = axios.create({
 
 
 const instanceFile = axios.create({
-  baseURL: "http://sjwas.gzonesoft.co.kr:32206/api/",
+  baseURL: SERVER_URL + "/api/",
   timeout: 50000,
   headers: {
     "Content-Type": "multipart/form-data",

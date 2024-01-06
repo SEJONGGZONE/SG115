@@ -230,7 +230,7 @@ import * as productApi from '@/api';
 import * as cartApi from '@/api';
 import * as listApi from '@/api';
 import ProductList from "@/components/products/ProductList.vue";
-import noImg from "~/assets/img/no_img.png";
+import noImg from "~/assets/img/no_img_sungchang.png";
 import { useUserStore } from '@/store/useUser';
 import { useCartStore } from '@/store/useCart';
 import { Carousel, Slide } from "vue3-carousel";
@@ -411,7 +411,7 @@ const handleScroll=()=> {
       const detectorHeight = scrollDetector1.offsetHeight;
 
       // 스크롤이 화면 제일 밑까지 도달했는지 확인
-      if (scrollTop + windowHeight >= detectorOffsetTop + detectorHeight && isShowMoreBtn.value) {
+      if (scrollTop + windowHeight >= detectorOffsetTop + detectorHeight -200 && isShowMoreBtn.value) {
         pageNum.value = pageNum.value + 1;
         doSearch();
       }
@@ -561,8 +561,8 @@ const doSearch = async ()=>{//리스트 정보
   isShowMoreBtn.value = false;
   let param = {
           clcode : clcodeS ??''
-        , itscode :category1com.value
-        , itscode2 : category2com.value
+        , itscode :category1com.value ?? ""
+        , itscode2 : category2com.value ?? ""
         , keyword : ''
         , itcode : ''
         , pageNum : pageNum.value

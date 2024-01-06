@@ -4,7 +4,7 @@
 
 <script setup>
 
-import noImg from "~/assets/img/no_img.png";
+import noImg from "~/assets/img/no_img_sungchang.png";
   const props = defineProps({
     image: {
         type : String,
@@ -34,8 +34,8 @@ import noImg from "~/assets/img/no_img.png";
 </script>
 <style>
 .size-30 {
-  width: 30%;
-  height: 30%;
+  width: 80%;
+  height: auto;
 }
 .size-50 {
   width: 50%;

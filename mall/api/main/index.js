@@ -4,7 +4,7 @@ import { getAxios, getAxiosErp } from "@/common/utils.ts";
 /************************************************** 회원관리 */
 
 /** 기획/이벤트 영역 */
-export function excuteEventMng(params){ 
+export function excuteEventList(params){ 
     let data = {  
         '@I_GEONUM': params.geonum,
         '@I_PAGE_SIZE': params.pageSize,

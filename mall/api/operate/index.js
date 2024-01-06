@@ -44,7 +44,7 @@ export function operateQnaSel(params) {
     "@I_REF_NO": params.refNo, //WEB_BOAR.GEONUM
     "@I_INPUT_USER": params.inputUser,
   };
-  return getAxios().post(`/WEB_BOARD_SEL`, data);
+  return getAxiosErp().post(`/WEB_BOARD_SEL`, data);
 }
 /** 저장 */
 export function operateQnaSav(params) {

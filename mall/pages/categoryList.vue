@@ -167,8 +167,8 @@ const doSearch = async () => {
   isShowMoreBtn.value = false;
   let param = {
     clcode: "",
-    itscode: category1.value,
-    itscode2: category2.value,
+    itscode: category1.value ?? "",
+    itscode2: category2.value ?? "",
     keyword: "",
     itcode: "",
     pageSize: pageSize.value,

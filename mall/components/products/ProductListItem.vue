@@ -50,7 +50,7 @@ import ProductModal from '../common/modals/ProductModal.vue';
 import { useCartStore } from '@/store/useCart';
 import { useCompareStore } from '@/store/useCompare';
 import { useWishlistStore } from '@/store/useWishlist';
-import noImg from "~/assets/img/no_img.png";
+import noImg from "~/assets/img/no_img_sungchang.png";
 import * as common_utils from "@/common/utils.ts";
 export default defineComponent({
   components: { ProductModal },

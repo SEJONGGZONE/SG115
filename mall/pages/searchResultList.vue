@@ -59,7 +59,7 @@ const handleScroll=()=> {
       const detectorHeight = scrollDetector1.offsetHeight;
 
       // 스크롤이 화면 제일 밑까지 도달했는지 확인
-      if (scrollTop + windowHeight >= detectorOffsetTop + detectorHeight && isShowMoreBtn.value) {
+      if (scrollTop + windowHeight >= detectorOffsetTop + detectorHeight -200 && isShowMoreBtn.value) {
         pageNum.value = pageNum.value + 1;
         doSearch();
       }

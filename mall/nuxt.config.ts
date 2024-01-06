@@ -3,6 +3,30 @@
 //import fs from 'fs'
 //import path from 'path'
 
+/*
+   - 크몽작업소스..
+   
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://webfontworld.github.io/sunn/SUIT.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+*/
 export default defineNuxtConfig({
   server: {
     port: 5194,
@@ -19,6 +43,9 @@ export default defineNuxtConfig({
     "bootstrap/scss/bootstrap.scss",
     "vue3-carousel/dist/carousel.css",
     "~/assets/scss/main.scss",
+    "~/assets/kmong/css/common.css", // 크몽작업소스 적용
+    "~/assets/kmong/css/style.css", // 크몽작업소스 적용
+    "~/assets/kmong/css/swiper-bundle.min.css",
   ],
   modules: [
     "nuxt-swiper",

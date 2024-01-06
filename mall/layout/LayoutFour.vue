@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header/>
-    <main class="box-white white-bg pt-115">
+    <main class="box-white white-bg">
         <div class="container">
           <div class='box-grey-inner'>
             <div class="row">

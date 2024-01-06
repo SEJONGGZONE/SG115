@@ -2,7 +2,10 @@
 import { reactive, onMounted, inject, ref, watch, computed } from "vue";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useAppOptionStore } from "@/stores/app-option";
-import { onBeforeRouteLeave } from "vue-router";
+
+import { onBeforeRouteLeave, useRoute } from "vue-router";
+const route = useRoute();
+
 import vueTable from "@/components/plugins/VueTable.vue";
 import navscrollto from "@/components/app/NavScrollTo.vue";
 import ImageEdtior from "@/components/image/ImageEdtior.vue";
@@ -71,6 +74,7 @@ let Testlist = [
 ];
 //검색어
 let searchKeyword = ref("");
+let selectItcode = ref("");
 
 //메인 그리드에서 선택한 row 정보
 const selectRowData = ref([]);
@@ -174,8 +178,19 @@ let imageFiles = ref(null); //업로드용 파일
 let filesPreview = ref([]);
 let uploadImageIndex = ref(0); // 이미지 업로드를 위한 변수
 
+
+// 파라미터받기
+let REQ_ITCODE = ref("");
+const getUrlParam = () => {
+    REQ_ITCODE.value = route.query.itcode;
+    selectItcode.value = REQ_ITCODE.value;
+};
+
 /******************************************************************************* onMounted */
 onMounted(() => {
+
+  getUrlParam(); // 파라미터받기
+
   pageNumber.value = 1;
   setCategory1();
   setCategory2();
@@ -195,6 +210,13 @@ onMounted(() => {
     for (var i = 0; i < arrModels.length; i++) {
       // 신규요소 추가
       document.getElementById("modal_insert_area").append(arrModels[i]);
+    }
+
+    // 파라미터받기
+    if (REQ_ITCODE.value != null) {
+      console.log("REQ_ITCODE.value=" + REQ_ITCODE.value);
+    } else {
+      console.log("넘어온파라미터 없음...")
     }
   }, 1000);
 });
@@ -264,7 +286,7 @@ const doSearch = async (order, sort) => {
     clcode: userClcode,
     pageNumber: pageNumber.value,
     inputUser: userId,
-    itCode: "",
+    itCode: selectItcode.value,
   };
 
   let data;
@@ -454,6 +476,7 @@ const searchBtn = () => {
   //검색 Btn
   tableSet.rows = [];
   pageNumber.value = 1;
+  selectItcode.value = "";
   doSearch();
 };
 const optioCodeChg1 = () => {
@@ -464,6 +487,7 @@ const optioCodeChg1 = () => {
   itsCode1.value = event.target.value;
   searchKeyword.value = "";
   setCategory2();
+  selectItcode.value = "";
   doSearch();
 };
 const optioCodeChg2 = () => {
@@ -471,11 +495,13 @@ const optioCodeChg2 = () => {
   pageNumber.value = 1;
   itsCode2.value = event.target.value;
   searchKeyword.value = "";
+  selectItcode.value = "";
   doSearch();
 };
 const searchMoteBtn = () => {
   //더보기 Btn
   pageNumber.value = pageNumber.value + 1;
+  selectItcode.value = "";
   doSearch();
 };
 const excelFileDownload = () => {
@@ -910,7 +936,7 @@ const previewImage = (itCode) => {
                       <span
                         ><input
                           type="button"
-                          value="미리보기"
+                          value="바로이동"
                           @click="previewImage(obj.ITCODE)"
                       /></span>
                     </div>

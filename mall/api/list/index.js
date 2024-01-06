@@ -25,7 +25,7 @@ export function categoryList(params){
 
 /************************************************** 기획상품 */
 /** 기획상품_목록화면   -- 리스트 조회 */
-export function eventList(params){ 
+export function eventItemSel(params){ 
     let data = {  
         '@I_TYPE': params.type ,
         '@I_PAGE_SIZE': params.pageSize,
@@ -39,7 +39,7 @@ export function eventList(params){
         '@I_ORDER_TYPE_40': params.orderType30,//상품명
     }  
 
-    return getAxios().post(`/WEB_EVENTITEM_SEL`,data)
+    return getAxiosErp().post(`/WEB_EVENTITEM_SEL`,data)
     
 }
 
@@ -58,7 +58,7 @@ export function favList(params){
         '@I_ORDER_TYPE_40': params.orderType30,//상품명
     }  
 
-    return getAxios().post(`/WEB_FAVITEM_SEL`,data)
+    return getAxiosErp().post(`/WEB_FAVITEM_SEL`,data)
     
 }
 /** 관심상품_목록화면   -- (하트버튼)관심상품 추가 */
@@ -69,7 +69,7 @@ export function addFavList(params){
         '@I_ITNAME' : params.itname
     }  
 
-    return getAxios().post(`/WEB_FAVITEM_SAVE`,data)
+    return getAxiosErp().post(`/WEB_FAVITEM_SAVE`,data)
     
 }
 /** 관심상품_목록화면   -- (하트버튼)관심상품 삭제 */
@@ -79,7 +79,7 @@ export function delFavList(params){
         '@I_ITCODE': params.itcode
     }  
 
-    return getAxios().post(`/WEB_FAVITEM_DEL`,data)
+    return getAxiosErp().post(`/WEB_FAVITEM_DEL`,data)
     
 }
 /************************************************** 주문내역조회 */
@@ -93,5 +93,5 @@ export function orderHistoryList(params){
         "@I_INPUT_USER": params.inputUser
   } 
 
-    return getAxios().post(`/WEB_ORDER_SEL `,data)
+    return getAxiosErp().post(`/WEB_ORDER_SEL `,data)
 }

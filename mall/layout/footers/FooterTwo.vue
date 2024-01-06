@@ -107,7 +107,7 @@
                       <div data-aos="fade-up" class="col-xl-2 col-lg-2 col-md-3 col-3">
                         <div class="logo" style="cursor: pointer;">
                             <a @click="movePage('/')">
-                                <img src="~/assets/img/icon_001.png" alt="logo" class="set-logo">
+                                <img src="~/assets/img/sungchang/logo_01_100.png" alt="logo" class="set-logo">
                             </a>
                         </div> 
                       </div>
@@ -131,6 +131,8 @@ import { useUserStore } from '@/store/useUser';
 import privacyPdf from "~/assets/img/privacyPolicy.pdf";
 import * as common_utils from "@/common/utils.ts";
 import AOS from "aos";
+//import kmong_jquery_3_4_1 from "@/assets/kmong/js/jquery-3.4.1.min.js";
+
 
 import { Carousel, Slide } from "vue3-carousel";  
     const widget_data = [
@@ -205,6 +207,10 @@ const doNoticeList = async ()=>{//공지사항목록 가져오기
         
       }
 }
+
+// console.log(kmong_jquery_3_4_1.value);
+// console.log(kmong_main_js.value);
+
 </script>
 <style>
 .set-logo{

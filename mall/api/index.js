@@ -16,8 +16,8 @@ export function login_resetPassWord(params) {
 
 /************************************************** 메인(mainApi) */
 /** 기획/이벤트 영역 */
-export function main_excuteEventMng(params) {
-  return mainApi.excuteEventMng(params);
+export function main_getEventList(params) {
+  return mainApi.excuteEventList(params);
 }
 /** 관심상품 영역 */
 export function main_excuteFaveItem(params) {
@@ -35,8 +35,8 @@ export function list_categoryList(params) {
 }
 /************************************************** 기획상품 */
 /** 기획상품_목록화면   -- 리스트 조회 */
-export function list_eventList(params) {
-  return listApi.eventList(params);
+export function list_eventItemSel(params) {
+  return listApi.eventItemSel(params);
 }
 /************************************************** 관심상품 */
 /** 관심상품_목록화면   -- 리스트 조회 */
