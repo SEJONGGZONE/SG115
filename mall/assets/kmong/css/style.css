@@ -34,8 +34,8 @@
 .today_cookbox .prdbox .prd_item .btnbox {position: absolute; left: 0; bottom: 0; display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem; width: 100%;}
 .today_cookbox .prdbox .prd_item .btnbox .btn { height: 2.5rem; display: flex; align-items: center; justify-content: center; border-radius: 0.25rem; border: 1px solid var(--outline, #DDD); background: #FFF; color: var(--text); font-size: 1rem; line-height: 1.5;}
 .today_cookbox .prdbox .prd_item .btnbox .wish_btn { width: 2.5rem;aspect-ratio: 1/1;}
-.today_cookbox .prdbox .prd_item .btnbox .wish_btn .icon_wish {display: flex; width: 1rem; aspect-ratio: 1/1; background: url(../img/ic_wish.png) no-repeat center/100% auto;}
-.today_cookbox .prdbox .prd_item .btnbox .wish_btn.on .icon_wish{background-image: url(../img/ic_wish_on.png);}
+.today_cookbox .prdbox .prd_item .btnbox .wish_btn .icon_wish {display: flex; width: 1rem; aspect-ratio: 1/1; background: url(../img/ic_heart.png) no-repeat center/100% auto;}
+.today_cookbox .prdbox .prd_item .btnbox .wish_btn.on .icon_wish{background-image: url(../img/ic_heart_on.png);}
 .today_cookbox .prdbox .prd_item .btnbox .cart_btn { flex: 1; gap: 0.5rem;}
 .today_cookbox .prdbox .prd_item .btnbox .cart_btn .icon_cart { display: flex; width: 1rem; aspect-ratio: 1/1; background: url(../img/ic_cart2.png) no-repeat center /100% auto;}
 .today_cookbox .prdbox .prd_item .txtbox { position: relative; display: flex; flex-direction: column; gap: 0.5rem;}
@@ -92,10 +92,10 @@
 
 
 /* 상품 영역 */
-.product_wrap {margin-bottom: 3rem;}
+.product_wrap {padding-top: 0.3rem; margin-bottom: 3rem;}
 .product_wrap:last-child {margin-bottom: 0;}
 .product_wrap .prd_list { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 1rem;}
-.product_wrap .prd_item { width: calc((100% - 1.5rem*3)/4); display: flex; flex-direction: column; gap: 0rem; padding: 0.5rem; border-radius: 0.5rem; background: #FFF; box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);}
+.product_wrap .prd_item { width: calc((100% - 1.5rem*3)/4); display: flex; flex-direction: column; gap: 0rem; padding: 0.5rem; border-radius: 0.5rem; background: #FFF; box-shadow: 0px 0px 20px 0px #00000030;}
 .product_wrap .prd_item .thumbox{width: 100%;aspect-ratio: 1/1; position: relative; border-radius: 0.25rem; overflow: hidden;}
 .product_wrap .prd_item .thumbox .link { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; transition: all 0.25s ease-in-out;}
 .product_wrap .prd_item .thumbox .link:hover { transform: scale(1.1);}
@@ -116,11 +116,16 @@
 .product_wrap .prd_item .txtbox .right .review { color: var(--text_gray); font-size: 0.875rem; font-weight: 500; line-height: 1.5;}
 .product_wrap .prd_item .btnbox { display: flex; align-items: center; gap: 0.5rem; width: 100%;}
 .product_wrap .prd_item .btnbox .btn { height: 2.5rem; display: flex; align-items: center; justify-content: center; border-radius: 0.25rem; border: 1px solid var(--outline, #DDD); background: #FFF; color: var(--text); font-size: 1rem; line-height: 1.5;}
+.product_wrap .prd_item .btnbox .btn:hover {font-weight:600; background-color:#000000F0; color:#FFFFFF}
 .product_wrap .prd_item .btnbox .wish_btn { width: 2.5rem; aspect-ratio: 1/1;}
-.product_wrap .prd_item .btnbox .wish_btn .icon_wish{ display: flex; width: 1rem; aspect-ratio: 1/1;  background: url(../img/ic_wish.png) no-repeat center/100% auto;}
+.product_wrap .prd_item .btnbox .wish_btn .icon_wish{ display: flex; width: 1rem; aspect-ratio: 1/1;  background: url(../img/ic_heart.png) no-repeat center/100% auto;}
+.product_wrap .prd_item .btnbox .wish_btn:hover .icon_wish{background-image: url(../img/ic_heart_w.png);}
 .product_wrap .prd_item .btnbox .wish_btn.on .icon_wish{background-image: url(../img/ic_wish_on.png);}
 .product_wrap .prd_item .btnbox .cart_btn { flex: 1; gap: 0.5rem;}
-.product_wrap .prd_item .btnbox .cart_btn .icon_cart  { display: flex; width: 1rem; aspect-ratio: 1/1; background: url(../img/ic_cart2.png) no-repeat center /100% auto;}
+.product_wrap .prd_item .btnbox .cart_btn .icon_cart  { display: flex; width: 1rem; aspect-ratio: 1/1; background: url(../img/ic_cart2_b.png) no-repeat center /100% auto;}
+.product_wrap .prd_item .btnbox .cart_btn:hover .icon_cart{aspect-ratio: 1/1; background-image: url(../img/ic_cart2_w.png);}
+.product_wrap .prd_item .btnbox .wish_btn.on .icon_cart{aspect-ratio: 1/1; background-image: url(../img/ic_cart2_w.png);}
+
 
 
 

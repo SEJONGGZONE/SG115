@@ -3,30 +3,50 @@
   <!-- header -->
   <header id="header" class="header">
     <div class="h_inner">
-        <div class="h_topnav">
-            <div class="linkbox">
-                <a href="" class="link">로그인</a>
-            </div>
-            <div class="linkbox">
-                <a href="" class="link">회원가입</a>
-            </div>
-        </div>
+        <!-- 상단영역 -->
         <div class="h_contbox">
+            <!-- 상단-좌측, 로고/검색영역 -->
             <div class="h_left">
                 <div class="h_logo">
-                    <a href="" class="link">
-                        <img src="~/assets/img/icon_001.png" alt="" class="img-full-kmong">
+                    <a @click="movePage('/')" class="link">
+                        <img src="~/assets/img/sungchang/logo_01_100.png" alt="" style="width:5rem; height:auto;">
                     </a>
                 </div>
                 <div class="h_schbox">
                     <input type="text" class="h_schinput">
                     <button class="btn sch_btn_kmong">
-                        <img src="~/assets/img/kmong/img/ic_search.png" alt="" class="img-full-kmong">
+                        <img src="~/assets/img/kmong/img/ic_search.png" alt="" style="width:1.5rem; height:auto;">
                     </button>
                 </div>
             </div>
+            <!-- 상단-우측, 로그인/회원가입 그아래 아이콘(배송/위치/등등..) -->
             <div class="h_right">
-                <div class="linkbox">
+                <div class="h_topnav">
+                    <img src="~/assets/img/kmong/img/ic_profile.png" alt="" class="img-full-kmong">
+                    <div class="linkbox">
+                        <a href="" class="link">로그인</a>
+                    </div>
+                    <div class="linkbox">
+                        <a href="" class="link">회원가입</a>
+                    </div>
+                    <div class="linkbox">
+                        <a href="" class="link">관심상품</a>
+                    </div>
+
+                    <img src="~/assets/img/kmong/img/ic_cart.png" alt="" class="img-full-kmong">
+                    <div class="linkbox">
+                        <a href="" class="link">장바구니</a>
+                    </div>
+                    <div class="linkbox">
+                        <a href="" class="link">주문내역</a>
+                    </div>
+                    <img src="~/assets/img/kmong/img/ic_truck.png" alt="" class="img-full-kmong">
+                    <div class="linkbox">
+                        <a href="" class="link">배송지관리</a>
+                    </div>
+
+                </div>
+                <!-- <div class="linkbox">
                     <a href="" class="link">
                         <img src="~/assets/img/kmong/img/ic_truck.png" alt="" class="img-full-kmong">
                     </a>
@@ -45,8 +65,8 @@
                     <a href="" class="link">
                         <img src="~/assets/img/kmong/img/ic_heart.png" alt="" class="img-full-kmong">
                     </a>
-                </div>
-                <div class="linkbox cart">
+                </div> -->
+                <div class="linkbox cart" style="display: none;">
                     <a href="" class="link">
                         <img src="~/assets/img/kmong/img/ic_cart.png" alt="" class="img-full-kmong">
                     </a>
@@ -150,7 +170,9 @@
                 </div>
             </div>
         </div>
+        <!-- 카테고리 메뉴 -->
         <div class="h_nav">
+            <!-- 햄버거 아이콘에 올렸을때 메뉴 -->
             <div class="navitem">
                 <div class="category_btn link">
                     <img src="~/assets/img/kmong/img/ic_hamburger.png" alt="" class="img-full-kmong">
@@ -342,6 +364,7 @@
                     </div>
                 </div>
             </div>
+            <!-- 그 옆으로 나오는 메뉴.. -->
             <div class="navitem">
                 <a href="" class="link">오늘의 쿡짱</a>
             </div>
@@ -358,11 +381,12 @@
                 <a href="" class="link">입점/제휴문의</a>
             </div>
         </div>
+        <!-- 모바일상단,검색 및 햄버거메뉴 -->
         <div class="h_mobile tablet">
             <div class="h_schbox">
                 <input type="text" class="h_schinput" placeholder="검색어를 입력하세요">
-                <button class="btn sch_btn_kmong">
-                    <img src="~/assets/img/kmong/img/ic_search.png" alt="" class="img-full-kmong">
+                <button class="btn sch_btn">
+                    <img src="~/assets/img/kmong/img/ic_search.png" alt="" style="width:1.5rem; height:auto;">
                 </button>
             </div>
             <div class="menu_icon tablet" onclick="m_menu_ope();">
@@ -383,7 +407,9 @@
 </template>
 
 <style>
-
+.sample_color {
+    color :#00000040;
+}
 </style>
 
 <script setup   lang="ts">

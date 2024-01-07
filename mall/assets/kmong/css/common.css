@@ -194,6 +194,7 @@ body.hidden::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor:pointer;
 }
 .header .h_contbox .h_left .h_schbox {
   position: relative;
@@ -237,7 +238,7 @@ body.hidden::before {
   position: relative;
 }
 .header .h_contbox .h_right .linkbox > .link {
-  width: 24px;
+  width: auto;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;

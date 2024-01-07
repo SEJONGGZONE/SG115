@@ -21,7 +21,7 @@
                 <div style="width: 100px;position: absolute;left: calc(50% - 50px);padding-top: 20px;">
                     <div class="logo-mobile" style="cursor: pointer;height: 50px;">
                         <a @click="movePage('/')">
-                            <img src="~/assets/img/icon_001.png" alt="logo" style="height:100%;">
+                            <img src="~/assets/img/sungchang/logo_01_100.png" alt="logo" style="height:100%;">
                         </a>
                     </div>
                 </div>
