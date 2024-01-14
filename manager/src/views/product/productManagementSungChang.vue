@@ -279,14 +279,14 @@ const doSearch = async (order, sort) => {
   startLoadingBar();
 
   const param = {
-    itsCode1: itsCode1.value,
-    itsCode2: itsCode2.value,
-    pageSize: pageSize.value,
+    itsCode1: itsCode1.value ?? "",
+    itsCode2: itsCode2.value ?? "",
+    pageSize: pageSize.value ?? "",
     searchKeyword: searchKeyword.value ?? "",
-    clcode: userClcode,
-    pageNumber: pageNumber.value,
-    inputUser: userId,
-    itCode: selectItcode.value,
+    clcode: userClcode ?? "",
+    pageNumber: pageNumber.value ?? "",
+    inputUser: userId ?? "",
+    itCode: selectItcode.value ?? "",
   };
 
   let data;

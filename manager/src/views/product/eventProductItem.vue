@@ -179,6 +179,12 @@ const tableDR = reactive({
       isKey: true,
     },
     {
+      label: "",
+      field: "ITEM_MAIN_IMAGE",
+      width: "5%",
+      sortable: false,
+    },
+    {
       label: "상품명",
       field: "ITNAME",
       width: "14%",
@@ -192,29 +198,34 @@ const tableDR = reactive({
       sortable: true,
       isKey: true,
     },
-    {
-      label: "규격",
-      field: "ITSTAN",
-      width: "5%",
-    },
+    // {
+    //   label: "규격",
+    //   field: "ITSTAN",
+    //   width: "5%",
+    // },
     // {
     // label: "대표이미지",
     // field: "IMAGE",
     // width: "8%",
     // },
-    {
-      label: "매입가",
-      field: "ITEA_IPDAN",
-      width: "6%",
-      sortable: true,
-      isKey: true,
-    },
+    // {
+    //   label: "매입가",
+    //   field: "ITEA_IPDAN",
+    //   width: "6%",
+    //   sortable: true,
+    //   isKey: true,
+    // },
     {
       label: "판매가",
       field: "ITEASDAN",
       width: "6%",
       sortable: true,
       isKey: true,
+    },
+    {
+      label: "편집하기",
+      field: "SHOW_IMAGE",
+      width: "5%",
     },
   ],
   rows: [],
@@ -237,6 +248,12 @@ const tableDL = reactive({
       isKey: true,
     },
     {
+      label: "",
+      field: "ITEM_MAIN_IMAGE",
+      width: "5%",
+      sortable: false,
+    },
+    {
       label: "상품명",
       field: "ITNAME",
       width: "14%",
@@ -250,23 +267,23 @@ const tableDL = reactive({
       sortable: true,
       isKey: true,
     },
-    {
-      label: "규격",
-      field: "ITSTAN",
-      width: "5%",
-    },
+    // {
+    //   label: "규격",
+    //   field: "ITSTAN",
+    //   width: "5%",
+    // },
     // {
     // label: "대표이미지",
     // field: "IMAGE",
     // width: "8%",
     // },
-    {
-      label: "매입가",
-      field: "ITEA_IPDAN",
-      width: "6%",
-      sortable: true,
-      isKey: true,
-    },
+    // {
+    //   label: "매입가",
+    //   field: "ITEA_IPDAN",
+    //   width: "6%",
+    //   sortable: true,
+    //   isKey: true,
+    // },
     {
       label: "판매가",
       field: "ITEASDAN",
@@ -277,7 +294,7 @@ const tableDL = reactive({
     {
       label: "편집하기",
       field: "SHOW_IMAGE",
-      width: "10%",
+      width: "5%",
     },
   ],
   rows: [],
@@ -983,19 +1000,21 @@ const previewImage = (itCode) => {
                                 />
                               </div>
                             </td>
+                            <td>
+                              <img class="mw-100 mh-100"
+                                  :src="obj.ITEM_MAIN_IMAGE ? obj.ITEM_MAIN_IMAGE : '/assets/img/logo/noimg.png'"/>
+                            </td>
                             <td style="text-align: left">
                               <div v-html="obj.ITNAME"></div>
                             </td>
                             <td style="text-align: left">
                               <div v-html="obj.ITMAKER"></div>
                             </td>
-                            <td><div v-html="obj.ITSTAN"></div></td>
+                            <!-- <td><div v-html="obj.ITSTAN"></div></td> -->
                             <!-- <td >
 													<div class="h-50px" style="padding: 5px 0px;"><img alt="" class="mw-100 mh-100" :src="getImageUrl(obj)"/></div> 
 												</td> -->
-                            <td style="text-align: right">
-                              <div v-html="obj.ITEA_IPDAN"></div>
-                            </td>
+                            <!-- <td style="text-align: right"><div v-html="obj.ITEA_IPDAN"></div></td> -->
                             <td style="text-align: right">
                               <div v-html="obj.ITEASDAN"></div>
                             </td>
@@ -1203,21 +1222,31 @@ const previewImage = (itCode) => {
                                   />
                                 </div>
                               </td>
+                              <td>
+                                <img class="mw-100 mh-100"
+                                    :src="obj.ITEM_MAIN_IMAGE ? obj.ITEM_MAIN_IMAGE : '/assets/img/logo/noimg.png'"/>
+                              </td>
                               <td style="text-align: left">
                                 <div v-html="obj.ITNAME"></div>
                               </td>
-                              <td style="text-align: left">
-                                <div v-html="obj.ITMAKER"></div>
-                              </td>
-                              <td><div v-html="obj.ITSTAN"></div></td>
+                              <td style="text-align: left"><div v-html="obj.ITMAKER"></div></td>
+                              <!-- <td><div v-html="obj.ITSTAN"></div></td> -->
                               <!-- <td >
 														<div class="h-50px" style="padding: 5px 0px;"><img alt="" class="mw-100 mh-100" :src="getImageUrl(obj)"/></div> 
 													</td> -->
-                              <td style="text-align: right">
-                                <div v-html="obj.ITEA_IPDAN"></div>
-                              </td>
+                              <!-- <td style="text-align: right"><div v-html="obj.ITEA_IPDAN"></div></td> -->
                               <td style="text-align: right">
                                 <div v-html="obj.ITEASDAN"></div>
+                              </td>
+                              <td style="text-align: right">
+                                <div>
+                                  <span
+                                    ><input
+                                      type="button"
+                                      value="편집"
+                                      @click="previewImage(obj.ITCODE)"
+                                  /></span>
+                                </div>
                               </td>
                             </tr>
                             <tr v-else>
