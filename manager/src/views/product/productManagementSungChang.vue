@@ -34,7 +34,7 @@ const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
 const userClcode = userInfo.CLCODE;
 const userId = userInfo.ID;
 const pageNumber = ref(1);
-const pageSize = ref(14);
+const pageSize = ref(15);
 const isImageChange = ref(false);
 
 const imageEditor = ref(null); //이미지 에디터 컴포넌트
@@ -83,81 +83,21 @@ const tableSet = reactive({
   isLoading: false,
   isReSearch: false,
   columns: [
-    {
-      label: "NO",
-      field: "RANK",
-      width: "5%",
-      sortable: true,
-    },
-    {
-      label: "대표번호",
-      field: "ITUSER",
-      width: "5%",
-      sortable: true,
-    },
-    {
-      label: "이미지",
-      width: "5%",
-      isKey: true,
-    },
-    {
-      label: "이미지 갯수",
-      width: "5%",
-      isKey: true,
-    },
-    {
-      label: "상품명",
-      width: "20%",
-      sortable: true,
-    },
-    {
-      label: "바코드",
-      field: "ITBASE_EABARCODE",
-      width: "10%",
-      sortable: true,
-    },
-    {
-      label: "제원",
-      field: "ITSTAN",
-      width: "10%",
-      sortable: true,
-    },
-    // {
-    //   label: "단가",
-    //   field: "AMOUNT",
-    //   width: "10%",
-    //   sortable: true,
-    // },
-    {
-      label: "매입가",
-      field: "AMOUNT",
-      width: "6%",
-      sortable: true,
-      isKey: true,
-    },
-    {
-      label: "판매가",
-      field: "ITEASDAN",
-      width: "6%",
-      sortable: true,
-      isKey: true,
-    },
-    // {
-    //   label: "관심수",
-    //   field: "ITEM_COUNT",
-    //   width: "10%",
-    //   sortable: true,
-    // },
-    // {
-    //   label: "추가정보",
-    //   field: "LAST_DATE",
-    //   width: "10%",
-    // },
-    {
-      label: "Mall에서보기",
-      field: "SHOW_IMAGE",
-      width: "10%",
-    },
+    {label:"NO",field:"RANK",width:"30px",sortable:false,},
+    {label:"유형",field:"CATEGORY2",width:"",sortable:false,},
+    {label:"대표번호",field:"ITUSER",width:"90px",sortable:false,},
+    {label:"이미지",width:"90px",isKey:false,},
+    {label:"IMG",width:"30px",isKey:false,},
+    {label:"상품명",width:"10rem",sortable:false,},
+    {label:"제원",field:"ITSTAN",width:"5rem",sortable:false,},
+    {label:"입수량",field:"ITBOX_IPQTY",width:"30px;",sortable:false,},
+    {label:"EA매입가",field:"AMOUNT",width:"4rem",sortable:false,isKey:true,},
+    {label:"EA매출단가",field:"ITEASDAN",width:"4rem",sortable:false,isKey:true,},
+    {label:"EA소비자가",field:"ITEACDAN",width:"4rem",sortable:false,isKey:true,},
+    {label:"바코드",field:"ITBASE_EABARCODE",width:"4.8rem",sortable:false,},
+    {label:"유형",field:"ITS_NAME2",width:"90px",sortable:false,},
+    {label:"가용여부",field:"ITS_NAME2",width:"90px",sortable:false,},
+    {label:"Mall에서보기",field:"SHOW_IMAGE",width:"4rem",},
   ],
   rows: [],
   totalRecordCount: 0,
@@ -364,6 +304,13 @@ function callSaveImage(file, type) {
   // API 호출이 비동기적으로 처리되어야 하는 경우, Promise 또는 async/await를 사용하여 비동기 처리를 구현해야 합니다.
   // 아래의 예제에서는 간략하게 setTimeout 함수를 사용하여 비동기적인 동작을 흉내내었습니다.
 
+  console.log("------------------------------->>>");
+  console.log(type);
+  console.log("------------------------------->>>");
+  console.log(file);
+  console.log("------------------------------->>>");
+  
+  
   return new Promise(async (resolve, reject) => {
     const fileInfo = file;
     const params = makeFileInfo(fileInfo, type);
@@ -542,17 +489,27 @@ const makeFileInfo = (fileInfo, type) => {
 
   const fileFormat = fileInfo.file.type?.split("/")?.[1];
   var d = new Date();
+  console.log("--------------------- makeFileInfo,1");
 
   const hours = d.getHours().toString().padStart(2, "0");
   const minutes = d.getMinutes().toString().padStart(2, "0");
   const seconds = d.getSeconds().toString().padStart(2, "0");
 
+  console.log("--------------------- makeFileInfo,2");
+
   let paddedNumber = type + String(fileInfo.SEQ).padStart(2, "0");
   if (type !== "104") {
     paddedNumber = type;
   }
+
+  console.log("--------------------- makeFileInfo,3");
+
   let fileName = `I_${selectRowData.value.ITCODE}_${paddedNumber}_${hours}${minutes}${seconds}`;
   let url = `/goods/${fileFormat}/${false}/${fileName}`;
+
+  console.log("--------------------- makeFileInfo,4");
+  console.log(fileInfo.file);
+
   return {
     url,
     file: fileInfo.file,
@@ -721,7 +678,7 @@ const setViewImage = (imageUrl) => {
 
 const previewImage = (itCode) => {
   console.log("--------------------- previewImage,0");
-  const url = "https://www.cookzzang.com/product-details/" + itCode;
+  const url = "http://sc.gzonesoft.com:5194/product-details/" + itCode;
   window.open(url);
 };
 
@@ -756,29 +713,24 @@ const previewImage = (itCode) => {
         </div>
         <!-- 검색어 -->
         <div class="grid_searcharea" style="">
-          <select
-            class="selectBox"
+          <select class="selectBox"
             @change="optioCodeChg1"
-            :v-model="catergory1data"
-          >
+            :v-model="catergory1data">
             <option
               v-for="item in catergory1data"
               :value="item.CODE"
-              :key="item.CODE"
-            >
+              :key="item.CODE">
               {{ item.NAME }}
             </option>
           </select>
           <select
             class="selectBox"
             @change="optioCodeChg2"
-            :v-model="catergory2data"
-          >
+            :v-model="catergory2data">
             <option
               v-for="item in catergory2data"
               :value="item.CODE"
-              :key="item.CODE"
-            >
+              :key="item.CODE">
               {{ item.NAME }}
             </option>
           </select>
@@ -803,6 +755,7 @@ const previewImage = (itCode) => {
         <div class="item__scroll" id="productDiv" style="margin-bottom: 1rem;">
           <div class="unit__scroll">
             <table>
+              <!-- 리스트 타이틀 -->
               <thead>
                 <tr>
                   <th
@@ -853,9 +806,9 @@ const previewImage = (itCode) => {
                   </th>
                 </tr>
               </thead>
+              <!-- 리스트 바디 -->
               <tbody>
-                <tr
-                  :class="selectRowData?.GEONUM === obj.GEONUM ? 'active' : ''"
+                <tr :class="selectRowData?.GEONUM === obj.GEONUM ? 'active' : ''"
                   v-if="tableSet.rows.length > 0"
                   v-for="(obj, index) in tableSet.rows"
                   :key="index"
@@ -863,24 +816,12 @@ const previewImage = (itCode) => {
                   @mouseleave="removeHoverClassFromTr"
                   @click="handleRowClick(obj, $event)"
                 >
-                  <td class="vtl-tbody-td">
-                    <div>
-                      <span>{{ obj.RANK }}</span>
-                    </div>
-                  </td>
-                  <td class="vtl-tbody-td">
-                    <div>
-                      <span>{{ obj.ITUSER }}</span>
-                    </div>
-                  </td>
-                  <td
-                    class="vtl-tbody-td"
-                    @click="handleImageClick(obj, $event)"
-                  >
+                  <td class="vtl-tbody-td"><span>{{ obj.RANK }}</span></td>
+                  <td class="vtl-tbody-td"><div><span>{{ obj.CATEGORY2 }}</span></div></td>
+                  <td class="vtl-tbody-td"><div><span>{{ obj.ITUSER }}</span></div></td>
+                  <td class="vtl-tbody-td" @click="handleImageClick(obj, $event)">
                     <div class="h-50px clickPoint" style="padding: 5px 0px">
-                      <img
-                        alt=""
-                        class="mw-100 mh-100"
+                      <img alt="" class="mw-100 mh-100"
                         :src="
                           obj.ITEM_MAIN_IMAGE
                             ? obj.ITEM_MAIN_IMAGE
@@ -889,48 +830,16 @@ const previewImage = (itCode) => {
                       />
                     </div>
                   </td>
-                  <!--
-                              <td class="vtl-tbody-td clickPoint" data-bs-toggle="modal" data-bs-target="#modalAccount1"
-                                                    @mouseenter="addCursorClassToTr" @mouseleave="removeCursorClassFromTr"
-                                                    >
-                              <div class="h-50px clickPoint"><img alt="" class="mw-100 mh-100" :src="obj.BACK_IMAGE ? obj.BACK_IMAGE : '/assets/img/logo/noimg.png'"/></div>
-                            </td>
-                            -->
-                  <td class="vtl-tbody-td">
-                    <div>
-                      <span>{{ obj.MORE_ITEMIMAGE_CNT }}</span>
-                    </div>
-                  </td>
-                  <td class="vtl-tbody-td" style="text-align: left">
-                    <div>
-                      <span>{{ obj.ITNAME }}</span>
-                    </div>
-                  </td>
-                  <td class="vtl-tbody-td">
-                    <div>
-                      <span>{{ obj.ITBASE_EABARCODE }}</span>
-                    </div>
-                  </td>
-                  <td class="vtl-tbody-td" style="text-align: left">
-                    <div>
-                      <span>{{ obj.ITSTAN }}</span>
-                    </div>
-                  </td>
-                  <td class="vtl-tbody-td" style="text-align: end">
-                    <div>
-                      <span>{{ obj.AMOUNT }}원</span>
-                    </div>
-                  </td>
-                  <td class="vtl-tbody-td" style="text-align: end">
-                    <div>
-                      <span>{{ obj.ITEASDAN }}원</span>
-                    </div>
-                  </td>
-                  <!-- <td class="vtl-tbody-td">
-                    <div>
-                      <span>{{ obj.ADD_INFO }}</span>
-                    </div>
-                  </td> -->
+                  <td class="vtl-tbody-td"><div><span>{{ obj.MORE_ITEMIMAGE_CNT }}</span></div></td>
+                  <td class="vtl-tbody-td" style="text-align:left"><div><span>{{ obj.ITNAME }}</span></div></td>
+                  <td class="vtl-tbody-td" style="text-align:center">{{ obj.ITSTAN }}</td>
+                  <td class="vtl-tbody-td" style="text-align:center">{{ obj.ITBOX_IPQTY }}</td>
+                  <td class="vtl-tbody-td" style="text-align:end">{{ obj.ITEA_IPDAN }}원</td>
+                  <td class="vtl-tbody-td" style="text-align:end">{{ obj.ITSDAN1 }}원</td>
+                  <td class="vtl-tbody-td" style="text-align:end">{{ obj.ITEACDAN }}원</td>
+                  <td class="vtl-tbody-td" style="text-align:center; background-color: #91d5ff;">{{ obj.ITBASE_EABARCODE }}</td>
+                  <td class="vtl-tbody-td" style="text-align:center"><div><span>{{ obj.ITS_NAME1 }}</span></div></td>
+                  <td class="vtl-tbody-td" style="text-align:center"><div><span>{{ obj.ITS_NAME2 }}</span></div></td>
                   <td class="vtl-tbody-td">
                     <div>
                       <span
@@ -952,7 +861,7 @@ const previewImage = (itCode) => {
           </div>
         </div>
         <!-- 더보기버튼 -->
-        <div class="item__buttons" v-if="tableSet.isShowMoreBtn" style="gap: 0px; margin-bottom: -0.2rem;">
+        <div class="item__buttons" style="gap: 0px; margin-bottom: -0.2rem;">
           <button @click="searchMoteBtn" style="margin: 0px">
             <i class="fa-solid fa-plus"></i>더보기
           </button>
@@ -1135,50 +1044,21 @@ const previewImage = (itCode) => {
                     "
                   >
                     <!-- 이미지가 없을때 -->
-                    <div
-                      v-if="!masterFiles.length"
-                      class="room-file-upload-example-container"
-                      style="justify-content: left"
-                    >
+                    <div v-if="!masterFiles.length" class="room-file-upload-example-container" style="justify-content: left">
                       <div class="room-file-upload-example">
                         <div class="file-preview-wrapper-upload">
                           <div class="image-box" @click="imageChange('master')">
-                            <label
-                              for="masterFiles"
-                              style="background-color: #aa42ff"
-                              >+</label
-                            >
+                            <label for="masterFiles" style="background-color: #aa42ff" >+</label >
                           </div>
                         </div>
                       </div>
                     </div>
                     <!-- 이미지가 있을때 -->
-                    <div
-                      v-else
-                      class="file-preview-content-container"
-                      style="display: flex; justify-content: left"
-                    >
-                      <div
-                        class="file-preview-container"
-                        style="justify-content: left"
-                      >
-                        <div
-                          v-for="(file, index) in masterFiles"
-                          :key="index"
-                          class="file-preview-wrapper"
-                        >
-                          <div
-                            class="file-close-button"
-                            @click="fileDeleteButton(file, 'master')"
-                            :name="file.SEQ"
-                          >
-                            X
-                          </div>
-                          <img
-                            :src="file.URL"
-                            id="masterImage"
-                            @click="setViewImage(file?.URL)"
-                          />
+                    <div v-else class="file-preview-content-container" style="display: flex; justify-content: left" >
+                      <div class="file-preview-container" style="justify-content: left" >
+                        <div v-for="(file, index) in masterFiles" :key="index" class="file-preview-wrapper" >
+                          <div class="file-close-button" @click="fileDeleteButton(file, 'master')" :name="file.SEQ">X</div>
+                          <img :src="file.URL" id="masterImage" @click="setViewImage(file?.URL)"/>
                         </div>
                       </div>
                     </div>
@@ -1328,6 +1208,18 @@ const previewImage = (itCode) => {
 </template>
 
 <style scoped>
+
+.selectBox { 
+  margin-right: 5px; 
+        height: 42px;
+        width: 15rem;
+        background-color: #fff; 
+        border-style: solid;
+        border-color: #d8d8d8;
+        border-radius: 10px;
+        padding: 10px 18px;
+        font-size: 15px;
+}
 
 .left_side {
   width: 75%;
