@@ -18,7 +18,7 @@ const instanceFile = axios.create({
   baseURL: '/api',
   timeout: 50000,
   headers: {
-    'Content-Type': 'application/json',
+    ContentType: 'application/json',
     CodyApiKey: '1Bb6wI6DnVL8S8LQAbvAO+pSnKXCf7HwQ7GEn+FnrJk=',
   },
 })
