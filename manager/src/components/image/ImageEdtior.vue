@@ -6,7 +6,9 @@
     <div class="contentImage">
       <section class="cropper-area">
         <div class="img-cropper">
-          <vue-cropper ref="cropper"  class="vue-cropper" :aspect-ratio="1 / 1" :src="imgSrc" preview=".preview" @cropmove="cropMoving"   />
+          <vue-cropper ref="cropper"  class="vue-cropper" 
+                       :aspect-ratio="1 / 1" 
+                       :src="imgSrc" preview=".preview" @cropmove="cropMoving"   />
         </div>
         <div class="actions" style="display: flex; justify-content: space-between;">
           <div class="left-actions">
@@ -256,8 +258,8 @@ input[type="file"] {
 
 .cropper-area {
   width: 100%;
-  height: auto;
-  margin: 10px 10px 10px 10px;
+  height: 50%;
+  margin: 0px 10px 0px 10px;
 }
 .img-cropper{
   display: flex;

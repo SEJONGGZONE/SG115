@@ -158,6 +158,8 @@ onMounted(() => {
     } else {
       console.log("넘어온파라미터 없음...")
     }
+
+    closeImage();
   }, 1000);
 });
 
