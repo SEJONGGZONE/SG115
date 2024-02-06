@@ -109,6 +109,8 @@ export default {
         canvas.height = image.height;
 
         const context = canvas.getContext('2d');
+        context.fillStyle = '#FFFFFF'; 
+        context.fillRect(0, 0, canvas.width, canvas.height);
         context.drawImage(image, 0, 0);
 
         // 캔버스의 내용을 파일 오브젝트로 변환
