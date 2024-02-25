@@ -179,6 +179,54 @@
                     <div class="txt">카테고리</div>
                 </div>
                 <div class="h_nav_ul">
+                    <template v-for="(menu, i) in categoryClass" :key="i">
+                        <div class="depth1" style="text-align: center; padding-top:0.2rem;">
+                            <!--상위메뉴-->
+                            <a href="" class="depth1-menu-title" @click.prevent="handleOffMenu(menu.classCode)">
+                                {{menu.className}}
+                            </a>
+                            <div class="slide_banbox" style="margin-top:1rem;">
+                                <div class="swiper slide_banner banner1">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="">
+                                                <div class="imgbox">
+                                                    <img :src="menu.pItemImage" alt="" class="img-full-kmong-profile">
+                                                </div>
+                                                <div class="slide_banbox_item_text">
+                                                    <a href="" class="link">{{ menu.pItemName }}</a>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev prev_btn">
+                                        <img src="~/assets/img/kmong/img/ic_arrow_left.png" alt="" class="img-full-kmong">
+                                    </div>
+                                    <div class="swiper-button-next next_btn">
+                                        <img src="~/assets/img/kmong/img/ic_arrow_right.png" alt="" class="img-full-kmong">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--하위메뉴#1-->
+                            <div class="h_nav_ul_ul">
+                                <div class="depth2_parent" 
+                                    :style="`${
+                                        i === 0 ? 'margin-top:0px' : 
+                                        i === 1 ? 'margin-top:185px' : 
+                                        i === 2 ? 'margin-top:380px' : 
+                                        i === 3 ? 'margin-top:540px' : 'margin-top:0px'
+                                    }`"
+                                    >
+                                    <template v-for="(subMenu, j) in categoryList" :key="j">
+                                        <div class="depth2" v-if="menu.classCode == subMenu.CLASS_CODE">
+                                            <a href="" class="link" @click.prevent="handleOffMenu(menu.classCode +'/' + subMenu.CODE)">{{subMenu.NAME}}</a>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+<!--                    
                     <div class="depth1">
                         <a href="" class="link">냉동식품</a>
                         <div class="h_nav_ul_ul">
@@ -362,8 +410,10 @@
                     <div class="depth1">
                         <a href="" class="link">배달용기</a>
                     </div>
+-->                    
                 </div>
             </div>
+            
             <!-- 그 옆으로 나오는 메뉴.. -->
             <div class="navitem">
                 <a href="" class="link">오늘의 쿡짱</a>
@@ -409,6 +459,40 @@
 <style>
 .sample_color {
     color :#00000040;
+}
+.depth1 {
+    height: 12rem;
+    cursor:pointer;
+}
+/* 메뉴타이틀 */
+.depth1-menu-title {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px #cccccca5;
+    text-decoration : underline;
+    text-underline-position : under;
+}
+/* 하위메뉴 */
+.depth2_parent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.7rem 5rem;
+    padding: 1rem;
+    font-size:0.875rem;
+    justify-content: flex-start;
+}
+/* 메뉴-추천상품 이름 */
+.slide_banbox_item_text {
+    margin-top:-0.5rem;
+    padding:0rem;
+    border: 0px solid red;
+    font-size:0.9rem;
+    /* 말줄임처리 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
 }
 </style>
 
@@ -494,7 +578,7 @@ onMounted(async()=>{
         });
 
         await doSearch()
-        await doSearchCategory()
+        await doSearchCategory('99', '') // CODE=99 성창푸드용(모든 카테고리 가져옴)
         await setMenuData()
         
 })
@@ -699,32 +783,77 @@ const doSearchCatrList = async ()=>{//장바구니 상품 조회
       console.error(error);
     }
 }
+const categoryClassOld = ref([
+        {
+            "CODE": "01",
+            "NAME": "냉동식품"
+        },
+        {
+            "CODE": "02",
+            "NAME": "냉장식품"
+        },
+        {
+            "CODE": "03",
+            "NAME": "실온제품"
+        },
+        {
+            "CODE": "04",
+            "NAME": "비식품"
+        }
+    ])
+const categoryClass = ref([])    
 const categoryList = ref([])
 const dropdownMenu = ref([])
-const doSearchCategory = async ()=>{//카테고리1 영역
+const doSearchCategory = async (codeVal:String, nameVal:String)=>{//카테고리1 영역
 
     let data;
     let param = {
-        code : '',
+        code : codeVal,
+        name : nameVal,
         inputUser : '',
-        name : ''
     }
     try {
         const dataObj = await productApi.product_category(param)
         const data = dataObj.data;
         if(data.RecordCount > 0){
             categoryList.value.push(...data.RecordSet);
+            console.log('--------------- 0');
+            console.log(categoryList);
+            console.log('--------------- 1');
         }
     } catch (error) {
         console.error(error);
     }finally{
+        let prevCode = '';
+        for (let i = 0; i < categoryList.value.length; i++) {
+            if (prevCode != categoryList.value[i].CLASS_CODE) {
+                let category = categoryList.value[i];
+                let promoteItemInfo = category.PROMOTE_ITEM;
+                let firstItem = promoteItemInfo.split('/R/')[0];
+                let firstItemCode = firstItem.split('/C/')[0];
+                let firstItemName = firstItem.split('/C/')[1];
+                let firstItemImage = firstItem.split('/C/')[2];
+                
+                let formattedItem = {
+                    classCode: category.CLASS_CODE,
+                    className: category.CLASS_NAME,
+                    pItemCd: firstItemCode,
+                    pItemName: firstItemName,
+                    pItemImage : firstItemImage
+                }
+                categoryClass.value.push(formattedItem);
+                prevCode = categoryList.value[i].CLASS_CODE;
+            }
+        }
 
         for (let i = 0; i < categoryList.value.length; i++) {
             let category = categoryList.value[i];
             let formattedItem = {
                 link: `/categoryList?code=${category.CODE}&title=${category.NAME}`,
                 title: category.NAME,
-                code: category.CODE
+                code: category.CODE,
+                classCode: category.CLASS_CODE,
+                className: category.CLASS_NAME
             }
 
             dropdownMenu.value.push(formattedItem);
@@ -732,4 +861,13 @@ const doSearchCategory = async ()=>{//카테고리1 영역
         localStorage.setItem("category1", JSON.stringify(categoryList.value))
     }
 }
+
+/**
+ * 메뉴를 클릭했을때..
+ * @param menuCode 메뉴코드
+ */
+const handleOffMenu = (menuCode:String) => {
+    console.log(menuCode)
+} 
+
 </script>
