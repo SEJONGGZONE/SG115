@@ -1,0 +1,38 @@
+쿡짱 작업 확인용 URL
+
+http://marronde.com/web/ex1/index.html
+
+* 비로그인/로그인 UI 변화는
+  html 파일에 주석으로 표시해놨습니다. 
+  주석 "[확인]" 을 검색해서 확인부탁드립니다.
+
+
+[분류]
+메인_A_비로그인 + 햄버거_비로그인
+http://marronde.com/web/ex1/mainA.html
+
+메인_B_로그인 + 햄버거_로그인 + 장바구니 팝업
+http://marronde.com/web/ex1/mainB.html
+
+메인_C_로그인 + 햄버거_로그인
+http://marronde.com/web/ex1/mainC.html
+
+
+* PC시안과 모바일 시안의 제품들이 달라서 
+  PC시안 기준으로 작업을 해놨습니다!
+  참고 부탁드립니다.
+
+
+
+
+24.01.17 작업
+
+제품 목록
+http://marronde.com/web/ex1/list.html
+
+검색결과
+http://marronde.com/web/ex1/search.html
+
+제품 상세
+http://marronde.com/web/ex1/prd_detail.html
+

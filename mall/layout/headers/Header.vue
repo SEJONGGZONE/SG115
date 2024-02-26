@@ -182,7 +182,7 @@
                     <template v-for="(menu, i) in categoryClass" :key="i">
                         <div class="depth1" style="text-align: center; padding-top:0.2rem;">
                             <!--상위메뉴-->
-                            <a href="" class="depth1-menu-title" @click.prevent="handleOffMenu(menu.classCode)">
+                            <a href="" class="depth1-menu-title" @click.prevent="handleOffMenu(menu.classCode, menu.className, '', '')">
                                 {{menu.className}}
                             </a>
                             <div class="slide_banbox" style="margin-top:1rem;">
@@ -219,7 +219,7 @@
                                     >
                                     <template v-for="(subMenu, j) in categoryList" :key="j">
                                         <div class="depth2" v-if="menu.classCode == subMenu.CLASS_CODE">
-                                            <a href="" class="link" @click.prevent="handleOffMenu(menu.classCode +'/' + subMenu.CODE)">{{subMenu.NAME}}</a>
+                                            <a href="" class="link" @click.prevent="handleOffMenu(menu.classCode, menu.className, subMenu.CODE, subMenu.NAME)">{{subMenu.NAME}}</a>
                                         </div>
                                     </template>
                                 </div>
@@ -866,8 +866,14 @@ const doSearchCategory = async (codeVal:String, nameVal:String)=>{//카테고리
  * 메뉴를 클릭했을때..
  * @param menuCode 메뉴코드
  */
-const handleOffMenu = (menuCode:String) => {
-    console.log(menuCode)
+const handleOffMenu = (menuCode:String, title:String, subMenuCode:String, subMenuName:String) => {
+    //console.log(menuCode)
+    location.href = "/categoryList?code=" + menuCode + 
+                    "&title=" + title + 
+                    "&menuCode=" + menuCode + 
+                    "&subMenuCode=" + subMenuCode + 
+                    "&subMenuName=" + subMenuName;
+    
 } 
 
 </script>

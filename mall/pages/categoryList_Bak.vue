@@ -26,7 +26,6 @@ const isShowMoreBtn = ref(false);
 // 메뉴선택정보
 const menuCode = ref("");
 const subMenuCode = ref("");
-const subMenuName = ref("");
 
 //카테고리 정보
 const category1 = ref(""); //메인화면에서 받아온 카테고리1 값
@@ -51,10 +50,6 @@ onMounted(async () => {
   await doSearchCategory();
   if (category2List.value.length > 0) {
     category2.value = category2List.value[0].CODE;
-
-    console.log("88888888888888")
-    console.log(category2List);
-    console.log("99999999999999")
   }
   //category2.value = "01"; //화면 첫 진입 시, 카테고리2는 무조건 '01'로 셋팅
 
@@ -90,7 +85,6 @@ const setParam = () => {
   // 성창추가(2024.02.26)
   menuCode.value = route.query.menuCode;
   subMenuCode.value = route.query.subMenuCode;
-  subMenuName.value = route.query.subMenuName;
 };
 
 watch(
@@ -207,95 +201,15 @@ const doSearch = async () => {
     console.error(error);
   }
 };
-
-/**
- * 메뉴를 클릭했을때..
- * @param menuCode 메뉴코드
- */
- const handleOffMenu = (menuCode:String, title:String, subMenuCode:String, subMenuName:String) => {
-    //console.log(menuCode)
-    location.href = "/categoryList?code=" + menuCode + 
-                    "&title=" + title + 
-                    "&menuCode=" + menuCode + 
-                    "&subMenuCode=" + subMenuCode + 
-                    "&subMenuName=" + subMenuName;
-    
-} 
 </script>
 
 
 <template>
   <layout>
-    <div class="wrap">
-      <!-- contents -->
-      <div id="contents" class="contents pb_none">
-        <!-- 제품 목록 -->
-        <section class="main_section product_wrap prd_list_wrap">
-            <div class="inner">
-                <div class="m_titbox color">
-                    <p class="m_tit">
-                        냉동식품
-                    </p>
-                </div>
-                <ul class="prd_category">
-                  
-                  <li :class="`${!subMenuCode?'on':''}`">
-                    <a href="" class="link">전체보기</a>
-                  </li>
-
-                  <template v-for="(col, i) in category2List" :key="i">
-                    <li :class="col.NAME === subMenuName ?'on':''">
-                      <a href="" class="link" @click.prevent="handleOffMenu(menuCode, category1nm, col.CODE, col.NAME)">
-                        {{ col.NAME }}</a>
-                    </li>  
-                  </template>
-
-                    <!-- <li class="on"><a href="" class="link">전체보기</a></li>
-                    <li><a href="" class="link">만두/돈까스</a></li>
-                    <li><a href="" class="link">튀김/탕류/조림</a></li>
-                    <li><a href="" class="link">냉동어묵/유부/소세지</a></li>
-                    <li><a href="" class="link">냉동떡류/햄/볶음밥</a></li>
-                    <li><a href="" class="link">면류/우동/냉면/쫄면</a></li>
-                    <li><a href="" class="link">냉동소스류/육수류</a></li>
-                    <li><a href="" class="link">피자치즈/빵가루</a></li> -->
-                </ul>
-                <div class="prd_list_top">
-                    <p class="prd_total">총 1,980건</p>
-                    <div class="prd_filter">
-                        <div class="mob_filter_btn">
-                            <span id="filter_txt">인기순</span>
-                            <span class="arrow">
-                                <img src="img/ic_filter_arrow.png" alt="" class="img-full">
-                            </span>
-                        </div>
-                        <div class="prd_filter_box">
-                            <a href="#none" class="btn on">인기순</a>
-                            <span class="bar"></span>
-                            <a href="#none" class="btn">신상품순</a>
-                            <span class="bar"></span>
-                            <a href="#none" class="btn">낮은 가격순</a>
-                            <span class="bar"></span>
-                            <a href="#none" class="btn">높은 가격순</a>
-                            <span class="bar"></span>
-                            <a href="#none" class="btn">상품명 오름차순</a>
-                            <span class="bar"></span>
-                            <a href="#none" class="btn">상품명 내림차순</a>
-                        </div>
-                    </div>
-                </div>
-                <product-list :title="`'${category2nm}' `" :productList="list" @changeProduct="changeProduct">
-                </product-list>
-              </div>
-        </section>
-      </div>
-    </div>
-
-
-
     <!--navicate 영역-->
-    <!-- <div data-aos="flip-down" class="breadcr mt-90">{{ category1nm }} > {{ category2nm }}</div> -->
+    <div data-aos="flip-down" class="breadcr mt-90">{{ category1nm }} > {{ category2nm }}</div>
     <!-- 카테고리2 영역-->
-    <!-- <div class="brand__area non-mobile">
+    <div class="brand__area non-mobile">
       <div class="container custom-container-2">
         <div class="brand__slider-active p-relative mt-40">
           <Carousel
@@ -362,9 +276,9 @@ const doSearch = async () => {
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- 모바일 카테고리 영역-->
-    <!-- <div class="scrollmenu mobile_brand__slider">
+    <div class="scrollmenu mobile_brand__slider">
       <a v-for="(col, i) in category2List" :key="i">
         <button
           class="os-btn"
@@ -377,11 +291,13 @@ const doSearch = async () => {
           {{ col.NAME }}
         </button>
       </a>
-    </div> -->
+    </div>
 
-    
-    
-    
+    <product-list
+      :title="`'${category2nm}' `"
+      :productList="list"
+      @changeProduct="changeProduct"
+    ></product-list>
     <div v-if="isShowMoreBtn" class="text-center mb-100">
       <button class="moreShowBtn" @click="moreBtn">
         <i class="fal fa-plus"></i> 더보기
@@ -391,22 +307,5 @@ const doSearch = async () => {
   </layout>
 </template>
 
-<style scoped>
-/* 제품 목록 */
-.prd_list_wrap {padding-top: 0.875rem;}
-.prd_category {display: flex;flex-wrap: wrap; gap: 1rem 8.333rem; margin: 2rem 0; padding: 1.688rem 2rem; background: #fff; border-radius: 0.5rem; box-shadow: 0px 0px 20px 0px #0000000D;}
-.prd_category > li { width: calc((100% - 8.333rem*3)/4);}
-.prd_category > li .link { display: inline-flex; justify-content: center; align-items: center; color: var(--text); font-size: 1rem; width: 100%; height: 40px;}
-.prd_category > li.on .link { color: #fff; border-radius: 0.25rem; background: var(--point);}
 
-.prd_list_top {display: flex; justify-content: space-between; margin-top: 2.5rem;}
-.prd_total {color: var(--text); font-size: 1.125rem; font-weight: 500;}
-.prd_filter {position: relative;}
-.prd_filter .mob_filter_btn {display: none;}
-.prd_filter .prd_filter_box{display: flex; align-items: center; gap: 0.5rem;}
-.prd_filter .prd_filter_box > .btn {color: var(--text_gray); font-size: 1.125rem; font-weight: 500;}
-.prd_filter .prd_filter_box > .btn.on {color: var(--text);}
-.prd_filter .prd_filter_box > .bar { display: block; width: 1px; height: 0.75rem; background: #D2D2D2;}
-
-</style>
 

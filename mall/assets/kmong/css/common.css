@@ -142,8 +142,8 @@ body.hidden::before {
 }
 
 .contents {
-  min-height: 800px;
-  padding: 2.125rem 0 5.5rem;
+  /* min-height: 800px; */
+  padding: 2.125rem 0 1.5rem;
 }
 .point_color {
   color: var(--point) !important;
