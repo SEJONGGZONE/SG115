@@ -1,0 +1,129 @@
+@charset 'utf-8';
+
+/*
+	copyright(c) 상상너머·원데이넷 all rights reserved.
+	허용된 라이센스이외 무단도용재배포를 금합니다.
+	본 소스는 모두 (주)상상너머의 지적 재산이며, 이에 대해 무단도용 및 수정 재배포/재편집등을 절대 금하며 적발 시 법적 대응을 할 것임을 경고합니다.
+*/
+
+
+/* Global -------------------------------------------------------------------------------------------------------------------------------- */
+html {width:100%; height:100%;}
+body {margin:0; padding:0; width:100%; height:100%; background:#F1F1F6; overflow-x:hidden;}
+
+body,p,pre,form,span,div,table,td,ul,ol,li,dl,dt,dd,input,textarea,label,button, select {color:#666; font-family:'Plus Jakarta Sans',맑은고딕, sans-serif; letter-spacing:-0.3px; font-size:12px; font-weight:400; color:#606070;}
+body,p,pre,form,span,div,table,td,ul,ol,li,dl,dt,dd,input,textarea,label,button, select {word-wrap:break-word; word-break:break-all; -webkit-text-size-adjust:none; text-decoration-skip-ink:none; font-variant-numeric:tabular-nums;}
+b,strong {color:#666; word-wrap:break-word; word-break:break-all; font-size:inherit; font-family:inherit; font-weight:600;}
+p,form,span,h1,h2,h3,h4,h5,h6 {margin:0; padding:0; font-weight:normal;}
+div,table {margin:0; padding:0; border-spacing:0; border-collapse:collapse; border:none; -webkit-overflow-scrolling: touch;}
+table caption { width:0px; height:0px; font-size:0; visibility:hidden; }
+ul,ol,li,td,dl,dt,dd {margin:0; padding:0; }
+em,i {font-style:normal}
+a,span {display:inline-block;}
+div {-webkit-overflow-scrolling: touch;}
+img {border:0;}
+span,div,a,b,strong,label {color:inherit; font-size:inherit; font-weight:inherit; letter-spacing:inherit; line-height:inherit;}
+a:link, a:visited {text-decoration: none; cursor:pointer;}
+a:hover, a:active {text-decoration: none;}
+u {text-decoration: none;}
+* {font-size: inherit; text-decoration-skip-ink: none;}
+img {max-width:100%}
+
+::selection {background:#111; color:#fff; text-shadow: none;}
+::-moz-selection {background:#111; color:#fff; text-shadow: none;}
+::-webkit-selection {background:#111; color:#fff; text-shadow: none;}
+
+label {display:inline-block; overflow:hidden; cursor:pointer;}
+/*
+label input[type=checkbox],label input[type=radio] {float:left; height:13px; width:13px; cursor:pointer; -webkit-gradient:none; -webkit-border-radius:0;}
+*/
+input[type=file] {cursor:pointer; border:0; border-radius:0px; -webkit-appearance:none; -webkit-gradient:none; -webkit-border-radius:0; border-radius:0px;}
+input[type=submit],input[type=button],button {cursor:pointer; border:0; border-radius:0px; -webkit-appearance:none; -webkit-gradient:none; -webkit-border-radius:0; border-radius:0px;}
+input[type=text],input[type=password],input[type=search],input[type=email],input[type=number],input[type=tel] {margin:0;padding:0;}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {-webkit-appearance:none; margin:0;} /* number 오른쪽에 나타나는 화살표 버튼없애기 */
+input[type=date]::-webkit-outer-spin-button, input[type=date]::-webkit-inner-spin-button {-webkit-appearance:none; margin:0;} /* 오른쪽에 나타나는 화살표 버튼없애기 */
+
+input {color:#666; background:transparent; margin:0; padding:0; border:0; outline:none; border-radius:0px; -webkit-appearance: none;}
+input[type=text]:focus {color:#333 !important;}
+input::-ms-clear {display: none;}
+
+textarea {color:#666; background:#fff; margin:0; padding:0; border:0; -webkit-appearance: none;}
+textarea:focus {color:#333 !important;}
+select {color:#666; cursor:pointer; font-size: inherit !important; font-family: inherit !important; -webkit-user-select: none; -webkit-appearance: none;}
+select::-ms-expand {display:none;}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {display:none;}
+
+input,select,textarea {outline:none !important}
+input {-webkit-tap-highlight-color:transparent}
+
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px #fff inset;}
+input:-webkit-autofill:focus {-webkit-box-shadow: 0 0 0px 1000px #fff inset;}
+
+placeholder {color:#CECEDB !important;}
+input::-webkit-input-placeholder {color:#CECEDB !important;}
+input:-ms-input-placeholder {color:#CECEDB !important;}
+input:-moz-placeholder {color:#CECEDB !important;}
+textarea::-webkit-input-placeholder {color:#CECEDB !important;}
+textarea:-ms-input-placeholder {color:#CECEDB !important;}
+textarea:-moz-placeholder {color:#CECEDB !important;}
+
+.wrap {width:100%; position:relative; box-sizing:border-box; height:100%; display:flex; justify-content: stretch; align-items: stretch; flex-direction:column;}
+.layout_fix {position:relative; padding:0 40px;}
+.upper_link {position:absolute; left:0; top:0; width:100%; height:100%; z-index:9}
+.lineup {display:flex; justify-content: center; align-items: center; flex-direction:row;}
+
+
+
+/* font -------------------------------------------------------------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}

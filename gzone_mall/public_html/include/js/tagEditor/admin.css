@@ -1,0 +1,19 @@
+.tag-editor-delete {
+	min-height: 20px;
+}
+.tag-editor {
+	float:none !important;
+	background: #fff !important;
+	box-sizing: border-box !important;
+	border: 2px dashed #DAE4FB !important;
+	border-radius:5px !important;
+	padding: 10px 5px 40px 5px !important;
+	overflow: hidden !important;
+	display:flex; justify-content: flex-start; align-items: center; flex-direction:row; flex-wrap:wrap;
+}
+
+
+.tag-editor li {float:none; white-space:nowrap}
+.tag-editor .tag-editor-tag {background:#DAE4FB !important; display:flex; justify-content: center; align-items: center; flex-direction:column; height:25px;}
+.tag-editor .tag-editor-delete {background:#DAE4FB !important; display:flex; justify-content: center; align-items: center; flex-direction:column; height:25px;}
+.tag-editor .tag-editor-delete i {margin-top:-2px;}

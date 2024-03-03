@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<date>2023-03-21</date>
+	<title><![CDATA[[반응형] FOOD]]></title><!-- 사이트 스킨 이름 -->
+	<info><![CDATA[컨텐츠 사이즈 : 1,280 pixel]]></info><!-- 사이트 스킨 설명(엔터로 구분) -->
+
+	<!-- 사이트 기본정보 -->
+	<default>
+		<!-- 사이트 컨텐츠 크기 -->
+		<pc_content_width>1280</pc_content_width>
+	</default>
+
+	<!-- 상품정보 -->
+	<product>
+		<!-- 상품컨텐츠 영역크기::사이트 컨텐츠 크기 -->
+		<pc_content_width>1280</pc_content_width>
+		<mo_content_width>1000</mo_content_width>
+
+		<!-- 대표이미지(자동등록) 크기 -->
+		<main_image_width>590</main_image_width>
+		<main_image_height>590</main_image_height>
+
+		<!-- 목록 썸네일 -->
+		<list_image_width>590</list_image_width>
+		<list_image_height>590</list_image_height>
+
+		<!-- 상품상세 썸네일 -->
+		<detail_image_width>590</detail_image_width>
+		<detail_image_height>590</detail_image_height>
+
+		<!-- 썸네일이미지 크기 -->
+		<!-- 상품상세 이미지 하단의 롤링이미지, 마이페이지 주문내역/주문상세, 장바구니, 관리자페이지 상품이미지-->
+		<thumb_image_width>200</thumb_image_width>
+		<thumb_image_height>200</thumb_image_height>
+	</product>
+
+	<!-- 카테고리 정보 -->
+	<category>
+		<!-- 상단이미지 -->
+		<pc_image_width>1280</pc_image_width><!-- 카테고리 상단 :: 상품상단 이미지::off이면 사용안함 -->
+
+		<!--
+			PC 단수설정 : 6,5,4,3,2 => 박스형 / 2,1 => 리스트2단형, 리스트1단형
+			반응형 수설정 : 3,2,1 => 박스형 / 1  => 리스트 1단형
+		-->
+		<pc_pro_box_depth>6,5,4,3,2</pc_pro_box_depth>
+		<pc_pro_list_depth>2,1</pc_pro_list_depth>
+		<mo_pro_box_depth>3,2,1</mo_pro_box_depth>
+		<mo_pro_list_depth>1</mo_pro_list_depth>
+		<pc_pro_depth_default>5</pc_pro_depth_default>
+		<mo_pro_depth_default>3</mo_pro_depth_default>
+
+		<pro_depth_all_title>
+			<pc_box_6>박스 6단형</pc_box_6>
+			<pc_box_5>박스 5단형</pc_box_5>
+			<pc_box_4>박스 4단형</pc_box_4>
+			<pc_box_3>박스 3단형</pc_box_3>
+			<pc_box_2>박스 2단형</pc_box_2>
+
+			<pc_list_2>리스트 2단형</pc_list_2>
+			<pc_list_1>리스트 1단형</pc_list_1>
+
+			<mo_box_3>박스 3단형</mo_box_3>
+			<mo_box_2>박스 2단형</mo_box_2>
+			<mo_box_1>박스 1단형</mo_box_1>
+			
+			<mo_list_1>리스트 1단형</mo_list_1>
+		</pro_depth_all_title>
+
+	</category>
+</skin>

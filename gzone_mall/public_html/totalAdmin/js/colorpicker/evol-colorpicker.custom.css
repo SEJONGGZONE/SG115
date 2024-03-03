@@ -1,0 +1,23 @@
+/**/
+.evo-colorind,
+.evo-colorind-ie,
+.evo-colorind-ff {
+	border: 1px solid #d9dee3;
+	width: 35px;
+	height: 35px;
+	border-radius:5px;
+}
+.evo-color {
+	width: auto;
+	max-width:100px;
+}
+
+.evo-pop {width:230px !important;}
+.evo-pop> span {display:block;}
+.evo-palette td {padding:0px !important; height:25px;}
+.evo-color span {font-size:13px !important;}
+.evo-palette {display:block;}
+.evo-palette tbody {display:block;}
+.evo-palette tr {display:flex; justify-content: center; align-items: center; flex-direction:row; gap:2px}
+.evo-palette td {display:block; flex:1}
+

@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+/*
+ * Copyright    :    ONEDAYNET.CO.KR
+ * SOLUTION     :    HYSSENCE 3.0 PLUS
+ * File         :    ie_fix.css
+ * SUMMARY      :    ie에서만 사용
+ */
+
+/* 본 소스는 모두 (주)상상너머의 지적 재산이며, 이에 대해 무단도용 및 수정 재배포/재편집등을 절대 금하며 적발 시 법적 대응을 할 것임을 경고합니다. */
+
+
+/* 세팅 -------------------------------------------------------------------------------------------------------------------------------- */
+body {min-width: 1300px;}
+
+
+
+
+
+
+/* 메인 -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* 상하단 ==================== */
+.sc_Header .search_open .keyword_box {max-width: 100%;}
+.sc_Header .search_open .keyword_box .link {margin-right: 5px; margin-bottom: 5px;}
+.sc_Header .logo_box img {max-width:300px;}
+
+.sc_Footer .menu_box {margin-bottom: 30px;}
+.sc_Footer .menu_box li+ li {margin-left: 15px;}
+.sc_Footer .company_box {flex: auto;}
+.sc_Footer .company_box .txt {margin-right: 15px; margin-top: 5px;}
+.sc_Footer .auth_box .tx_guide {margin-top: 10px;}
+.sc_Footer .auth_box .pg_logo .img+ .img {margin-left: 10px;}
+
+
+/* 상품영역 ==================== */
+.sc_Ctg .tab_box .swipe_box {display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.sc_Ctg .tab_box .swipe_box li {display: flex; flex-direction: row; justify-content: center; align-items: center;}
+
+
+/* 디자인영역 ==================== */
+.sc_More_btn .link {flex: auto; width: 100%;}
+
+.sc_Ad .banner {flex: auto;}
+.sc_Ad .banner .txt_box {flex: auto;}
+
+.sc_Review .about_item .info .name {max-height: 15px;}
+.sc_Review .about_item .thumb {margin-right: 10px;}
+.sc_Review .rv_info .tx_conts {max-height: 37px; max-width: 100%; margin-top: 10px;}
+.sc_Review .rv_info .writer {margin-top: 10px;}
+
+.sc_Service .tit_ko {margin-top: 5px;}
+.sc_Service dd {margin-top: 40px;}
+.sc_Service .bank_list li+ li {margin-top: 5px;}
+
+
+
+
+
+/* 서브 -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* 서브공통 ==================== */
+.p_Fly .btn_recent {position: relative;}
+
+.p_Slide .my_info .who .name {flex: auto;}
+.p_Slide .my_info .member_link li+ li {margin-left: 1px;}
+.p_Slide .cs_info {margin-bottom: 40px;}
+
+.p_Recent .recent_item .item_name {max-width: 100%; max-height: 34px;}
+
+
+/* 상품박스 ==================== */
+.item_box .info .item_name {max-width: 100%; max-height: 40px;}
+.item_box .info .sub_name {max-width: 100%; max-height: 15px;}
+
+
+/* 상품목록 ==================== */
+.p_Category .swipe_box li+ li {margin-left: 5px;}
+
+.p_List_ctrl .filter_benefit label.c_label+ label.c_label {margin-left: 15px;}
+.p_List_ctrl .type_box {margin-left: 10px;}
+
+.item_list ul {display:flex; flex-direction:row; justify-content:flex-start; align-items:stretch; flex-wrap:wrap; margin-top:-50px; margin-left:-30px;}
+.item_list li {width:25%; margin-top:50px; padding-left:30px;}
+.item_list.pc_type_box6 li {width:16.666%;}
+.item_list.pc_type_box5 li {width:20%;}
+.item_list.pc_type_box4 li {width:25%;}
+.item_list.pc_type_box3 li {width:33.333%;}
+.item_list.if_list_type li {width:50%;}
+.item_list.if_list_type .item_box .info .btn_multi {order: inherit;}
+.item_list.pc_type_list2 li {width:50%;}
+.item_list.pc_type_list1 li {width:100%;}
+
+.rolling_wrap .rolling_box .item_list ul {flex-wrap:nowrap; margin:0;}
+.rolling_wrap .rolling_box .item_list li {margin-top:0 !important;}
+
+/* 상품상세 ==================== */
+.p_Vtop li {margin: 2px;}
+
+.p_Vshare .white_box li+ li {margin-left: 10px;}
+
+.p_Vopt .opt_other label .tx strong {max-height: 15px;}
+.p_Vopt .type_result .date {background-size: 12px 12px;}
+
+.p_Vcoupon .coupon_box .name dd {max-width: 100%; max-height: 15px;}
+
+.p_Vconts .tab_menu ul {flex: auto; width: 100%;}
+.p_Vconts .detail .fold_ctrl .btn_ctrl {flex: auto; width: 100%; margin: 0;}
+.p_Vconts .notify_wrap .notify+ .notify {margin-left: 30px;}
+.p_Vconts .place_info .info_box dl+ dl {margin-top: 5px;}
+.p_Vconts .place_info .info_box dt {margin-right: 10px;}
+
+.p_Vboard .board_top .c_btnbox li+ li {margin-left: 10px;}
+.p_Vboard .board_top .this_write {flex: auto !important;}
+.p_Vboard .board_top .score .average em {margin: 0 5px;}
+.p_Vboard .board_top .score .average strong {margin-left: 10px;}
+.p_Vboard .board_top .total_write {margin-left: 20px;}
+.p_Vboard .post_info .c_tag {margin-right: 10px;}
+.p_Vboard .post_info .mark {margin-right: 10px;}
+.p_Vboard .posting .name {margin-right: 10px;}
+.p_Vboard .posting .date {margin-right: 10px;}
+.p_Vboard .post_photo {margin-left: 50px;}
+.p_Vboard .c_btnbox li {flex: auto;}
+.p_Vboard.type_qna .post_conts .content {margin-top: 10px;}
+
+
+
+
+
+
+/* 공통 -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* 세부요소 ==================== */
+.c_btnbox li+ li {margin-left: 10px;}
+.c_btnbox.type_full .c_btn+ .c_btn {margin-top: 10px;}
+
+input.input_design.type_date {background-size: 14px 14px;}
+
+label.c_label .icon {margin-right: 5px;}
+label.c_label .tx em, label.c_label .tx strong {margin-right: 5px;}
+.c_labelbox label.c_label+ label.c_label {margin-left: 15px;}
+
+
+/* 세부 레이아웃 ==================== */
+.c_none .layout_fix {width: 100%;}
+
+.c_pagi .num+ .num {margin-left: 10px;}
+
+.c_page_tab li+ li {margin-left: 10px;}
+
+.c_page_tit .tit+ .tit {margin-left: 30px;}
+
+.c_group_tit .shop_name {background-size: 17px 17px;}
+
+
+/* 레이어 ==================== */
+.c_layer .conts_box {flex: auto;}
+.c_layer .place_info {flex: auto;}
+.c_layer .place_info .info_box dd {flex: auto;}
+.c_layer.type_review .conts_box {height: 350px;}
+.c_layer.type_qna .conts_box {height: 350px;}
+
+
+/* 폼 ==================== */
+.c_form .tip_txt {margin-top: 5px;}
+.c_form .form_tit {flex: auto;}
+.c_form .with_btn .c_btn {margin-left: 5px;}
+.c_form .with_btn .unit {margin: 0 5px;}
+.c_form .other {margin-top: 5px;}
+.c_form input.input_design {margin-top: 5px;}
+.c_form input.input_design:first-of-type {margin-top: 0;}
+.c_form .with_btn+ input.input_design {margin-top: 5px;}
+.c_form .tx_option {margin-top: 5px;}
+.c_form .bank_box .c_select {margin-right: 5px;}
+.c_form .bank_box .input_design:last-of-type {margin-top: 5px !important;}
+.c_form .attach_box .duplicate+ .duplicate {margin-top: 5px;}
+.c_form .attach_box .add_btn_box {margin-left: 5px;}
+.c_form .mine .txt+ .txt {margin-left: 5px;}
+.c_form .mine .txt em {margin-left: 5px;}
+.c_form .payway_box {display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; margin: -5px;}
+.c_form .payway_box label.c_label {width: calc(25% - 10px); margin: 5px;}
+.c_form .upload_list .upload-file label.c_label {margin-left: 10px;}
+
+
+/* 공통상품 ==================== */
+.c_brand li+ li {margin-left: 5px;}
+
+.c_comb .filter_box .list li {margin-right: 10px;}
+
+
+/* 멤버십 ==================== */
+.c_sns_login li+ li {margin-left: 10px;}
+
+.c_my_main .flex_bx .li+ li {margin-left: 15px;}
+.c_my_main .stats_bx dt {margin-right: 15px;}
+
+.c_my_stats .state_box .tit {margin-top: 10px;}
+
+.c_my_list .date {margin-top: 5px;}
+.c_my_list .thumb {margin-right: 10px;}
+.c_my_list .tit {margin-top: 5px; max-width: 100%;}
+.c_my_list .delivery {margin-top: 5px;}
+.c_my_list .c_btn {margin-top: 5px;}
+
+.c_my_coupon ul {display: flex; flex-direction: row; justify-content: flex-start; align-content: stretch; align-items: stretch; flex-wrap: wrap; margin: -5px;}
+.c_my_coupon li {width: 50%; padding: 5px; box-sizing: border-box;}
+.c_my_coupon .area_conts {flex: auto;}
+.c_my_coupon .tit {margin-top: 5px;}
+.c_my_coupon .descript {margin-top: 5px;}
+.c_my_coupon .date+ .date {margin-top: 5px;}
+
+.c_my_wish ul {margin-top: -5px;}
+.c_my_wish li {padding-top: 20px;}
+.c_my_wish .item_name {max-height: 15px;}
+.c_my_wish .item_price {margin-top: 5px;}
+
+.c_attend_guide .benefit {flex: auto;}
+.c_attend_guide .benefit .exp {margin-top: 10px;}
+.c_attend_guide .benefit .exp strong {margin-left: 5px;}
+.c_attend_guide .benefit .exp em {margin-left: 5px;}
+
+
+/* 주문 ==================== */
+.c_order .cart_item dt {margin-right: 30px;}
+.c_order .cart_item .thumb img {flex: none;}
+.c_order .cart_item .opt_name strong {max-width: 100%;}
+.c_order .cart_item .opt_ctrl {margin-top: 10px;}
+.c_order .cart_item .opt_ctrl .c_btn+ .c_btn {margin-left: 5px;}
+.c_order .cart_item .opt_price {margin-left: 30px;}
+.c_order .cart_item .counter {margin-left: 10px;}
+.c_order .cart_item .opt_price .btn_delete {margin-left: 10px;}
+.c_order .cart_item .option_total .opt {margin-right: 5px;}
+.c_order .cart_item .option_total li+ li {margin-top: 5px;}
+.c_order .cart_item .coupon .name strong {max-width: 100%; max-height: 28px;}
+.c_order .cart_sum dl+ dl {margin-top: 10px;}
+.c_order .cart_ctrl .btn+ .btn {margin-left: 10px;}
+.c_order .coupon_result .name em {max-height: 19px;}
+
+
+/* 게시판 ==================== */
+.c_board_ctrl .board_tit .name {margin-right: 5px;}
+.c_board_ctrl .period_box {margin-right: 10px;}
+.c_board_ctrl .due_box .c_btn {margin-left: 10px;}
+.c_board_ctrl .due_box .dash {margin: 0 5px;}
+.c_board_ctrl .area_right .c_btn+ .c_btn {margin-left: 10px;}
+.c_board_ctrl .board_ctg {margin-top: 15px;}
+.c_board_ctrl .board_ctg .swipe_box li+ li {margin-left: 5px;}
+.c_board_ctrl .board_search {flex: auto; margin-right: 10px;}
+.c_board_ctrl .input_design.type_date {margin-right: 10px;}
+
+.c_board_list.type_qna .c_tag {margin-right: 15px;}
+.c_board_list.type_qna .posting .tit {flex: auto; max-width: 100%; max-height: 15px;}
+.c_board_list.type_qna .this_info {margin-left: 15px;}
+.c_board_list.type_qna .this_info::before {background-size: 10px 6px;}
+.c_board_list .about_item {box-sizing: border-box; max-width: 100%; margin-top: 10px; max-height: 15px;}
+.c_board_list .answer .admin .name {margin-right: 10px;}
+.c_board_list .file_down .link {background-size: 14px 14px;}
+.c_board_list .state_icon {margin-left: 10px;}
+.c_board_list .state_icon img {margin-right: 10px;}
+.c_board_list .state_icon .ic_reply img {margin-right: 3px;}
+.c_board_list .posting .tit {max-height: 15px;}
+.c_board_list .number {margin-right: 15px;}
+.c_board_list .writer {max-height: 15px;}
+.c_board_list .date {margin-left: 15px;}
+.c_board_list li.this_tit {flex: auto;}
+.c_board_list li.this_tit .c_tag {margin-right: 15px;}
+.c_board_list .ic_q {margin-right: 15px;}
+
+.c_board_gallery .posting .tit {max-height: 38px;}
+.c_board_gallery .conts {max-height: 15px; margin-top: 5px;}
+
+.c_board_news li.this_photo {margin-right: 15px;}
+.c_board_news .state_icon {margin-left: 10px;}
+.c_board_news .state_icon img {margin-right: 10px;}
+.c_board_news .state_icon .ic_reply img {margin-right: 3px;}
+.c_board_news .posting {max-width: 100%;}
+.c_board_news .posting .tit {max-height: 17px;}
+.c_board_news .conts {max-width: 100%; max-height: 37px; margin-top: 5px;}
+
+.c_board_rv ul {display: flex; flex-direction: row; justify-content: flex-start; align-content: stretch; align-items: stretch; flex-wrap: wrap; margin: -5px;}
+.c_board_rv li {width: 50%; padding: 5px; box-sizing: border-box;}
+.c_board_rv .btn_del {background-size: 12px 12px;}
+
+.c_board_view .view_top .info .txt+ .txt {margin-left: 10px;}
+.c_board_view .file_down .link {background-size: 14px 14px;}
+.c_board_view .reply .list .name {margin-right: 5px;}
+.c_board_view .reply .list .date {margin-right: 5px;}
+.c_board_view .reply .form .btn_ok {margin-left: 10px;}
+.c_board_view .reply .list .conts {margin-top: 5px;}
+.c_board_view .nextprev li .tx {margin-right: 15px;}
+.c_board_view .nextprev .link {max-height: 15px;}
+.c_board_view .nextprev .date {margin-left: 15px;}
+.c_board_view .answer .writer .name {margin-right: 10px;}
+.c_board_view .file_down .link+ .link {margin-left: 10px;}
+
+.c_cs_main .top_faq .keyword .word+ .word {margin-left: 5px;}
+.c_cs_main .recent_wrap .board_box+ .board_box {margin-left: 120px;}
+.c_cs_main .board_list .posting .ic_q {margin-right: 5px;}
+.c_cs_main .board_list .posting .field {margin-right: 5px;}
+.c_cs_main .board_list .posting .tit {max-height: 15px;}

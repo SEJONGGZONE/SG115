@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/*
+	 * Max ~ 900px (Mouse Over)
+	 ----------------------------
+	 * 1300px
+	 * 1100px
+	 ----------------------------
+	 * 900px : Mobile Start
+	 * 700px
+ */
+
+/* 본 소스는 모두 (주)상상너머의 지적 재산이며, 이에 대해 무단도용 및 수정 재배포/재편집등을 절대 금하며 적발 시 법적 대응을 할 것임을 경고합니다. */
+
+
+
+/* Max ~ 900px (Mouse Over) ---------------------------------------------------------------- */
+@media screen and (min-width:900px) {
+
+	/* 상하단 ==================== */
+	.sc_Header .gnb_menu .nav_box:hover .first_menu {color: #333;}
+	.sc_Header .gnb_menu .nav_box .nav_li:hover .first_menu {color: #e19b54;}
+	.sc_Header .gnb_menu .nav_box .nav_li:hover .depth_box {display: block;}
+	.sc_Header .gnb_menu .depth_box .second_menu:hover .tx {color: #fff;}
+	.sc_Header .gnb_menu .depth_box .second_menu:hover .tx:before {width: 100%;}
+	.sc_Header .other_menu .user_link .menu:hover {color: #e19b54;}
+	.sc_Header .other_menu .user_link .menu:hover {color: #e19b54;}
+	.sc_Header .search_open .keyword_box .link:hover .tx:before {display: block;}
+	.sc_Footer .menu_box .menu:hover {text-decoration:underline;}
+	.sc_Header .search_open .keyword_box .link:hover {background:#f5f5f5;}
+
+
+	/* 상품영역 ==================== */
+	.sc_Md .tab_box .tab:hover {background: #eee; border-color: #eee;}
+	.sc_Ctg .tab_box .tab:hover .tx {color: #e19b54;}
+
+
+	/* 디자인영역 ==================== */
+	.sc_Group_tit a.tit:hover {color: #e19b54;}
+	.sc_More_btn .link:hover {border-color: #000;}
+	.sc_Ad .banner .img_box:hover img {transform: scale(1.07, 1.07);}
+	.sc_Single .rolling_wrap:hover .roll_prevnext {opacity: 1; filter: alpha(opacity=100); -ms-filter: alpha(opacity=100);}
+
+	.sc_Review .review_box .photo:hover {cursor: pointer;}
+	.sc_Review .review_box .photo:hover:before {background: rgba(0, 0, 0, 0.5);}
+	.sc_Review .review_box .photo:hover .icon_h {width: 41px; margin-left: -20px;}
+	.sc_Review .review_box .photo:hover .icon_v {height: 41px; margin-top: -20px;}
+	.sc_Review .about_item .info .name:hover {text-decoration:underline;}
+
+	.sc_Service .btn_order:hover {background: #222; color: #fff;}
+	.sc_Service .sns_list .btn_sns:hover {border-color: #333; background:#fff;}
+	.sc_Service dl:hover {background:#fafafa;}
+
+}
+
+
+
+
+
+
+
+
+
+
+/* 1300px ~  ---------------------------------------------------------------- */
+@media screen and (max-width:1300px) {
+
+	/* 상하단 ==================== */
+	.sc_Header .wrapping {gap:0 30px; flex-wrap:wrap;}
+	.sc_Header {padding:25px 0;}
+	.sc_Header .logo_box {order: 1; align-items:flex-start;}
+	.sc_Header .other_menu {order: 2;}
+	.sc_Header .gnb_menu {order: 3; width: 100%; flex: none; margin-top:15px;}
+
+	/* 디자인영역 ==================== */
+	.sc_Review .rolling_box .li {width: 25%;}
+	.sc_Review .rolling_box {margin-left: -15px;}
+	.sc_Review .review_box {margin-left:15px;}
+	.sc_Visual .layout_fix {padding:0px !important;}
+
+}
+
+
+
+
+
+
+
+
+/* 1100px ~  ---------------------------------------------------------------- */
+@media screen and (max-width:1100px) {
+
+	/* 디자인영역 ==================== */
+	.sc_Service dl {padding:30px 10px; gap:20px}
+
+}
+
+
+
+
+
+
+
+/* 900px ~ (Mobile Start)  ---------------------------------------------------------------- */
+@media screen and (max-width:900px) {
+
+	/* 상하단 ==================== */
+	body.if_view .sc_Header {display: none;}
+	.sc_Header {padding:15px 0 0 0;}
+	.sc_Header .wrapping {flex-wrap:nowrap}
+	.sc_Header .other_menu {flex:none;}
+	.sc_Header .other_menu .user_link {display: none;}
+	.sc_Header .other_menu .icon_link {margin-right:-10px;}
+	.sc_Header .other_menu .icon_link .this_slide {display: flex;}
+	.sc_Header .other_menu .icon_link .btn_slide {background-size:22px 25px !important;}
+	.sc_Header .gnb_menu {display:none;}
+	.sc_Header .category {display:block;}
+
+	.sc_Footer {margin-top:50px;}
+	.sc_Footer .layout_fix {flex-direction:column;}
+	.sc_Footer .auth_box .pg .guide {text-align:left;}
+	.sc_Footer .auth_box .logo {order:-1}
+	.sc_Footer .auth_box .logo img {height:40px;}
+	.sc_Footer .auth_box .ssl {order:-1}
+
+	/* 디자인영역 ==================== */
+	.sc_More_btn {margin-top:15px;}
+	.sc_More_btn .link {max-width:100%; height:45px; font-size:13px;}
+	.sc_Roll_ctrl {margin-top:15px;}
+	.sc_Group {margin-top:50px;}
+	.sc_Service .inner {flex-direction:column; border-top-width:1px;}
+	.sc_Service .inner dl {border-left:0; flex-direction:row; align-items:center; border-top:1px solid #eee; padding:20px 0; gap:0}
+	.sc_Service .inner dt {width:150px; border-right:1px solid #f2f2f2; font-size:12px;}
+	.sc_Service .inner dd {flex:1; padding:0 10px;}
+	.sc_Service .icon_box {margin-bottom:5px;}
+	.sc_Service .icon_box img {height:30px;}
+	.sc_Service .tit_en {font-size:15px;}
+	.sc_Single .banner img.this_pc {display: none;}
+	.sc_Single .banner img.this_mo {display: block;}
+	.sc_Review {padding:50px 0;}
+	.sc_Review .rolling_box .li {width: 33.333%;}
+	.sc_Group_tit .tit {font-size:30px;}
+	.sc_Md .tab_box .swipe_box ul {gap:0}
+	.sc_Md .tab_box .tab {font-size:14px; padding:0 10px; height:35px;}
+	.sc_Md .tab_box {margin-bottom:15px;}
+	.sc_Item+ .sc_Item {padding-top:50px;}
+	.sc_Visual .visual_img img.this_pc {display:none;}
+	.sc_Visual .visual_img img.this_mo {display:block;}
+
+}
+
+
+
+
+
+
+
+
+/* 700px ~  ---------------------------------------------------------------- */
+@media screen and (max-width:700px) {
+
+	/* 상하단 ==================== */
+	.sc_Header .other_menu .icon_link .btn {background-size:22px !important; width:40px; height:35px;}
+	.sc_Header .other_menu .icon_link .cart_num {top:0; }
+	.sc_Header .search_open {padding:30px 20px;}
+	.sc_Header .search_open .tit {font-size:30px;}
+	body.if_shop_order .sc_Footer {padding-bottom:150px}
+
+
+	/* 디자인영역 ==================== */
+	.sc_Review {padding:30px 0;}
+	.sc_Service .inner dt {width:120px;}
+	.sc_Ad .rolling_box li:only-child {width: 100%;}
+	.sc_Group {margin-top:30px;}
+	.sc_Group_tit {margin-bottom:15px;}
+	.sc_Group_tit .tit {font-size:25px;}
+	.sc_Ctg .tab_box .swipe_box ul {gap:5px}
+	.sc_Ctg .tab_box .tab strong {padding:0 10px;}
+	.sc_Ad .banner .txt_box {font-size:13px;}
+	.sc_Ad .banner .txt_box {padding:20px 5px;}
+	.sc_Roll_ctrl .roll_icon {display:none;}
+	.sc_Roll_ctrl .roll_pagi {display:flex;}
+	.sc_Visual .sc_Roll_ctrl .roll_prevnext {display:none;}
+	.sc_Single .layout_fix {padding:0px !important;}
+}
+

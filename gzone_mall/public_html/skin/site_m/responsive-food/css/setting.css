@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/*
+ * Copyright    :    ONEDAYNET.CO.KR
+ * SOLUTION     :    HYSSENCE 3.0 PLUS
+ * File         :    setting.css
+ * SUMMARY      :    기본값
+ */
+
+/* 본 소스는 모두 (주)상상너머의 지적 재산이며, 이에 대해 무단도용 및 수정 재배포/재편집등을 절대 금하며 적발 시 법적 대응을 할 것임을 경고합니다. */
+
+
+/* Global ---------------------------------------------------------------- */
+html {width:100%; height:100%; }
+body {margin:0; padding:0; background:#fff; height: 100%; overflow-x: hidden;}
+
+body,p,pre,form,span,div,table,td,ul,ol,li,dl,dt,dd,input,textarea,label,button, select {color:#666; font-family: 'Figtree','Pretendard',Sans-serif; letter-spacing:-0.3px; font-size:13px; font-weight:400;}
+body,p,pre,form,span,div,table,td,ul,ol,li,dl,dt,dd,input,textarea,label,button, select {word-wrap:break-word; word-break:break-all; -webkit-text-size-adjust:none; text-decoration-skip-ink: none}
+b,strong {color:#666; word-wrap:break-word; word-break:break-all; font-size:inherit; font-family:inherit; font-weight:600;}
+p,form,span,h1,h2,h3,h4,h5,h6 {margin:0; padding:0; font-weight:normal;}
+div,table {margin:0; padding:0; border-spacing:0; border-collapse:collapse; border:none; -webkit-overflow-scrolling: touch;}
+table caption { width:0px; height:0px; font-size:0; visibility:hidden; }
+ul,ol,li,td,dl,dt,dd {margin:0; padding:0; }
+em,i {font-style:normal}
+a,span {display:inline-block;}
+div {-webkit-overflow-scrolling: touch;}
+img {border:0;}
+span,div,a,strong,em,label,dl,dt,dd,ul,li {color:inherit; font-size:inherit; font-weight:inherit; letter-spacing:inherit; line-height:inherit;}
+a:link, a:visited {color:inherit; text-decoration: none; cursor:pointer;}
+a:hover, a:active {text-decoration: none;}
+u {text-decoration: none;}
+* {font-size: inherit; -webkit-tap-highlight-color:transparent}
+.swiper-notification {display:none;}
+
+
+/* Essential ---------------------------------------------------------------- */
+.wrap {width:100%; position:relative;}
+.layout_fix {max-width:1280px; padding: 0 100px; margin:0 auto; position:relative; box-sizing: content-box;} /* 이부분 실작업시 수정할것! 컨텐츠 레이아웃 최대값 */
+.upper_link {position:absolute; left:0; top:0; width:100%; height:100%; z-index:9;}
+
+
+/* Form ---------------------------------------------------------------- */
+/* lable */
+label {overflow:hidden; cursor: pointer;}
+input[type=checkbox],input[type=radio] {float:left; -webkit-appearance:none; -webkit-gradient:none; -webkit-border-radius:0; border:none; margin-right:5px; box-sizing:border-box;}
+
+/* input */
+input[type=text],input[type=password],input[type=number],input[type=email],input[type=tel],input[type=date],input[type=file],input[type=search], input[type=submit],input[type=url], input[type=button], button
+{-webkit-appearance:none; -webkit-gradient:none; -webkit-border-radius:0; border:none; background:none; box-sizing:border-box; padding: 0;}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {-webkit-appearance:none; margin:0;} /* 오른쪽에 나타나는 화살표 버튼없애기 */
+input[type=date]::-webkit-outer-spin-button, input[type=date]::-webkit-inner-spin-button {-webkit-appearance:none; margin:0; border:0;} /* 오른쪽에 나타나는 화살표 버튼없애기 */
+input::-ms-clear {display: none;} /* ie10 이상에서 input textbox 포커스시 생기는 삭제버튼 숨기기 */
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {display:none;} /* 검색 기본 x버튼 없애기 */
+input::placeholder {color: #ccc !important;}
+input::-webkit-input-placeholder {color: #ccc !important;}
+input:-ms-input-placeholder {color: #ccc !important;}
+input:-moz-placeholder {color: #ccc !important;}
+
+textarea {border:none; background:none; line-height:1.4; padding:15px; box-sizing:border-box; width:100%; -webkit-appearance:none; -webkit-border-radius:0; -webkit-overflow-scrolling: touch;}
+textarea::placeholder {color: #ccc !important;}
+textarea::-webkit-input-placeholder {color: #ccc !important;}
+textarea:-ms-input-placeholder {color: #ccc !important;}
+textarea:-moz-placeholder {color: #ccc !important;}
+
+/* select 기본 화살표 없애기 */
+select {-webkit-appearance: none; appearance: none; -moz-appearance: none; -webkit-user-select: none;}
+select::-ms-expand {display:none;}
+
+/* 크롬 자동완성 BG색 버림(아이디비번저장 시) */
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px #fff inset;}
+input:-webkit-autofill:focus {-webkit-box-shadow: 0 0 0px 1000px #fff inset;}
+
+/* 인풋포커스 라인삭제 : 웹접근성 작업 시 삭제 */
+input,select,textarea,a {outline:none}
+
+::selection {background:#e19b54; color:#000; text-shadow: none;}
+::-moz-selection {background:#e19b54; color:#000; text-shadow: none;}
+::-webkit-selection {background:#e19b54; color:#000; text-shadow: none;}
+
+
+
+/* font : 기본 ---------------------------------------------------------------- */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}

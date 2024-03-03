@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="닫기" class="cls-1" d="M20.465,1.735L19.3,0.611,10.424,9.181,1.548,0.611,0.384,1.735,9.26,10.305,0.384,18.876,1.548,20l8.877-8.57L19.3,20l1.164-1.124-8.877-8.57Z"/>
+</svg>

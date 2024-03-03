@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<title><![CDATA[공지형]]></title><!-- 게시판의 이름 -->
+	<type><![CDATA[notice]]></type> <!-- 게시판의 유형 -->
+	<info><![CDATA[텍스트형 게시판 - 목록노출 항목 : 제목/작성일]]></info><!-- 게시판 설명 -->
+	<file><![CDATA[true]]></file><!-- 파일첨부기능 사용여부 -->
+	<images><![CDATA[false]]></images><!-- 이미지 첨부 사용여부 -->
+	<date><![CDATA[false]]></date> <!-- 기간옵션 사용여부 -->
+	<reply><![CDATA[false]]></reply> <!-- 답글 사용여부 -->
+</skin>

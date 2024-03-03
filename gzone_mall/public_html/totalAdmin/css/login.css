@@ -1,0 +1,96 @@
+/*
+	copyright(c) 상상너머·원데이넷 all rights reserved.
+	허용된 라이센스이외 무단도용재배포를 금합니다.
+	본 소스는 모두 (주)상상너머의 지적 재산이며, 이에 대해 무단도용 및 수정 재배포/재편집등을 절대 금하며 적발 시 법적 대응을 할 것임을 경고합니다.
+*/
+
+html {height:100%; overflow:hidden;}
+body {overflow:hidden; height:100%; background:#fff;}
+li {list-style:none;}
+
+.t_login {display:flex; justify-content: stretch; align-items: stretch; flex-direction:column; width:100%; height:100%;}
+.t_login .grid_layout {flex:1; display:flex; justify-content: stretch; align-items: stretch; flex-direction:row;}
+.t_login .grid_layout .area_box {padding:30px; display:flex; justify-content: center; align-items: center; flex-direction:column; box-sizing:border-box; position:relative;}
+.t_login .grid_layout .area_left {background:#21212D; width:500px;}
+
+.t_login .grid_layout .area_left:before {content:""; position:absolute; right:0; top:0; width:100px; height:100px; background:#fff; z-index:1;}
+.t_login .grid_layout .area_left:after {content:""; position:absolute; right:0; top:0; width:100px; height:100px; background:#21212D; z-index:2; border-radius:0 100px 0 0;}
+
+.t_login .grid_layout .area_right {background:#fff; flex:1;}
+.t_login .grid_layout .area_right:before {content:""; position:absolute; left:0; bottom:0; width:100px; height:100px; background:#21212D; z-index:1;}
+.t_login .grid_layout .area_right:after {content:""; position:absolute; left:0; bottom:0; width:100px; height:100px; background:#fff; z-index:2; border-radius:0 0 0 100px ;}
+
+.t_login .login_form {box-sizing:border-box; width:100%; max-width:350px; margin:0 auto; display:flex; justify-content: stretch; align-items: stretch; flex-direction:column; text-align:center; background:#fff; border-radius:10px;}
+.t_login .login_form .tit {color:#21212D; font-size:35px; font-weight:800; line-height:1; text-align:center;}
+.t_login .login_form .stit {line-height:1; margin-top:5px; color:#AEAEB9; font-size:11px;}
+.t_login .login_form .type {display:flex; justify-content: center; align-items: center; flex-direction:row; margin-top:30px; border-radius:15px 15px 0 0; background:#EBEBF2; padding:5px; padding-bottom:0px;}
+.t_login .login_form .type label {flex: 1; cursor: pointer; height: auto;}
+.t_login .login_form .type label input {display: none;}
+.t_login .login_form .type label .tx {height: 40px; display: flex; flex-direction: row; justify-content: center; align-items: center; position: relative; font-weight:600; color:#21212D;}
+.t_login .login_form .type label .tx {transition: all 0.25s ease-out; -webkit-transition: all 0.25s ease-out;}
+.t_login .login_form .type label .tx:before {content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #fff; border-radius:10px 10px 0 0; z-index: 1;}
+.t_login .login_form .type label .tx:before {transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out;}
+.t_login .login_form .type label strong {position: relative; z-index: 2;}
+.t_login .login_form .type label:first-of-type .tx:before {transform: translateX(100%);}
+.t_login .login_form .type label:last-of-type .tx:before {transform: translateX(-100%);}
+.t_login .login_form .type label:first-of-type input:checked+ .tx:before {transform: translateX(0);}
+.t_login .login_form .type label:last-of-type input:checked+ .tx:before {transform: translateX(0);}
+.t_login .login_form .form {margin-top:20px; display:flex; justify-content: stretch; align-items: stretch; flex-direction:column; gap:10px}
+.t_login .login_form .form li {position:relative;}
+.t_login .login_form .form .upper_tx {position:absolute; left:15px; top:0; height:100%; display:flex; justify-content: center; align-items: center; flex-direction:column; color:#90909F; pointer-events:none}
+.t_login .login_form .form input.design {height:60px; width:100%; font-size:14px; font-weight:500; padding-left:80px;}
+.t_login .login_form .btn_login {background:#0351FF; border-radius:5px; display:flex; justify-content: center; align-items: center; flex-direction:column; height:60px; width:100%; color:#fff; font-size:18px; margin-top:15px;}
+.t_login .login_form .btn_login {transition: all 0.3s ease-out; -webkit-transition: all 0.3s ease-out; font-weight:600;}
+.t_login .login_form .btn_login:hover {background:#FF1434 !important;}
+.t_login .login_form .copyright {color:#AEAEB9; margin-top:15px; font-size:11px;}
+
+.t_login .login_guide {text-align:center; display:flex; justify-content: center; align-items: center; flex-direction:column;}
+.t_login .login_guide .guide_box {margin-top:10px; line-height:1.5; display:flex; justify-content: center; align-items: center; flex-direction:column; color:rgba(255,255,255,0.3);}
+.t_login .login_guide .site_name {font-weight:600; color:#fff; font-size:18px; line-height:1;}
+.t_login .login_guide .conts {margin-top:10px; line-height:1.5;}
+.t_login .login_guide .conts .only_pc {margin-top:5px;}
+.t_login .login_guide .tel {color:inherit; margin-top:25px; line-height:1;}
+.t_login .login_guide .email {color:inherit; margin-top:25px; line-height:1;}
+.t_login .login_guide .tel+ .email {margin-top:5px !important;}
+
+.t_login .login_guide .picto_box {width:100px; height:100px; display:flex; justify-content: stretch; align-items: stretch; flex-direction:column; position:relative; border-radius:35px;}
+.t_login .login_guide .picto_box .picto {flex:1; }
+.t_login .login_guide .picto_box .picto2 {background:transparent url('../images/login_picto2.svg') center center no-repeat; opacity: 0.3; filter: alpha(opacity=30); -ms-filter:alpha(opacity=30); background-size:65%;}
+.t_login .login_guide .picto_box .picto2 {animation:mv_spin 2s linear infinite both; -webkit-animation:mv_spin 2s linear infinite both;}
+.t_login .login_guide .picto_box .picto1 {background:transparent url('../images/login_picto1.svg') center center no-repeat; position:absolute; left:0; top:0; width:100%; height:100%; background-size:70%;}
+.t_login .login_guide .picto_box .picto1 {animation:mv_spin 6s linear infinite both; -webkit-animation:mv_spin 6s linear infinite both;}
+
+@-webkit-keyframes mv_spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(-360deg);}
+}
+@keyframes mv_spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(-360deg);}
+}
+
+
+/* 서브어드민 */
+.t_login.if_sub .login_form .btn_login {background:#21212D;}
+.t_login.if_sub .grid_layout .area_left {background:#606070;}
+.t_login.if_sub .login_guide .conts {color:rgba(255,255,255,0.5);;}
+.t_login.if_sub .grid_layout .area_left:after {background:#606070;}
+.t_login.if_sub .grid_layout .area_right:before {background:#606070;}
+
+
+@media screen and (max-width:1000px) {
+	.t_login .grid_layout {background:#21212D;}
+	.t_login .grid_layout {flex-direction:column; justify-content:center;}
+	.t_login .grid_layout .area_left {flex:none; padding:30px 0; width:auto; order:-1}
+	.t_login .grid_layout .area_left:before {display:none;}
+	.t_login .grid_layout .area_left:after {display:none;}
+	.t_login .grid_layout .area_right {border-radius:40px 40px 0 0;}
+	.t_login .grid_layout .area_right:before {display:none;}
+	.t_login .grid_layout .area_right:after {display:none;}
+	.t_login .login_guide .conts .only_pc {display:none;}
+	.t_login .login_form .tit {font-size:30px;}
+	.t_login .login_guide .tel {margin-top:10px;}
+	.t_login .login_guide .email {margin-top:10px;}
+	.t_login .login_guide .picto_box {width:70px; height:70px;}
+	.t_login.if_sub .grid_layout {background:#606070;}
+}
