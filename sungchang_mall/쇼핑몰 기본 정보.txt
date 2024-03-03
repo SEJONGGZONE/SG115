@@ -1,0 +1,70 @@
+﻿쇼핑몰 기본 정보
+
+
+◆ 링크 정보
+
+쇼핑몰 주소
+
+http://gzonesoft.onedaynet.co.kr
+
+관리자 주소
+
+http://gzonesoft.onedaynet.co.kr/totalAdmin/
+
+※ 차후 도메인이 적용된다면 관리자 페이지는 반드시 http://도메인/totalAdmin/ 로 접속하시기 바랍니다.
+
+◆ 로그인 정보
+
+사용자 모드
+
+master // Na2NHwYGhNpq4Wu
+
+※ 회원관리 > 회원관리 메뉴에서 수정 가능합니다.
+
+관리자 모드
+
+master // Na2NHwYGhNpq4Wu
+
+※ 환경설정 > 기본설정 메뉴에서 수정 가능합니다.
+
+◆ FTP 접속 정보
+
+주소
+
+gzonesoft.onedaynet.co.kr
+
+아이디
+
+gzonesoft
+
+비밀번호
+
+Na2NHwYGhNpq4Wu
+
+포트번호
+
+9129 (SSH: 9229)
+
+Passive Mode
+
+체크
+
+◆ DB정보
+
+DB Name
+
+gzonesoft_db
+
+DB ID
+
+gzonesoft_id
+
+DB Password
+
+gzonesoft_Na2NHwYGhNpq4Wu
+
+◆ 안내
+
+솔루션 설치를 위한 파일 file.sql, file.tgz 를 FTP에 업로드해드렸으니 FTP 접속 후 다운로드하여 설치 해주시기 바랍니다. 
+
+FTP 접속의 경우 허용 아이피를 원데이넷 1;1 고객문의에 남겨주시면 허용해 드리겠습니다. (업무시간내 가능)	
