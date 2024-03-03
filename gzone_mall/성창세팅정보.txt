@@ -1,0 +1,11 @@
+사이트 주소
+http://localhost
+
+
+관리자사이트 주소
+http://localhost/totalAdmin/
+
+master // sungchang0303!
+
+
+mysqladmin -u root -p password '설정할 비밀번호'

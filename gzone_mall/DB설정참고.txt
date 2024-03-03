@@ -1,0 +1,36 @@
+root 암호 : hwang88
+
+5.1버전
+update user set password=password('hwang88') where user='root';
+
+flush privileges;
+
+5.7버전이후
+ALTER user 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hwang88';
+
+flush privileges;
+
+database : sungchang
+user : sungchang / sungchang0303!
+
+
+
+
+
+-------------------------------------------------------------------------------------------
+아래 명령어들은 참고로....할것.(2024.03.03)
+-------------------------------------------------------------------------------------------
+-- 사용자생성
+create user gzone@localhost identified by 'hwang0725!';
+
+-- 암호변경
+alter user 'gzone@localhost' identified with mysql_native_password by 'hwang0725!';
+
+-- 권한주기
+grant all privileges on tong.* to 'gzone'@'localhost';
+
+
+
+grant select, insert, update, delete, create, drop, alter on tong.*to 'gzone'@'%';
+
+flush privileges;
